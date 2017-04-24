@@ -4,9 +4,27 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass mwart
 \use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Format 60
+CiteEngine authoryear
+Citep*[][]
+Citet*[][]
+Citealt*[][]
+Citealp*[][]
+Citeauthor*[]
+citeyear[]
+citeyearpar[][]
+nocite
+End
+\end_local_layout
 \language english
 \language_package default
 \inputencoding auto
@@ -27,8 +45,9 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
-\papersize default
+\papersize a4paper
 \use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
@@ -40,8 +59,8 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine natbib
+\cite_engine_type authoryear
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
@@ -70,7 +89,204 @@
 
 \begin_body
 
+\begin_layout Title
+Machine Learning and Application in Multi-Criteria Decision Analysis
+\end_layout
+
+\begin_layout Author
+La Minh Hoang
+\end_layout
+
+\begin_layout Right Address
+University of Zielona Gora
+\end_layout
+
+\begin_layout Right Address
+Faculty of Mathematics, Computer Science and Econometrics
+\end_layout
+
+\begin_layout Right Address
+Poland
+\end_layout
+
 \begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+INTRODUCTION
+\end_layout
+
+\begin_layout Standard
+Multi-criteria Decision Analysis (MCDA) which also can be call as "Multiple
+ Criteria Decision-Making" or "Multicriteria Decision Aiding'' in English
+ or "Analyse Multicritère" in French is an exciting field which has seen
+ many achievements including increasing number of research papers, books,
+ and theoretical over the years since the 60s
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pugnaire1992multicriteria,roy2005paradigms"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For many decision makers, MCDA is an excellent tool in getting comprehensive
+ insight information when solving a decision problem especially when there
+ are many different factors are taken into account
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pugnaire1992multicriteria,roy2005paradigms"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In this thesis, we will show to the readers how to incorporate Machine Learning
+ in MCDA.
+ Thus, to prove the feasibility of this incorporation; first, we will point
+ out some difficulties which MCDA has when dealing with complicated decision
+ problems, especially problems that repeat many times.
+ Then we will see what advantages of Machine Learning can offer to solve
+ these difficulties.
+\end_layout
+
+\begin_layout Standard
+The readers should notice that the structure of this thesis is not linear,
+ readers should not only read from the beginning to the end of the paper.
+ Instead, there will be many instructive lines of texts which can act as
+ "signpost" or a guide of how to find the next information which can clarify
+ the section that the readers are reading.
+\end_layout
+
+\begin_layout Standard
+To make more sense to the readers, the contents of this thesis will be structure
+d as follow:
+\end_layout
+
+\begin_layout Standard
+In the first chapter, readers will be greeted with basic concepts of MCDA
+ and what we should expect from MCDA when using it to solve a decision problem.
+ Also, we will see what kind of difficulties and associated decision problem
+ in which Machine Learning is the solution.
+\end_layout
+
+\begin_layout Standard
+In the next chapter, we will show the concept of Analytic Hierarchy Process
+ (AHP) which is an MCDA method to derive priority or ratio scales from paired
+ comparisons.
+ Also, we will explain to the readers that why this method is a suitable
+ example in proving that Machine Learning is the right solution for the
+ problems mentioned in chapter one.
+\end_layout
+
+\begin_layout Standard
+For the third chapter, we will focus on the detail of Machine Learning,
+ especially Artificial Neural Network (ANN) and Adaptive Neuro - Fuzzy Inference
+ System (ANFIS).
+ ANN and ANFIS are two methods of Machine Learning which are the potential
+ candidates for incorporating with MCDA.
+\end_layout
+
+\begin_layout Standard
+Then, in the fourth chapter, we will design a system in which Machine Learning
+ will play a major role in the MCDA process.
+ With this system are two study cases which will show how effective Machine
+ Learning can be in improving the decision making process.
+\end_layout
+
+\begin_layout Standard
+Finally, we will conclude the thesis with some conclusions which summarise
+ the points of this thesis.
+ Because the study for this thesis still in the early stage, we will also
+ propose some suggestions for future improvements.
+\end_layout
+
+\begin_layout Section
+Multi-criteria Decision Analysis
+\end_layout
+
+\begin_layout Standard
+Chapter 1 goes here.
+\end_layout
+
+\begin_layout Section
+The Method of AHP (Analytic Hierarchy Process)
+\end_layout
+
+\begin_layout Standard
+Chapter 2 goes here.
+\end_layout
+
+\begin_layout Section
+Soft Computing with Artificial Neuron Network and Adaptive Neuro - Fuzzy
+ Inference System
+\end_layout
+
+\begin_layout Standard
+Chapter 3 goes here.
+\end_layout
+
+\begin_layout Section
+Case Studies
+\end_layout
+
+\begin_layout Standard
+Chapter 4 goes here.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+CONCLUSIONS
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "master_thesis"
+options "plainnat"
+
+\end_inset
+
 
 \end_layout
 
