@@ -100,12 +100,6 @@ Machine Learning and Application in Multi-Criteria Decision Analysis
 
 \begin_layout Author
 La Minh Hoang
-\begin_inset Newline newline
-\end_inset
-
-Promoter: dr hab.
- Zbigniew Świtalski, prof.
- UZ
 \end_layout
 
 \begin_layout Right Address
@@ -1017,8 +1011,8 @@ Criterion or Criteria
 \end_layout
 
 \begin_layout Standard
-The subsections below will present to the readers the definitions of each
- concept so the readers can generalise what an MCDA process is.
+The following subsections will present to the readers the definitions of
+ each concept so the readers can generalise what an MCDA process is.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1201,7 +1195,7 @@ reference "subsec:Criterion-and-Family"
 \end_layout
 
 \begin_layout Subsubsection
-Criteria
+Criterion and Family of Criteria
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Criterion-and-Family"
@@ -5093,13 +5087,6 @@ key "jang1993anfis"
 :
 \end_layout
 
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
 \begin_layout Itemize
 If 
 \begin_inset Formula $X_{1}$
@@ -5143,13 +5130,6 @@ If
 
 , then 
 \begin_inset Formula $f_{2}=m_{2}X_{1}+n_{2}X_{2}+q_{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
 \end_inset
 
 
@@ -5212,13 +5192,6 @@ The architecture of the proposed ANFIS model containings five layers where
  layer are explained below:
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
 
@@ -5229,14 +5202,7 @@ Layer 1
 \end_layout
 
 \begin_layout Standard
-The node function of every node in this layer takes the form of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:layer1"
-
-\end_inset
-
-.
+The node function of every node in this layer takes the form: 
 \begin_inset Formula 
 \begin{equation}
 O_{i}^{1}=\mu A_{i}(X)\label{eq:layer1}
@@ -5285,7 +5251,7 @@ reference "eq:muai"
 
 \end_inset
 
- are utilised.
+ are utilised:
 \begin_inset Formula 
 \begin{equation}
 \mu A_{i}(X)=exp(-\frac{1}{2}*\frac{(X-c_{i})^{2}}{\sigma_{i}^{2}})\label{eq:muai}
@@ -5316,30 +5282,8 @@ Layer 2
 
 \begin_layout Standard
 Every node in this layer multiplies the incoming signals from layer 1 and
- sends the product out as in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:layer2"
-
-\end_inset
-
-.
-\begin_inset Formula 
-\begin{equation}
-w_{i}=\mu A_{i}(X_{1})\times\mu B_{i}(X_{2})\qquad\qquad i=1,2\label{eq:layer2}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Where the output of this layer (
-\begin_inset Formula $w_{i}$
-\end_inset
-
-) represents the firing strength of a rule.
+ sends the product out as follows: Where the output of this layer () represents
+ the firing strength of a rule.
 \end_layout
 
 \begin_layout Labeling
@@ -5352,218 +5296,35 @@ Layer 3
 \end_layout
 
 \begin_layout Standard
-Every node 
-\begin_inset Formula $i$
-\end_inset
-
- in this layer is a node labelled 
-\begin_inset Formula $N$
-\end_inset
-
-, determine the ratio of the 
-\begin_inset Formula $i$
-\end_inset
-
--th rules’s firing strength to the sum of all rules’s firing strength as
- in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:layer3"
-
-\end_inset
-
-.
-\begin_inset Formula 
-\begin{equation}
-w_{i}^{-}=\frac{w_{i}}{w_{1}+w_{2}}\label{eq:layer3}
-\end{equation}
-
-\end_inset
-
-
+Every node in this layer is a node labelled , determine the ratio of the
+ -th rules’s firing strength to the sum of all rules’s firing strength as:
 \end_layout
 
 \begin_layout Standard
 Where the output of this layer represents the normalised firing strengths.
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\series bold
-Layer 4
-\series default
-:
+\begin_layout Standard
+Layer 4:
 \end_layout
 
 \begin_layout Standard
-Every node 
-\begin_inset Formula $i$
-\end_inset
-
- in this layer is an adaptive node with a node function in the form of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:layer4"
-
-\end_inset
-
-.
-\begin_inset Formula 
-\begin{equation}
-O_{i}^{4}=w_{i}^{-}f_{i}=w_{i}^{-}(m_{i}X_{1}+n_{i}X_{2}+q_{i})\qquad\qquad i=1,2\label{eq:layer4}
-\end{equation}
-
-\end_inset
-
- 
+Every node in this layer is an adaptive node with a node function of the
+ form:
 \end_layout
 
 \begin_layout Standard
-Where 
-\begin_inset Formula $w_{i}^{-}$
-\end_inset
-
- is the output to layer 3, and 
-\begin_inset Formula $m_{i},n_{i},q_{i}$
-\end_inset
-
- is the parameter set of this node.
+Where is the output to layer 3, and is the parameter set of this node.
  Parameters in this layer are referred to as consequent parameters.
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\series bold
-Layer 5
-\series default
-:
+\begin_layout Standard
+Layer 5:
 \end_layout
 
 \begin_layout Standard
 There is only a single node in this layer that computes the overall output
- as the weighted average of all incoming signals from layer 4 as in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:layer5"
-
-\end_inset
-
-.
- 
-\begin_inset Formula 
-\begin{equation}
-O_{i}^{5}=\sum_{i}w_{i}^{-}f_{i}=\frac{\sum_{i}w_{i}f_{i}}{\sum_{i}w_{i}}\qquad\qquad i=1,2\label{eq:layer5}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Learning Process of ANFIS
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Learning-Process-of-1"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-As mentioned earlier, both the premise (non-linear) and consequent (linear)
- parameters of the ANFIS should be tuned, utilising the so-called learning
- process, to optimally represent the factual mathematical relationship between
- the input space and output space.
- Normally, as a first step, an approximate fuzzy model is initiated by the
- system and then improved through an iterative adaptive learning process.
-\end_layout
-
-\begin_layout Standard
-Basically, ANFIS takes the initial fuzzy model and tunes it by means, of
- a hybrid technique combining gradient descent back-propagation and mean
- least-squares optimisation algorithms.
- At each epoch, an error measure, usually defined as the sum of the squared
- difference between actual and desired output, is reduced.
- Training stops when either the predefined epoch number or error rate is
- obtained.
- There are two passes in the hybrid learning procedure for ANFIS.
- In the forward pass of the hybrid learning algorithm, functional signals
- go forward till layer 4, and the consequent parameters are identified by
- the least squares estimate.
-\end_layout
-
-\begin_layout Standard
-In the backwards pass, the error rates propagate backwards, and the premise
- parameters are updated by the gradient descent.
- When the values of the premise parameters are learned, the overall output
- in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:f"
-
-\end_inset
-
- can be expressed as a linear combination of the consequent parameters 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "jang1993anfis"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-f=w_{1}/(w_{1}+w_{2})f_{1}+w_{2}/(w_{1}+w_{2})f_{2}=w_{1}^{-}f_{1}+w_{2}^{-}f_{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\begin_inset Formula 
-\begin{equation}
-=(w_{1}^{-}X_{1})m_{1}+(w_{1}^{-}X_{2})n_{1}+(w_{1}^{-})q_{1}+(w_{2}^{-}X_{2})m_{2}+(w_{2}^{-}X_{2})n_{2}+(w_{2}^{-})q_{2}\label{eq:f}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Which is linear in the consequent parameters 
-\begin_inset Formula $m_{1},n_{1},q_{1},m_{2},n_{2},q_{2}$
-\end_inset
-
-.
+ as the weighted average of all incoming signals from layer 4 as:
 \end_layout
 
 \begin_layout Section
@@ -5577,8 +5338,16 @@ name "sec:Case-Studies"
 
 \end_layout
 
+\begin_layout Standard
+Chapter 4 goes here.
+\end_layout
+
 \begin_layout Section*
 Conclusions
+\end_layout
+
+\begin_layout Standard
+Conclusion goes here.
 \end_layout
 
 \begin_layout Standard

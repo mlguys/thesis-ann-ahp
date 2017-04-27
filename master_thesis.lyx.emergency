@@ -1,0 +1,2804 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass mwart
+\begin_preamble
+\usepackage{url}
+\setkeys{Gin}{width=\linewidth}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Format 60
+CiteEngine authoryear
+Citep*[][]
+Citet*[][]
+Citealt*[][]
+Citealp*[][]
+Citeauthor*[]
+citeyear[]
+citeyearpar[][]
+nocite
+End
+\end_local_layout
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement !tph
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Machine Learning and Application in Multi-Criteria Decision Analysis
+\end_layout
+
+\begin_layout Author
+La Minh Hoang
+\end_layout
+
+\begin_layout Right Address
+University of Zielona Gora
+\end_layout
+
+\begin_layout Right Address
+Faculty of Mathematics, Computer Science and Econometrics
+\end_layout
+
+\begin_layout Right Address
+Poland
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+Multi-criteria Decision Analysis (MCDA) which also can be call as "Multiple
+ Criteria Decision-Making" or "Multi-criteria Decision Aiding'' in English
+ or "Analyse Multicritère" in French is an exciting field which has seen
+ many achievements including increasing number of research papers, books,
+ and theoretical over the years since the 60s 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pugnaire1992multicriteria,roy2005paradigms"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For many decision makers, MCDA is an excellent tool in getting comprehensive
+ insight information when solving a decision problem especially when there
+ are many different factors are taken into account 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pugnaire1992multicriteria,roy2005paradigms"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In this thesis, we will show to the readers how to incorporate Machine Learning
+ in MCDA.
+ Thus, to prove the feasibility of this incorporation; first, we will point
+ out some difficulties which MCDA has when dealing with complicated decision
+ problems, especially problems that repeat many times.
+ Then we will see what advantages of Machine Learning can offer to solve
+ these difficulties.
+\end_layout
+
+\begin_layout Standard
+The readers should notice that the structure of this thesis is not linear,
+ readers should not only read from the beginning to the end of the paper.
+ Instead, there will be many instructive lines of texts which can act as
+ "signpost" or a guide of how to find the next information which can clarify
+ the section that the readers are reading.
+\end_layout
+
+\begin_layout Standard
+To make more sense to the readers, the contents of this thesis will be structure
+d as follow:
+\end_layout
+
+\begin_layout Standard
+In the first chapter, readers will be greeted with basic concepts of MCDA
+ and what we should expect from MCDA when using it to solve a decision problem.
+ Also, we will see what kind of difficulties and associated decision problem
+ in which Machine Learning is the solution.
+\end_layout
+
+\begin_layout Standard
+In the next chapter, we will show the concept of Analytic Hierarchy Process
+ (AHP) which is an MCDA method to derive priority or ratio scales from paired
+ comparisons.
+ Also, we will explain to the readers that why this method is a suitable
+ example in proving that Machine Learning is the right solution for the
+ problems mentioned in chapter one.
+\end_layout
+
+\begin_layout Standard
+For the third chapter, we will focus on the detail of Machine Learning,
+ especially Artificial Neural Network (ANN) and Adaptive Neuro - Fuzzy Inference
+ System (ANFIS).
+ ANN and ANFIS are two methods of Machine Learning which are the potential
+ candidates for incorporating with MCDA.
+\end_layout
+
+\begin_layout Standard
+Then, in the fourth chapter, we will design a system in which Machine Learning
+ will play a major role in the MCDA process.
+ With this system are two study cases which will show how effective Machine
+ Learning can be in improving the decision making process.
+\end_layout
+
+\begin_layout Standard
+Finally, we will conclude the thesis with some conclusions which summarise
+ the points of this thesis.
+ Because the study for this thesis still in the early stage, we will also
+ propose some suggestions for future improvements.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Multi-criteria Decision Analysis
+\end_layout
+
+\begin_layout Standard
+To begin this chapter, we will examine the foundation theory of MCDA which
+ is the Decision Theory in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:The-foundation-of"
+
+\end_inset
+
+.
+ Then we will also explain the reasons why people use MCDA for aiding the
+ decision making process in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Why-people-use"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:From-Monocriteria-to"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+After having a brief description of Decision Theory and MCDA, we will delve
+ deep into the philosophy and paradigms of MCDA in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Basic-concept-mcda"
+
+\end_inset
+
+.
+ In this section, we will explain the following notions: the general structure
+ of an MCDA process, how to model a decision problem with MCDA, some notable
+ features and finally some limitations of MCDA in some particular cases
+ where Machine Learning will help overcome.
+ We will also list some interest MCDA methods in subsection 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:MCDA-Methods"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When readers have gained a considerable amount of knowledge about MCDA,
+ we will show an example of a simple MCDA process to help readers to practice
+ their new knowledge of MCDA in subsection 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:A-basic-example"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finally, we will point out the reasons why we choose the AHP method as the
+ candidate for our study for applying Machine Learning in MCDA in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:AHP-Method-as"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+The foundation of MCDA: Decision Theory
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-foundation-of"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Decision Theory, in general, is simply a theory about making decisions.
+ However, it is not an easy task to precisely define what Decision Theory
+ is.
+ It is because Decision Theory is truly an interdisciplinary subject which
+ is pursued by researchers from many disciplines such as economists, statisticia
+ns, psychologist, political and social scientists or philosophers 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wiki:decision_theory"
+
+\end_inset
+
+.
+ Each discipline has its way of studying and theorising Decision Theory,
+ for example, a psychologist might want to investigate the behaviour of
+ people when they are making decisions, an economist is likely to study
+ the payoffs of each decision or a political scientist will try to find
+ the optimal voting rule by studying Decision Theory.
+ However, if we abstract Decision Theory from all disciplines, we can see
+ that Decision Theory is all about theorising human activities in situations
+ where there are a goal and options to choose between in order to reach
+ that goal, in other words, decision-making situations.
+\end_layout
+
+\begin_layout Standard
+We can generalise the Decision Theory into two definitions: one is broad,
+ and the other one is narrow 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lectureUZ"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Broad definition
+\series default
+: Decision Theory is the set of all possible disciplines connected with
+ making decisions.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Narrow definition
+\series default
+: Decision Theory is the set of theoretical consideration of what is a decision,
+ what is decision situation, what are elements of a decision situation,
+ what is right or optimal decision and how to make a right or optimal decision.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is also important to know that Decision Theory has two main branches:
+ Normative Decision Theory and Descriptive Decision Theory.
+ The brief definitions of those two branches can be given as follow:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Normative Decision Theory
+\series default
+ concerns about constructing rules and methods of making decisions that
+ in the context of an ideal decision maker (i.e.
+ decision maker with perfect information) can identify the best decision.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Descriptive Decision Theory
+\series default
+ interests in the psychological or behavioural aspect of the decision maker
+ (i.e.
+ how do people in real situations make their decisions).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, readers should notice the direction of the thesis in term of which
+ branch of Decision Theory we will go from here.
+ Because the goal of this study is to introduce a new approach, in this
+ case, Machine Learning techniques, to enhance the process of making a decision;
+ therefore, the majority of this study will be in the context of Normative
+ Decision Theory.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Why-people-use"
+
+\end_inset
+
+, we will present to the readers the concept of Decision Analysis and why
+ it is important to have Decision Analysis in every decision-making situation.
+\end_layout
+
+\begin_layout Subsection
+The necessary of Decision Analysis
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Why-people-use"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:The-foundation-of"
+
+\end_inset
+
+, we have known that in a decision-making situation, decision makers have
+ the responsibility to choose the right option in order to realise the goal
+ in that particular situation.
+ However, there are many factors with hidden information in a decision-making
+ situation that can hide the true value of each option thus affect the judgement
+ of the decision maker.
+ 
+\end_layout
+
+\begin_layout Standard
+For example, when choosing suppliers for providing materials to build a
+ particular product.
+ If we do not spend the time to research the past performance of each supplier,
+ we will never know the true value of each supplier in term of providing
+ the needed materials.
+ Thus our judgment for choosing the suppliers will not be certain.
+ To overcome this difficulty of uncertain judgment, a decision maker will
+ need to practice Decision Analysis in a decision-making situation.
+\end_layout
+
+\begin_layout Standard
+Decision Analysis or Decision Aiding (DA) can be defined as follows 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+: It is the activity of using explicit and formalised models to help obtain
+ elements of responses to the questions posed by a stakeholder in a decision
+ process.
+ In other words, it is the process of getting more information from the
+ context of the decision-making situation to clarify the decision.
+\end_layout
+
+\begin_layout Standard
+With the above definition, DA's purpose 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+ is to establish the decision-making process with working hypotheses, formulatio
+ns of propositions (satisfying solutions or possible compromises) which
+ clears out the uncertainty in the decision maker's judgement.
+ In such case, DA can contribute to the follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Analysing the context of the decision-making situation by various means
+ such as identifying the actors, the possibilities of action, their consequences
+, or the stakes.
+\end_layout
+
+\begin_layout Itemize
+Organising and structuring how the decision-making process should proceed
+ to improve the consistency among the values underlying the goal and the
+ final decision that realise that goal.
+\end_layout
+
+\begin_layout Itemize
+Getting the actors (such as the decision maker and the expert who is providing
+ the information related to the decision) to cooperate by proposing a way
+ to improve mutual understanding and a framework that comfortable to debate.
+\end_layout
+
+\begin_layout Itemize
+Elaborating recommendations by using the models or procedures which are
+ formulated within the context of a working hypothesis.
+\end_layout
+
+\begin_layout Itemize
+Aiding in the final decision legitimization.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:From-Monocriteria-to"
+
+\end_inset
+
+, we will present to readers the notions of Mono-criteria and Multi-criteria,
+ thus the reason why MCDA is the prefer tool for many decision makers.
+ 
+\end_layout
+
+\begin_layout Subsection
+From Mono-criteria to Multi-criteria
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:From-Monocriteria-to"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In a decision-making situation, a decision maker has two approaches to evaluate
+ the options.
+ They are Mono-criteria and Multi-criteria.
+ To simply put, Mono-criteria is when the decision maker only uses one criterion
+ for determining the value of each option of the decision problem.
+ Multi-criteria, on the other hand, evaluate each option on many different
+ criteria that associating with various aspects of the decision problem.
+\end_layout
+
+\begin_layout Standard
+When a decision maker is dealing with a DA process, it is very rare for
+ the decision maker to have in mind only one single clear criterion (Mono-criter
+ia).
+ In a multi-actor environment, it is even more unlikely for that single
+ criterion to satisfy the point of view of every actor in the decision-making
+ process because each actor plays a different role in that process which
+ gives different preference to the actor own objectives and value system
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For any case, it is essential to consider every point of view dealing with
+ many perspectives of a decision-making situation, for example, the financial
+ status, the current human resources, the affected ecosystem, security or
+ quality of services.
+ By regarding each related point of view individually, independently from
+ the others, it is likely to arrive at a clear decision that meets all actors'
+ preferences and requirements 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Therefore, it is typical to associating a particular criterion to each related
+ point of view (Multi-criteria).
+ For each associated criterion, it will be used to evaluate any potential
+ action on an appropriate qualitative or quantitative scale 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As we can see, in many decision-making contexts, using Mono-criteria approach
+ might overlook certain aspects of the decision problem, thus affecting
+ the judgement of the decision maker.
+ Using Multi-criteria approach in such cases will help the decision maker
+ to avoid the before-mentioned danger of neglecting.
+\end_layout
+
+\begin_layout Standard
+Next in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Basic-concept-mcda"
+
+\end_inset
+
+, we will explore the three basic concepts of MCDA which will give us a
+ throughout view of the structure of a Decision Analysis process that connects
+ with Multi-criteria to help the decision maker in solving his or her decision
+ problem.
+\end_layout
+
+\begin_layout Subsection
+Basic Concepts of MCDA
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Basic-concept-mcda"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+MCDA Methods
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:MCDA-Methods"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+A basic example of an MCDA process
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:A-basic-example"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Method of Analytic Hierarchy Process
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:The-Method-of"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section, we will get into the details of Analytic Hierarchy Process
+ (AHP) by answering questions such as: What is AHP? Who created it? Which
+ kind of decision problem can we apply AHP?
+\end_layout
+
+\begin_layout Standard
+After getting the general ideas about AHP, we will delve deep into the methodolo
+gy and core elements of AHP such as: What is the Pair-wise comparison? How
+ to make a Comparison Matrix? How to calculate priority vector? How to use
+ Consistency Index and Consistency Ration to verify the comparisons?
+\end_layout
+
+\begin_layout Standard
+Explaining AHP using only its definitions can be tough at some points.
+ Therefore we will use an example to explain each aspect of AHP.
+ It is easier to understand the concept of AHP that way.
+\end_layout
+
+\begin_layout Subsection
+Brief Introduction of Analytic Hierarchy Process 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Brief-Introduction-of"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analytic Hierarchy Process (AHP) is created by Professor Thomas L.
+ Saaty as a Multi-Criteria decision-making method.
+ This method is described in the book “Mathematical Principles of Decision
+ Making” or “Principia Mathematica Decernendi” which Prof.
+ Saaty wrote in the 70s 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "web:goepel_ahp"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In general, Analytic Hierarchy Process is a method to derive priority or
+ ratio scales (we will use the word “priority” and “ratio” interchangeably)
+ from paired comparisons 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "saaty2008decision"
+
+\end_inset
+
+.
+ The input of AHP method is obtained from actual measurements such as price,
+ weight, area, or from subjective opinion such as satisfaction feelings
+ or preference 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+.
+ To derive the ratio scales, we need to solve the principal Eigen Vectors
+ problem and then to verify the scales we will use Consistency Index which
+ is calculated from Eigenvalue.
+\end_layout
+
+\begin_layout Standard
+To solve a decision problem by using AHP, we need to decompose the decision
+ problem into the following steps 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Saaty:1980ahp"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Define the problem and determine the kind of knowledge sought – in other
+ words, we set the goal of the decision problem.
+\end_layout
+
+\begin_layout Enumerate
+Structure the hierarchy of the decision problem.
+ The goal of the decision problem will be on the top level of the hierarchy.
+ Then you will put the objectives or criteria (and sub-criteria) in the
+ intermediate levels.
+ Finally, at the lowest level will be the set of alternatives.
+\end_layout
+
+\begin_layout Enumerate
+Construct a set of pairwise comparison matrices.
+ In which, each element in an upper level is compared to the elements in
+ the level immediately below to it.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the priorities from the comparison matrices in each level of the
+ hierarchy until the last priorities of the alternatives in the lowest level
+ of our hierarchy are obtained.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After obtaining priorities for the alternatives in the decision problem,
+ we should calculate the Consistency Index and Consistency Ratio to see
+ if our comparisons are logical and consistent.
+ If not, we have to revise our comparisons to get a more consistent set
+ of priorities.
+\end_layout
+
+\begin_layout Standard
+If the priorities are consistent, we can use them to evaluate our alternatives
+ and select the optimal alternative for our decision problem, i.e.
+ the alternative with the highest priority.
+\end_layout
+
+\begin_layout Standard
+Because AHP allows small inconsistency in making comparison 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+, we can use AHP to solve various decision problems, from making simple
+ and straightforward decisions to complex and high-stakes problems in which
+ human perceptions and judgements are required 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wiki:ahp2017"
+
+\end_inset
+
+, for example:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Choice
+\end_layout
+
+\begin_layout Enumerate
+Ranking
+\end_layout
+
+\begin_layout Enumerate
+Quality management
+\end_layout
+
+\begin_layout Enumerate
+Conflict resolution
+\end_layout
+
+\begin_layout Enumerate
+Etc.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One fascinating example of AHP application is suspect identification by
+ witnesses in criminal cases 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mu2013new"
+
+\end_inset
+
+.
+ Usually, candidates for identification are shown altogether or sequential,
+ but in the AHP case, they are shown in pairs.
+ Comparisons between pairs are then made by the witnesses.
+ Studies have shown that by using AHP method, the reliability of identification
+ has been increased from 55% to 83% and the false identification rate has
+ been reduced from 20% to 17% 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mu2013new"
+
+\end_inset
+
+.
+ Also, the consistency index produced by AHP method is a good indicator
+ for telling if the statements made by witnesses are consistent or not.
+\end_layout
+
+\begin_layout Subsection
+Pair-wise comparison
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Pair-wise-comparison"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The most fundamental element of AHP method is the Pair-wise comparison.
+ In short, it is like asking between two objects, which one do you prefer
+ and how much do you prefer it to the other object.
+ 
+\end_layout
+
+\begin_layout Standard
+Suppose we have two cars made by two different manufacturers, one is from
+ Renault, and the other is from Toyota.
+ To make a pair-wise comparison between these two cars, we will use a relative
+ scale in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Relative-scale-between"
+
+\end_inset
+
+ to measure how much we prefer a car compare to the other 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "saaty2008decision"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Relative scale between two car manufacturers.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Relative-scale-between"
+
+\end_inset
+
+Relative scale between two car manufacturers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the above relative scale, if we prefer the Toyota car than the Renault
+ car, we choose a number which is a preference value between one and nine
+ on the left side of the scale.
+ If we prefer the Renault car otherwise, we choose a number on the right
+ side of the scale.
+\end_layout
+
+\begin_layout Standard
+The preference values or judgement values are used to describe how strong
+ our preference is over a car.
+ The following 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Judgement-table"
+
+\end_inset
+
+ explains the judgement values 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "saaty2008decision"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Judgement-table"
+
+\end_inset
+
+Judgement table
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features booktabs="true" tabularvalignment="middle" tabularwidth="100line%">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="70line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preference Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Two cars are equal in comparison; no car is more preferred than the other.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+One car is slightly preferred than the other.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+One car is strongly preferred than the other.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+One car is very strongly preferred than the other.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+On car is absolutely preferred than the other.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,4,6,8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Intermediate scales between two adjacent values.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For example, if we firmly prefer the Toyota car than the Renault car, we
+ then mark the scale like in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Toyota-is-being"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Toyota is being preferred on relative scale.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Toyota-is-being"
+
+\end_inset
+
+Toyota is being preferred on relative scale
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, if we add one more car from another manufacturer, our pair-wise comparison
+ will become like in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Comparisons-between-three"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Comparisons between three car manufacturers.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparisons-between-three"
+
+\end_inset
+
+Comparisons between three car manufacturers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we can see, the number of pair-wise comparisons has been increased from
+ one to three comparisons; it is a combination of the number of objects
+ to be compared.
+ We can calculate the number of comparisons using 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Number-of-comparisons"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Number-of-comparisons"
+
+\end_inset
+
+Number of comparisons per number of objects
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="10">
+<features booktabs="true" tabularvalignment="middle" tabularwidth="100line%">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Number of objects
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+n
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Number of comparisons
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{n(n-1)}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Number-of-comparisons"
+
+\end_inset
+
+, it suggests that if we compare too many objects (30 cars for example),
+ the number of comparisons will become immensely significant (435 comparisons
+ for 30 cars).
+ With a large number of comparison, it will confuse the people who make
+ the comparison, and as a result, the likelihood of inconsistent comparisons
+ will be high.
+ 
+\end_layout
+
+\begin_layout Standard
+Next, as we have made our pair-wise comparisons between objects, we will
+ aggregate them into a Comparison Matrix.
+\end_layout
+
+\begin_layout Subsection
+Comparison Matrix
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Comparison-Matrix"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will use the comparison between three cars in the previous section as
+ the example of how to make a comparison matrix from pair-wise comparisons.
+\end_layout
+
+\begin_layout Standard
+In our example, we have a middle-aged man named Darek.
+ Darek wants to buy a new car, but he does not know which car he should
+ buy because there are just too many cars to choose.
+ Thankfully, a friend who works in automobile industry recommends Darek
+ three car models from three different manufacturers.
+ These three cars are currently the best, but Darek can only choose one.
+ Therefore he makes the comparisons in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Darek's-pair-wise-comparisons"
+
+\end_inset
+
+ based on his subjective judgement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Darek's pair-wise comparisons.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Darek's-pair-wise-comparisons"
+
+\end_inset
+
+Darek's pair-wise comparisons
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because we have three pair-wise comparisons, in this case, our comparison
+ matrix will be a three by three matrix.
+ In this matrix, the values on the diagonal line will be one because it
+ is the value of a comparison of two same objects.
+ We only have to fill up the upper triangular matrix, for the lower triangular
+ matrix, we can use the reciprocal values of the upper triangular matrix.
+ To fill up the comparison value, we use the following rules 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If the preference value is on the 
+\series bold
+left side
+\series default
+ of 1, we put the 
+\series bold
+actual preference value
+\series default
+ 
+\end_layout
+
+\begin_layout Enumerate
+If the preference value is on the 
+\series bold
+right side
+\series default
+ of 1, we put the 
+\series bold
+reciprocal value
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In our case, because Darek strongly prefers Renault than Toyota, we put
+ 
+\begin_inset Formula $\frac{1}{5}$
+\end_inset
+
+ in row 1 and column 2 of the matrix.
+ Next, Darek slightly prefers Ford than Toyota; we put 
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+ in row 1 and column 3 of the matrix.
+ Finally, between Renault and Ford, Darek very strongly prefers Renault
+ then Ford, therefore we put 7 in row 2 and column 3 of the matrix.
+ The comparison matrix is presented in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Comparison-matrix-for"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Comparison-matrix-for"
+
+\end_inset
+
+Comparison matrix for Darek's pair-wise comparisons
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\text{1}}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We only have set the value for the upper triangular matrix, for the lower
+ triangular matrix we will use the reciprocal values of the upper triangular
+ matrix based on the following rule 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+: If 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ is the element of row 
+\begin_inset Formula $i$
+\end_inset
+
+ column 
+\begin_inset Formula $j$
+\end_inset
+
+ of the matrix, then the lower diagonal is filled using this equation: 
+\begin_inset Formula $a_{ij}=\frac{1}{a_{ij}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Using the rule above we now have the complete comparison matrix in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Complete-comparison-matrix"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Complete-comparison-matrix"
+
+\end_inset
+
+Complete comparison matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\text{1}}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Please be noticed that all values in the comparison matrix must be positive,
+ or 
+\begin_inset Formula $a_{ij}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In next section, we will use this comparison matrix to calculate the eigenvalues
+ and eigenvectors to calculate the final priorities or Priority Vector of
+ our alternatives which are the three car models in Darek example.
+\end_layout
+
+\begin_layout Subsection
+Priority Vector
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Priority-Vector"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With the complete comparison matrix in the previous section, we can now
+ find the priority vector for our alternatives.
+ However, first, we need to calculate the eigenvalues and eigenvectors of
+ the matrix because the priority vector is the normalised principal Eigenvector
+ of the matrix.
+\end_layout
+
+\begin_layout Standard
+Usually, eigenvalues and eigenvectors of a matrix are calculated by using
+ computer programs such as MATLAB or Maxima due to the increasing complexity
+ in calculation when the size of the matrix is getting bigger.
+ However, for small matrices with size 
+\begin_inset Formula $n\leq3$
+\end_inset
+
+ like the one in our example, it is possible to use an approximation method
+ to approximate the normalised principal Eigenvector with low error rate
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The approximation method is very easy to use.
+ All we need to do is just to normalise each column in the comparison matrix.
+ For example, we got 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Complete-comparison-matrix"
+
+\end_inset
+
+ from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Comparison-Matrix"
+
+\end_inset
+
+, then we sum each column of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Complete-comparison-matrix"
+
+\end_inset
+
+ to get the following 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Comparison-matrix-summed"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Comparison-matrix-summed"
+
+\end_inset
+
+Comparison matrix summed by column
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\text{1}}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{47}{35}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{25}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To get the approximation of the normalised principal Eigenvector we just
+ need to average the matrix across the rows as follow:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+v=\frac{1}{3}\begin{bmatrix}\frac{1}{9}+\frac{7}{47}+\frac{1}{25}\\
+\frac{5}{9}+\frac{35}{47}+\frac{21}{25}\\
+\frac{1}{3}+\frac{5}{47}+\frac{3}{25}
+\end{bmatrix}=\begin{bmatrix}0.1000\\
+0.7134\\
+0.1866
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we have got the priority vector or the approximation of the normalised
+ principal Eigenvector of the comparison matrix.
+ Since the sum of all elements in the priority vector is 1, it tells us
+ the relative weights of all alternatives we have compared.
+\end_layout
+
+\begin_layout Standard
+By having the priority vector, we can say the weight or the priority of
+ each car model in our example:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The Toyota car is 10%
+\end_layout
+
+\begin_layout Itemize
+The Renault car is 71.34%
+\end_layout
+
+\begin_layout Itemize
+The Ford car is 18.66%
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+According to these weights, the Renault car has the highest priority (71.34%)
+ among the three car models.
+ Therefore, Darek can easily choose the Renault car as his new car.
+\end_layout
+
+\begin_layout Standard
+However, we need to verify if the comparisons made by Darek is consistent
+ or not.
+ To do this, we need to calculate the Principal Eigenvalue.
+ It can be obtained in our approximation by the summation of products between
+ each element of the priority vector and the sum of columns of the comparison
+ matrix 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lambda_{max}=9*(0.1)+\frac{47}{35}*(0.7134)+\frac{25}{3}*(0.1866)=3.4129
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using this Principal Eigenvalue, we can verify the consistency of our pair-wise
+ comparisons by calculating the Consistency Index and Consistency Ratio
+ which will be shown in the next section.
+\end_layout
+
+\begin_layout Subsection
+Consistency Index and Consistency Ratio
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Consistency-Index-and"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The consistency of pair-wise comparison is closely related to the transitive
+ property 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+.
+ Which means for a person who prefers A than B or 
+\begin_inset Formula $A\succ B$
+\end_inset
+
+ and he also prefers B than C or 
+\begin_inset Formula $B\succ C$
+\end_inset
+
+ then according to transitive property, this person should prefer A than
+ C or 
+\begin_inset Formula $A\succ C$
+\end_inset
+
+.
+ If for any reason, this particular person does not prefer A than C, but
+ he prefers C than A or 
+\begin_inset Formula $C\succ A$
+\end_inset
+
+, then we can say that his comparisons over A, B, and C are inconsistent
+ with each other.
+\end_layout
+
+\begin_layout Standard
+Let’s check this consistency in our example in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Comparison-Matrix"
+
+\end_inset
+
+.
+ Based on the three comparisons in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Darek's-pair-wise-comparisons"
+
+\end_inset
+
+, we can see that:
+\end_layout
+
+\begin_layout Standard
+Darek prefers the Renault car more than the Ford car or 𝑅𝑒𝑛𝑎𝑢𝑙𝑡 ≻ 𝐹𝑜𝑟𝑑.
+\end_layout
+
+\begin_layout Standard
+Darek prefers the Ford car more than the Toyota car or 𝐹𝑜𝑟𝑑 ≻ 𝑇𝑜𝑦𝑜𝑡𝑎.
+\end_layout
+
+\begin_layout Standard
+Darek prefers the Renault car more than the Toyota car or 𝑅𝑒𝑛𝑎𝑢𝑙𝑡 ≻ 𝑇𝑜𝑦𝑜𝑡𝑎.
+\end_layout
+
+\begin_layout Standard
+In this case, the comparisons made by Darek appear to be consistent:
+\end_layout
+
+\begin_layout Subsection
+AHP Method as a candidate for applying Machine Learning
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:AHP-Method-as"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Chapter 2 goes here.
+\end_layout
+
+\begin_layout Section
+Soft Computing with Artificial Neuron Network and Adaptive Neuro - Fuzzy
+ Inference System
+\end_layout
+
+\begin_layout Standard
+Chapter 3 goes here.
+\end_layout
+
+\begin_layout Section
+Case Studies
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Case-Studies"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Chapter 4 goes here.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Conclusions
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "master_thesis"
+options "ACM-Reference-Format-Journals"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
