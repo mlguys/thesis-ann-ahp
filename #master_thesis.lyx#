@@ -432,23 +432,12 @@ Second, if the training data is not well-defined, the performance of the
 \end_layout
 
 \begin_layout Standard
-Third, this study only scrapes the tip of the iceberg.
- Until now, the artificial neural network seems very simple to us because
- we only pick the most basic and easiest to understand concepts of artificial
+Third, this study only scrape the tip of the iceberg.
+ Until now, artificial neural network seem very simple to us because we
+ only pick the most basic and easiest to understand concepts of artificial
  neural network and machine learning in general.
  Looking at the code where we created an instance of artificial neural network
- in MATLAB (refer to 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "subsec:Artificial-Neural-Network"
-
-\end_inset
-
-), we can see that there are many parameters to be configured.
- Moreover, yet those settings are for the feedforward neural network, the
- simplest kind of artificial neural network.
- Therefore, it is very hard and requires a lot of skill, experience, and
- patient to configure an optimal artificial neural network.
+ in MATLAB, we can see that there are many configurate 
 \end_layout
 
 \begin_layout Standard

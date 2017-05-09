@@ -1,0 +1,1602 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass mwart
+\begin_preamble
+\usepackage{url}
+\setkeys{Gin}{width=\linewidth}
+\end_preamble
+\use_default_options true
+\master master_thesis.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Soft Computing with Artificial Neural Network and Adaptive Neuro - Fuzzy
+ Inference System
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Soft-Computing-with"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When using Multi-Criteria Decision Analysis, especially AHP method, to deal
+ with decision problems of high complexity (i.e.
+ decision problems with many variables, criteria, or alternatives) the cost
+ of computation to find the exact solution could increase exponentially.
+ Also, it is impossible to account all uncertainty elements of the problems
+ too, thus reducing the effectiveness of the solution.
+ However, there is an interesting alternative way to find the approximate
+ solution for these particular decision problems without having high computation
+ cost; it is by using Soft Computing.
+\end_layout
+
+\begin_layout Standard
+Soft computing is an alternative approach to computing which emulates the
+ remarkable ability of the human mind in reasoning and learning in an environmen
+t of uncertainty and imprecision 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jang1997neuro"
+
+\end_inset
+
+.
+ It consists of many complementary tools such as artificial neural network
+ (ANN), fuzzy logic (FL), and adaptive neuro-fuzzy inference system (ANFIS).
+ In this chapter, we will get into the details of ANN and ANFIS, the two
+ tools of soft computing which we will incorporate into AHP method to solve
+ multi-criteria decision problems.
+ 
+\end_layout
+
+\begin_layout Subsection
+Artificial Neural Network 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Artificial-Neural-Network"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In a sense, artificial neural network (ANN) simulate the architecture of
+ the human brain.
+ It is a type of network that sees nodes as artificial neurons.
+ This network of artificial neurons is a computational model inspired by
+ natural neurons.
+ Natural neurons receive signals through synapses located on the dendrites
+ or membrane of the neuron.
+ When the input signal received by the neuron are strong enough (i.e.
+ it surpasses a certain threshold), the neuron is activated and emits an
+ output signal through the axon.
+ This signal might be sent to another synapse, and might active other neurons
+ in the network 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DBLP:journals/corr/cs-NE-0308031"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Because the human brain contains billions of neurons and connections, therefore
+ the complexity of real neurons is highly abstracted when modelling artificial
+ neurons.
+ In fact, the basic model of artificial neuron just consists of inputs (represen
+ts synapses), which are multiplied by weights (represents the strength of
+ the respective signals), and then computed by a mathematical function which
+ determines the activation of the neuron.
+ Another function computes the output of the artificial neuron.
+ Finally, ANN combines these artificial neurons into the network to process
+ information 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DBLP:journals/corr/cs-NE-0308031"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When we compared to traditional computing techniques, artificial neural
+ networks have the advantage of parallel processing, distributed storing
+ of information, low sensitivity to error, their very robust operation after
+ training, generalisation and adaptability to new information.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:An-example-of"
+
+\end_inset
+
+is an example of biological neuron.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/An example of biological neuron.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:An-example-of"
+
+\end_inset
+
+An example of biological neuron
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Learning Process of ANN 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Learning-Process-of"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To understand the learning process of ANN, we will have to examine the very
+ basic element of the neural network, that is the artificial neuron.
+ An artificial neuron has five main elements: inputs, weights, sum function,
+ activation function and outputs.
+ Inputs are information that enters the neuron from other neurons or the
+ external world.
+ Weights are values that express the effect of an input set or another processin
+g element in the previous layer on this process element.
+ Sum function is a function that calculates the effect of inputs and weights
+ totally on this process element.
+ This function calculates the net input that comes to a neuron.
+ The activation function or as call as transfer function take the outcome
+ from the sum function and then calculates the output of the neuron 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "topcu2008prediction"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The information is propagated through the neural network layer by layer
+ and always in the same direction.
+ Besides the input and output layers there can be other layers of neurons
+ in between, which are usually called the hidden layer.
+ The following 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:A-typical-neural"
+
+\end_inset
+
+ shows the structure of a typical neural network.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/A typical neural network structure.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-typical-neural"
+
+\end_inset
+
+A typical neural network structure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For a single neuron, the input to the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ neuron or node are represented as an input factor 
+\begin_inset Formula $a$
+\end_inset
+
+ with component 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+(
+\begin_inset Formula $i=1$
+\end_inset
+
+ to 
+\begin_inset Formula $n$
+\end_inset
+
+ ), and the output 
+\begin_inset Formula $b_{j}$
+\end_inset
+
+.
+ The values 
+\begin_inset Formula $w_{1j},w_{2j},...$
+\end_inset
+
+, and 
+\begin_inset Formula $w_{nj}$
+\end_inset
+
+ are weight factors associated with each input to the node.
+ The weights determine the intensity of the input signal.
+ Every input (
+\begin_inset Formula $a_{1},a_{2},...,a_{n}$
+\end_inset
+
+) is multiplied by its corresponding weight factor (
+\begin_inset Formula $w_{1j},w_{2j},...,w_{nj}$
+\end_inset
+
+) , and the node uses this weighted input (
+\begin_inset Formula $w_{1j}a_{1},w_{2j}a_{2},...,w_{nj}a_{n}$
+\end_inset
+
+) to perform further calculations.
+ If the weight factor is positive, the weighted input (
+\begin_inset Formula $w_{ij}a_{i}$
+\end_inset
+
+) tends to excite the node.
+ If the weight factor is negative, the weighted input (
+\begin_inset Formula $w_{ij}a_{i}$
+\end_inset
+
+) inhibits the node.
+ In the initial setup of an artificial neural network, weight factors may
+ be chosen randomly according to a specified statistical distribution.
+ Then, these weight factors are adjusted in the development of the network
+ or 
+\begin_inset Formula $learningprocess$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The other input to the node is the node’s internal threshold 
+\begin_inset Formula $T_{j}$
+\end_inset
+
+; This is a randomly chosen value that controls the 
+\begin_inset Formula $activation$
+\end_inset
+
+ or total input of the node through the following equation 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "baughman2014neural"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Total Activation: 
+\begin_inset Formula 
+\begin{equation}
+x_{i}=\sum_{i=1}^{n}(w_{ij})*a_{i}-T_{j}\label{eq:total_activation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The total activation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:total_activation"
+
+\end_inset
+
+ depends on the magnitude of the internal threshold 
+\begin_inset Formula $T_{j}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $T_{j}$
+\end_inset
+
+ is large or positive, the node has a high internal threshold, thus inhibiting
+ node-firing.
+ If 
+\begin_inset Formula $T_{j}$
+\end_inset
+
+ is zero or negative, the node has a low internal threshold, which excites
+ node-firing.
+ If no internal threshold is specified, a zero value is assumed.
+ This activity is then modified by transfer function and becomes the final
+ output (
+\begin_inset Formula $b_{j}$
+\end_inset
+
+) of the neuron 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "baughman2014neural"
+
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+b_{j}=f(x_{i})=f(\sum_{i=1}^{n}(w_{ij})*a_{i}-T_{j})\label{eq:final_output}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This signal is then propagated to the neurons (process elements) of the
+ next layer.
+ The 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Propagation-of-information"
+
+\end_inset
+
+ depicts the process
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Propagation of information in an artificial neuron.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Propagation-of-information"
+
+\end_inset
+
+Propagation of information in an artificial neuron
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+A back-propagation neural network has been successfully applied in various
+ applications such as pattern recognition (image recognition, face recognition),
+ stock market prediction, or playing games (AlphaGo).
+\end_layout
+
+\begin_layout Standard
+Learning with back-propagation technique starts with applying an input vector
+ to the network, which is propagated in a forward propagation mode which
+ at the ends, produces an output vector.
+\end_layout
+
+\begin_layout Standard
+Next, the network evaluates the errors between the desired output vector
+ and the actual output vector.
+ It uses these errors to tune the connection weights and biases according
+ to a learning rule that tends to minimise the error.
+\end_layout
+
+\begin_layout Standard
+This process is referred to as “error back-propagation” or back-propagation.
+ The adjusted weights and biases are then used to start a new cycle.
+ A back-propagation cycle, also known as an epoch, in a neural network is
+ illustrated in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Back-propagation-cycle"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Back-propagation cycle.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Back-propagation-cycle"
+
+\end_inset
+
+Back-propagation cycle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For some epochs, the weights and biases are tuned until the errors from
+ the outputs are minimised.
+\end_layout
+
+\begin_layout Standard
+Activation function or transfer functions are the processing units of a
+ neuron.
+ The node’s output is determined by using a mathematical operation on the
+ total activation of the node.
+ These functions can be linear or non-linear.
+ Three of the most common transfer function are depicted in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Common-transfer-functions"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Common transfer functions.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Common-transfer-functions"
+
+\end_inset
+
+Common transfer functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The formula of the activation functions is given as follows 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "matlabnn"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+Pure-Linear: 
+\begin_inset Formula 
+\begin{equation}
+f(x)=x\label{eq:purelinear}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Log-sigmoid:
+\begin_inset Formula 
+\begin{equation}
+f(x)=\frac{1}{1+e^{-x}}\qquad\qquad0\leq f(x)\leq1\label{eq:logsigmoid}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Tangent sigmoid:
+\begin_inset Formula 
+\begin{equation}
+f(x)=tanh(x)=e^{x}-\frac{e^{-x}}{e^{x}+e^{-x}}\qquad\qquad-1\leq f(x)\leq1\label{eq:tangent}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Generalisation
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Generalisation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After the training is completed, the network error is usually minimised,
+ and the network output shows reasonable similarities with the target output,
+ and before a neural network can be used with any degree of confidence,
+ there is a need to establish the validity of the results it generates.
+\end_layout
+
+\begin_layout Standard
+A network could provide almost perfect answers to the set of problems with
+ which it was trained, but fail to produce meaningful answers to other examples.
+ Usually, validation involves evaluating network performance on a set of
+ test particular that were not used for training.
+ Generalisation (testing) is so named because it measures how well the network
+ can generalise what it has learned and form rules with which to make decisions
+ about data it has not previously seen.
+\end_layout
+
+\begin_layout Standard
+The error between the actual and predicted outputs of testing and training
+ converges upon the same point corresponding to the best set of weight factors
+ for the network.
+ If the network is learning an accurate generalised solution to the problem,
+ the average error curve for the test patterns decreases at a rate approaching
+ that of the training patterns.
+ Generalisation capability can be used to evaluate the behaviour of the
+ neural network.
+\end_layout
+
+\begin_layout Subsection
+Selecting the right number of hidden layers 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Selecting-the-right"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The number of hidden layers and the number of nodes in one hidden layer
+ are not straightforward to determine.
+ No rules are available to find the exact number.
+ The choice of the number of hidden layers and the nodes in the hidden layer(s)
+ depends on the network application.
+ Determining the number of hidden layers is a critical part of designing
+ a neural network, and it is not straightforward as it is for input and
+ output layers
+\begin_inset CommandInset citation
+LatexCommand citep
+key "rafiq2001neural"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To determine the optimal number of hidden layers, and the optimal number
+ of nodes in each layer, the network is to be trained using various configuratio
+ns, and then to select the configuration with the fewest number of layers
+ and nodes that still yields the minimum mean-squares error (MSE) quickly
+ and efficiently.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "eberhart1990neural"
+
+\end_inset
+
+ recommended the number of hidden-layer nodes to be at least greater than
+ the square root of the sum of the number of the components in the input
+ and output vectors.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hajela1991neurobiological,carpenter1994common"
+
+\end_inset
+
+ suggested that the number of nodes in the hidden layer is between the sum
+ and the average of the number of nodes in the input and output layers.
+\end_layout
+
+\begin_layout Standard
+The number of nodes in the hidden layer will be selected according to the
+ following rules:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The maximum error of the output network parameters should be as small as
+ possible for both training patterns and testing patterns.
+\end_layout
+
+\begin_layout Enumerate
+The training epochs (number of iteration) should be as few as possible.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Pre-process and post-process of the training patterns 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Pre-process-and-post-process"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neural networks require that their input and output data are normalised
+ to have the same order of magnitude.
+ Normalisation is very critical; if the input and the output variables are
+ not the same order of magnitude, some variables may appear to have more
+ significance than they do.
+ The normalisation used in the training algorithm compensates for the order-of-d
+ifferences in the magnitude of variables by adjusting the network weights.
+\end_layout
+
+\begin_layout Standard
+To avoid such problems, normalisation all input and output variables is
+ recommended.
+ The training patterns should be normalised before they are applied to the
+ neural network.
+ Besides, the activation function used in the back-propagation neural network
+ is a sigmoid function or hyperbolic tangent function.
+ The lower and upper limits of the function are 0 and 1 respectively for
+ sigmoid function and are -1 and +1 for hyperbolic tangent function.
+\end_layout
+
+\begin_layout Standard
+The following 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:xnorm"
+
+\end_inset
+
+ is used to pre-process the input data sets whose values are between -1
+ and 1 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "baughman2014neural"
+
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+x_{i,norm}=2*\frac{x_{i}-x_{i,min}}{x_{i,max}-x_{i,min}}-1\label{eq:xnorm}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $x_{i,norm}$
+\end_inset
+
+: The normalized variable
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $x_{i,min}$
+\end_inset
+
+: The minimum value of variable 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ (input)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $x_{i,max}$
+\end_inset
+
+: The maximum value of variable 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ (input)
+\end_layout
+
+\begin_layout Standard
+However, for the sigmoid function the following 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:norm"
+
+\end_inset
+
+ might be used:
+\begin_inset Formula 
+\begin{equation}
+O_{i,norm}=\frac{t_{i}-t_{i,min}}{t_{i,max}-t_{i,min}}\label{eq:norm}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $t_{i,min}$
+\end_inset
+
+: The minimum value of variable 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ (input)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $t_{i,max}$
+\end_inset
+
+: The maximum value of variable 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ (input)
+\end_layout
+
+\begin_layout Subsection
+Adaptive Neuro-Fuzzy Inference System (ANFIS)
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Adaptive-Neuro-Fuzzy-Inference"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The fuzzy set theory developed by 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "zadeh1965fuzzy"
+
+\end_inset
+
+ provides a mathematical framework to deal with vagueness associated with
+ the description of a variable.
+ The commonly used fuzzy inference system (FIS) is the actual process of
+ mapping from a given input to output using fuzzy logic.
+\end_layout
+
+\begin_layout Standard
+Fuzzy logic is particularly useful in the development of expert systems.
+ Expert systems are built by capturing the knowledge of humans: however,
+ such knowledge is known to be qualitative and inexact.
+ Experts may be only partially knowledgeable about the problem domain, or
+ data may not be fully available, but decisions are still expected.
+ In these situations, educated guesses need to be made to provide solutions
+ to problems.
+ This is where fuzzy logic can be employed as a tool to deal with imprecision
+ and qualitative aspects that are associated with problem-solving 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jang1993anfis"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A fuzzy set is a set without clear or sharp boundaries or without binary
+ membership characteristics.
+ Unlike a conventional set where object either belongs or do not belong
+ to the set, partial membership in a fuzzy set is possible.
+ In other words, there is a softness associated with the membership of elements
+ in a fuzzy set 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jang1993anfis"
+
+\end_inset
+
+.
+ A fuzzy set may be represented by a membership function.
+ This function gives the grade (degree) of membership within the set.
+ The membership function maps the elements of the universe onto numerical
+ values in the interval.
+ The membership functions most commonly used in control theory are triangular,
+ trapezoidal, Gaussian, generalised bell, sigmoidal and difference sigmoidal
+ membership functions 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jang1997neuro,zhao2002evaluation,matlabnn"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As mentioned previously, the fuzzy inference system is the process of formulatin
+g the mapping from a given input to an output using fuzzy logic.
+ The dynamic behaviour of a FIS is characterised by a set of linguistic
+ description rules based on expert knowledge.
+\end_layout
+
+\begin_layout Standard
+The fuzzy system and neural networks are complementary technologies.
+ The primary reason for combining fuzzy systems with neural networks is
+ to use the learning capability of the neural network.
+ While the learning capability is an advantage from the viewpoint of a fuzzy
+ system, from the viewpoint of a neural network there are additional advantages
+ to a combined system.
+ Because a neuro-fuzzy system is based on linguistic rules, we can easily
+ integrate prior knowledge into the system, and this can substantially shorten
+ the learning process.
+ One of the popular integrated systems is an ANFIS, which is an integration
+ of a fuzzy inference system with a back-propagation algorithm 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jang1997neuro,lin1996neural"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There is two type of fuzzy inference systems that can be implemented: Mamdani-ty
+pe and Sugeno-type 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mamdani1975experiment,sugeno1985industrial"
+
+\end_inset
+
+.
+ Because the Sugeno system is more compact and computationally more efficient
+ than a Mamdani system, it lends itself to the user of adaptive techniques
+ for constructing the fuzzy models.
+ These adaptive techniques can be used to customise the membership functions
+ so that the fuzzy system best models the data.
+ The fuzzy inference system based on neuro-adaptive learning techniques
+ is termed adaptive neuro-fuzzy inference system 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hamidian2010shape"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For an FIS to be mature and well established so that it can work appropriately
+ in prediction mode, its initial structure and parameters (linear and non-linear
+) need to be tuned or adapted through a learning process using a sufficient
+ input-output pattern of data.
+ One of the most commonly used learning systems for adapting the linear
+ and non-linear parameters of an FIS, particularly the first order Sugeno
+ fuzzy model, is the ANFIS.
+ ANFIS is a class of adaptive networks that are functionally equivalent
+ to fuzzy inference systems 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jang1993anfis"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Architecture of ANFIS
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Architecture-of-ANFIS"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following figure shows the architecture of a typical ANFIS with two
+ inputs and , two rules and one output, for the first order Sugeno fuzzy
+ model, where each input is assumed to have two associated membership functions
+ (MFs).
+ For a first-order Sugeno fuzzy model a typical rule set with two fuzzy
+ if-then rules can be expressed as 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jang1993anfis"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ is 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+, then 
+\begin_inset Formula $f_{1}=m_{1}X_{1}+n_{1}X_{2}+q_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ is 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $B_{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $f_{2}=m_{2}X_{1}+n_{2}X_{2}+q_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where: 
+\begin_inset Formula $m_{1},n_{1},q_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{2},n_{2},q_{2}$
+\end_inset
+
+ are the parameters of the output function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Architecture of a typical ANFIS.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Architecture-of-a"
+
+\end_inset
+
+Architecture of a typical ANFIS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The architecture of the proposed ANFIS model containings five layers where
+ the node functions in the same layer are of the same function family.
+ Inputs, outputs and implemented mathematical models of the nodes of each
+ layer are explained below:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Layer 1
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+The node function of every node in this layer takes the form of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:layer1"
+
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+O_{i}^{1}=\mu A_{i}(X)\label{eq:layer1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $X$
+\end_inset
+
+ is the input to node 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $\mu A_{i}$
+\end_inset
+
+ is the membership function (which can be triangular, trapezoidal, Gaussian
+ functions or other shapes) of the linguistic label 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ associated with this node and 
+\begin_inset Formula $O_{i}$
+\end_inset
+
+ is the degree of match to which the input 
+\begin_inset Formula $X$
+\end_inset
+
+ satisfies the quantifier 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ In the current study, the Gaussian shaped MFs defined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:muai"
+
+\end_inset
+
+ are utilised.
+\begin_inset Formula 
+\begin{equation}
+\mu A_{i}(X)=exp(-\frac{1}{2}*\frac{(X-c_{i})^{2}}{\sigma_{i}^{2}})\label{eq:muai}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $c_{i},\sigma_{i}$
+\end_inset
+
+ are the parameters of the MFs governing the Gaussian functions.
+ The parameters in this layer are usually referred to as premise parameters.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Layer 2
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Every node in this layer multiplies the incoming signals from layer 1 and
+ sends the product out as in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:layer2"
+
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+w_{i}=\mu A_{i}(X_{1})\times\mu B_{i}(X_{2})\qquad\qquad i=1,2\label{eq:layer2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where the output of this layer (
+\begin_inset Formula $w_{i}$
+\end_inset
+
+) represents the firing strength of a rule.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Layer 3
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Every node 
+\begin_inset Formula $i$
+\end_inset
+
+ in this layer is a node labelled 
+\begin_inset Formula $N$
+\end_inset
+
+, determine the ratio of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th rules’s firing strength to the sum of all rules’s firing strength as
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:layer3"
+
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+w_{i}^{-}=\frac{w_{i}}{w_{1}+w_{2}}\label{eq:layer3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where the output of this layer represents the normalised firing strengths.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Layer 4
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Every node 
+\begin_inset Formula $i$
+\end_inset
+
+ in this layer is an adaptive node with a node function in the form of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:layer4"
+
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+O_{i}^{4}=w_{i}^{-}f_{i}=w_{i}^{-}(m_{i}X_{1}+n_{i}X_{2}+q_{i})\qquad\qquad i=1,2\label{eq:layer4}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $w_{i}^{-}$
+\end_inset
+
+ is the output to layer 3, and 
+\begin_inset Formula $m_{i},n_{i},q_{i}$
+\end_inset
+
+ is the parameter set of this node.
+ Parameters in this layer are referred to as consequent parameters.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Layer 5
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+There is only a single node in this layer that computes the overall output
+ as the weighted average of all incoming signals from layer 4 as in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:layer5"
+
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{equation}
+O_{i}^{5}=\sum_{i}w_{i}^{-}f_{i}=\frac{\sum_{i}w_{i}f_{i}}{\sum_{i}w_{i}}\qquad\qquad i=1,2\label{eq:layer5}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Learning Process of ANFIS
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Learning-Process-of-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As mentioned earlier, both the premise (non-linear) and consequent (linear)
+ parameters of the ANFIS should be tuned, utilising the so-called learning
+ process, to optimally represent the factual mathematical relationship between
+ the input space and output space.
+ Normally, as a first step, an approximate fuzzy model is initiated by the
+ system and then improved through an iterative adaptive learning process.
+\end_layout
+
+\begin_layout Standard
+Basically, ANFIS takes the initial fuzzy model and tunes it by means, of
+ a hybrid technique combining gradient descent back-propagation and mean
+ least-squares optimisation algorithms.
+ At each epoch, an error measure, usually defined as the sum of the squared
+ difference between actual and desired output, is reduced.
+ Training stops when either the predefined epoch number or error rate is
+ obtained.
+ There are two passes in the hybrid learning procedure for ANFIS.
+ In the forward pass of the hybrid learning algorithm, functional signals
+ go forward till layer 4, and the consequent parameters are identified by
+ the least squares estimate.
+\end_layout
+
+\begin_layout Standard
+In the backwards pass, the error rates propagate backwards, and the premise
+ parameters are updated by the gradient descent.
+ When the values of the premise parameters are learned, the overall output
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:f"
+
+\end_inset
+
+ can be expressed as a linear combination of the consequent parameters 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jang1993anfis"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f=w_{1}/(w_{1}+w_{2})f_{1}+w_{2}/(w_{1}+w_{2})f_{2}=w_{1}^{-}f_{1}+w_{2}^{-}f_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+=(w_{1}^{-}X_{1})m_{1}+(w_{1}^{-}X_{2})n_{1}+(w_{1}^{-})q_{1}+(w_{2}^{-}X_{2})m_{2}+(w_{2}^{-}X_{2})n_{2}+(w_{2}^{-})q_{2}\label{eq:f}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Which is linear in the consequent parameters 
+\begin_inset Formula $m_{1},n_{1},q_{1},m_{2},n_{2},q_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

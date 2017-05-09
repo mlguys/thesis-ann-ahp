@@ -1,0 +1,1454 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass mwart
+\begin_preamble
+\usepackage{url}
+\setkeys{Gin}{width=\ifdim\Gin@nat@width>\linewidth
+  \linewidth
+\else
+  \Gin@nat@width
+\fi}
+\makeatother
+\usepackage{pgfplots}
+\usepackage[titles]{tocloft}
+\cftsetindents{figure}{0em}{3.0em}
+\cftsetindents{table}{0em}{3.0em}
+\end_preamble
+\use_default_options true
+\master master_thesis.lyx
+\maintain_unincluded_children false
+\begin_local_layout
+Format 60
+CiteEngine authoryear
+Citep*[][]
+Citet*[][]
+Citealt*[][]
+Citealp*[][]
+Citeauthor*[]
+citeyear[]
+citeyearpar[][]
+nocite
+End
+\end_local_layout
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Multi-criteria Decision Analysis
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Multi-criteria-Decision-Analysis"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To begin this chapter, we will examine the foundation theory of MCDA which
+ is the Decision Theory in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:The-foundation-of"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Next, we will have a look at the structure of a typical decision-making
+ process and how it operates in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Structure-of-decision-making"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:The-process-of"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Then we will explain the reasons why people use MCDA for aiding the decision
+ making process in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Why-people-use"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:From-Monocriteria-to"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+After having a brief description of Decision Theory, decision-making process
+ and why we need MCDA, we will delve deep into the philosophy and paradigms
+ of MCDA in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Basic-concept-mcda"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We will also list some interest MCDA methods in subsection 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:MCDA-Methods"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+The foundation of MCDA: Decision Theory
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-foundation-of"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Decision Theory, in general, is simply a theory about making decisions.
+ However, it is not an easy task to precisely define what Decision Theory
+ is.
+ It is because Decision Theory is truly an interdisciplinary subject which
+ is pursued by researchers from many disciplines such as economists, statisticia
+ns, psychologist, political and social scientists or philosophers 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wiki:decision_theory"
+
+\end_inset
+
+.
+ Each discipline has its way of studying and theorising Decision Theory,
+ for example, a psychologist might want to investigate the behavior of people
+ when they are making decisions, an economist is likely to study the payoffs
+ of each decision or a political scientist will try to find the optimal
+ voting rule by studying Decision Theory.
+ However, if we abstract Decision Theory from all disciplines, we can see
+ that Decision Theory is all about theorizing human activities in situations
+ where there are a goal and options to choose between in order to reach
+ that goal, in other words, decision-making process.
+\end_layout
+
+\begin_layout Standard
+We can generalize the Decision Theory into two definitions: one is broad,
+ and the other one is narrow 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lectureUZ"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Broad
+\begin_inset space ~
+\end_inset
+
+definition
+\series default
+: Decision Theory is the set of all possible disciplines connected with
+ making decisions.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Narrow
+\begin_inset space ~
+\end_inset
+
+definition
+\series default
+: Decision Theory is the set of theoretical consideration of what is a decision,
+ what is decision situation, what are elements of a decision situation,
+ what is right or optimal decision and how to make a right or optimal decision.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is also important to know that Decision Theory has two main branches:
+ Normative Decision Theory and Descriptive Decision Theory.
+ The brief definitions of those two branches can be given as follow:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Normative
+\begin_inset space ~
+\end_inset
+
+Decision
+\begin_inset space ~
+\end_inset
+
+Theory
+\series default
+ concerns about constructing rules and methods of making decisions that
+ in the context of an ideal decision maker (i.e.
+ decision maker with perfect information) can identify the best decision.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Descriptive
+\begin_inset space ~
+\end_inset
+
+Decision
+\begin_inset space ~
+\end_inset
+
+Theory
+\series default
+ interests in the psychological or behavioral aspect of the decision maker
+ (i.e.
+ how do people in real situations make their decisions).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, readers should notice the direction of the thesis in term of which
+ branch of Decision Theory we will go from here.
+ Because the goal of this study is to introduce a new approach, in this
+ case, Artificial Neural Network which will be used to enhance the process
+ of making a decision; therefore, the majority of this study will be in
+ the context of Normative Decision Theory.
+\end_layout
+
+\begin_layout Standard
+Next, in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Structure-of-decision-making"
+
+\end_inset
+
+ we will examine the structure of a typical decision-making process.
+\end_layout
+
+\begin_layout Subsection
+Structure of a decision-making process
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Structure-of-decision-making"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Typically, a decision-making process comprises of these elements 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lectureUZ"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Decision
+\begin_inset space ~
+\end_inset
+
+makers
+\series default
+: The decision makers themselves, they are the ones who are responsible
+ for the consequences of their decisions.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Goal
+\series default
+: The desired state of our decision problem, usually it is what we want
+ to achieve after solving the decision problem.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Initial
+\begin_inset space ~
+\end_inset
+
+state
+\series default
+: The beginning state of our decision problem i.e.
+ all the measurements, parameters, conditions or factors we have before
+ starting the decision-making process.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Decisions
+\series default
+: The options or alternative courses of action which are the possibilities
+ of realizing our goal or desired state.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Criterion
+\series default
+: A measurement or a standard which allows comparing between different options
+ or alternatives.
+ The criterion can be profit, cost, time, effort, property, measurable index,
+ measurable attribute or measurable characteristic.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Constraints
+\series default
+: Limitations stated by the decision problem.
+ It can also be used to decide the polarity of a criterion, i.e.
+ to decide if a criterion is a positive criterion or negative criterion.
+ For example, if a decision problem has time constraint then evaluation
+ from criteria related to time such as time to manufacture, time to delivery,
+ response time or time to travel should be as small as possible.
+ In other words, those criteria are negative criteria, i.e.
+ the smaller the value, the better the evaluation.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Consequences
+\series default
+: Outcomes or results we get after realizing the goal with the option or
+ alternative we have chosen.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Uncertainty
+\series default
+: The set of all consequences that are outside the set of expected consequences
+ of the goal.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Preferences
+\series default
+: The view of each decision maker which determines the importance of each
+ criterion.
+ For example, in a decision problem where the time and cost are criteria,
+ a decision maker may think time is the most important criterion while the
+ other decision maker may think the opposite, cost is the most important
+ criterion.
+ Therefore, an alternative with high evaluation from time criterion may
+ be appealing to decision makers who value time criterion while at the same
+ time being ignored by decision makers who value cost criterion.
+ This element is the most important one in a decision situation because
+ it directly affects the performance of an alternative in different decision
+ maker view.
+\end_layout
+
+\begin_layout Subsection
+The process of making a decision
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-process-of"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The relationship between elements in a decision-making process is presented
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Components-of-a"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lectureUZ"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Components of a decision-making process.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Components-of-a"
+
+\end_inset
+
+Elements of a decision-making process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Components-of-a"
+
+\end_inset
+
+, all the elements of decision-making process are drawn as members of an
+ analysis process.
+ As we can see, the process starts first by formulating the Initial State
+ of the decision problem, so then we can find the Constraints of the decision
+ problem, determine the Criteria and construct the Alternatives.
+ Then this information is given to Decision Makers.
+\end_layout
+
+\begin_layout Standard
+After formulating the information from the Initial State, each Decision
+ Maker with his or her Preferences takes part in an Evaluating Process along
+ with the given Alternatives, Criteria and Constraints.
+ During the Evaluating Process, one alternative or combination of alternatives
+ which is considered the best comparing to other alternatives is chosen
+ to realize the goal of the decision situation.
+ Finally, after realizing the goal using the selected alternative, we get
+ the outcomes from the realization.
+\end_layout
+
+\begin_layout Standard
+These outcomes belong to the Uncertainty set because no matter how careful
+ the Evaluating Process is executed by Decision Makers, there are always
+ some uncontrollable and unforeseeable factors that could affect the outcomes.
+ In other words, we can make a good decision by thorough deliberation in
+ the process of Evaluating Process and take into account all possible informatio
+n from Initial State, but because of the Uncertainty, we cannot know for
+ sure if that decision is the right decision or not.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Why-people-use"
+
+\end_inset
+
+, we will present to the readers the concept of Decision Analysis and why
+ it is important to have Decision Analysis in every decision-making process.
+\end_layout
+
+\begin_layout Subsection
+The necessary of Decision Analysis
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Why-people-use"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:The-foundation-of"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Structure-of-decision-making"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:The-process-of"
+
+\end_inset
+
+, we learnt that in a decision-making process, decision makers have the
+ responsibility to choose the right decision in order to realize the goal
+ in that particular situation.
+ However, there are many factors with hidden information in a decision-making
+ process that can hide the true value of each decision thus affect the judgement
+ of the decision maker.
+ 
+\end_layout
+
+\begin_layout Standard
+For example, when choosing suppliers for providing materials to build a
+ particular product.
+ If we do not spend the time to research the past performance of each supplier,
+ we will never know the true value of each supplier in term of providing
+ the needed materials.
+ Thus our judgment for choosing the suppliers will not be certain.
+ To overcome this difficulty of uncertain judgment, a decision maker will
+ need to practice Decision Analysis in a decision-making process.
+\end_layout
+
+\begin_layout Standard
+Decision Analysis or Decision Aiding (DA) can be defined as follows 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+: It is the activity of using explicit and formalized models to help obtain
+ elements of responses to the questions posed by a stakeholder in a decision
+ process.
+ In other words, it is the process of getting more information from the
+ context of the decision-making process to clarify various components inside
+ a decision problem.
+\end_layout
+
+\begin_layout Standard
+With the above definition, DA's purpose is to establish the decision-making
+ process with working hypotheses, formulations of propositions (satisfying
+ solutions or possible compromises) which clears out the uncertainty in
+ the decision maker's judgement 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+ .
+ In such case, DA can contribute to the follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Analyzing the context of the decision-making process by various means such
+ as identifying the actors, the possibilities of action, their consequences,
+ or the stakes.
+\end_layout
+
+\begin_layout Itemize
+Organizing and structuring how the decision-making process should proceed
+ to improve the consistency among the values underlying the goal and the
+ final decision that realize that goal.
+\end_layout
+
+\begin_layout Itemize
+Getting the actors (such as the decision maker and the expert who is providing
+ the information related to the decision) to cooperate by proposing a way
+ to improve mutual understanding and a framework that comfortable to debate.
+\end_layout
+
+\begin_layout Itemize
+Elaborating recommendations by using the models or procedures which are
+ formulated within the context of a working hypothesis.
+\end_layout
+
+\begin_layout Itemize
+Aiding in the final decision legitimization.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:From-Monocriteria-to"
+
+\end_inset
+
+, we will present to readers the notions of Mono-criteria and Multi-criteria,
+ thus the reason why MCDA is the prefer tool for many decision makers.
+ 
+\end_layout
+
+\begin_layout Subsection
+From Mono-criteria to Multi-criteria
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:From-Monocriteria-to"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In a decision-making process, a decision maker has two approaches to evaluate
+ the options.
+ They are Mono-criteria and Multi-criteria.
+ To simply put, Mono-criteria is when the decision maker only uses one criterion
+ for determining the value of each option of the decision problem.
+ Multi-criteria, on the other hand, evaluate each option on many different
+ criteria that associating with various aspects of the decision problem.
+ Readers can find more information about criterion in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Basic-concept-mcda"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When a decision maker is dealing with a DA process, it is very rare for
+ the decision maker to have in mind only one single clear criterion (Mono-criter
+ia).
+ In a multi-actor environment, it is even more unlikely for that single
+ criterion to satisfy the point of view of every actor in the decision-making
+ process because each actor plays a different role in that process which
+ gives different preference to the actor own objectives and value system
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For any case, it is essential to consider every point of view dealing with
+ many perspectives of a decision-making process, for example, the financial
+ status, the current human resources, the affected ecosystem, security or
+ quality of services.
+ By regarding each related point of view individually, independently from
+ the others, it is likely to arrive at a clear decision that meets all actors'
+ preferences and requirements 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Therefore, it is typical to associating a particular criterion to each related
+ point of view (Multi-criteria).
+ For each associated criterion, it will be used to evaluate any potential
+ action on an appropriate qualitative or quantitative scale 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As we can see, in many decision-making contexts, using Mono-criteria approach
+ might overlook certain aspects of the decision problem, thus affecting
+ the judgement of the decision maker.
+ Using Multi-criteria approach in such cases will help the decision maker
+ to avoid the before-mentioned danger of neglecting.
+\end_layout
+
+\begin_layout Standard
+Next in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Basic-concept-mcda"
+
+\end_inset
+
+, we will explore the three basic concepts of MCDA which will give us a
+ throughout view of the structure of a Decision Analysis process that connects
+ with Multi-criteria to help the decision maker in solving his or her decision
+ problem.
+\end_layout
+
+\begin_layout Subsection
+Basic Concepts of MCDA
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Basic-concept-mcda"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following concepts have a fundamental role in the process of analyzing
+ and structuring the decision-making process with MCDA:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Alternatives
+\series default
+ which defines the options that the decision maker has to decide to choose
+ one as the way to realize the goal in a decision-making process.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Criterion or Criteria
+\series default
+ which acts as a tool to evaluate and compare between alternatives.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The subsections below will present to the readers the definitions of each
+ concept so the readers can generalize what an MCDA process is.
+\end_layout
+
+\begin_layout Subsubsection
+Alternatives
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Alternatives"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In a decision-making process, to make a decision, the decision maker have
+ to choose an action with the purpose of realizing the goal of the decision
+ problem by using the chosen action.
+\end_layout
+
+\begin_layout Standard
+The action in this sense can be defined as a potential action which constitutes
+ to the object of the decision or one of the objectives of the decision
+ analysis process.
+ However, not all action can be qualified as a potential action.
+ The action must be considered to be possible to implement it or justifies
+ some interests within the decision analysis process 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+With the definition of potential action, the concept of alternative is often
+ modeled in two ways 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Mutual
+\begin_inset space ~
+\end_inset
+
+exclusive
+\series default
+: Two distinct potential actions must not be conjointly put into realizing
+ the goal of the decision problem.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Non-mutual
+\begin_inset space ~
+\end_inset
+
+exclusive
+\series default
+: Various potential actions can conjointly be put together to realize the
+ goal of the decision problem.
+\end_layout
+
+\begin_layout Description
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Many authors believed that potential actions should be mutual exclusive,
+ but it is not always the case 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+ In many real world decision analysis contexts, it is appropriate to combine
+ several potential actions into realizing the goal of the decision problem
+ rather than using only one potential action.
+\end_layout
+
+\begin_layout Standard
+In any case, for any decision analysis process, there is always a set of
+ more than two potential actions or alternatives, and this set is not fixed
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+ During the decision analysis process, this set can evolve i.e.
+ adding more potential actions as a result of investigating every aspect
+ of the decision problem.
+ For example, the investigation can help gain more knowledge about the goal,
+ constraints, the preferences of the stakeholders, the possible outcomes
+ of the actions, and other aspects of the decision problem.
+ Thus, this new knowledge could open new boundary that helps to identify
+ other actions as potential action.
+\end_layout
+
+\begin_layout Standard
+For the set of all potential actions or alternatives in a decision-making
+ process, we will use 
+\begin_inset Formula $A$
+\end_inset
+
+ to denote it.
+ To designate a potential action or alternative, we use 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ When the number of actions is finite 
+\begin_inset Formula $(|A|=m)$
+\end_inset
+
+ we have:
+\begin_inset Formula 
+\[
+A=\{a_{1},a_{2},\ldots,a_{m}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For each potential action, when we can model the action by referring to
+ some variable 
+\begin_inset Formula $x1,x2,x3,...$
+\end_inset
+
+ we can write:
+\begin_inset Formula 
+\[
+a=(x_{1},x_{2},...)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will use the above notions to describe the definition of Criterion in
+ the next 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Criterion-and-Family"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Criteria
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Criterion-and-Family"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The readers should recall from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:From-Monocriteria-to"
+
+\end_inset
+
+ that a criterion is used as a tool to determine the value of an alternative.
+ By using the notion of potential action 
+\begin_inset Formula $a$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Alternatives"
+
+\end_inset
+
+, we can denote a criterion as a function 
+\begin_inset Formula $g$
+\end_inset
+
+ which evaluates a potential action or alternative; this function then outputs
+ a 
+\begin_inset Formula $performance$
+\end_inset
+
+ value associating with the input potential action.
+ We will denote this evaluation as 
+\begin_inset Formula $g(a)$
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Often, 
+\begin_inset Formula $g(a)$
+\end_inset
+
+ is a real number.
+ However, it is necessary to define a set 
+\begin_inset Formula $X_{g}$
+\end_inset
+
+ of all possible evaluations that the criterion g can produce.
+ This set 
+\begin_inset Formula $X_{g}$
+\end_inset
+
+ should also follow a scale system to be accepted by all stakeholders in
+ an MCDA process
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Each element 
+\begin_inset Formula $x\in X_{g}$
+\end_inset
+
+ is called 
+\begin_inset Formula $degree$
+\end_inset
+
+ or 
+\begin_inset Formula $score$
+\end_inset
+
+ of the scale.
+ We can use any number, verbal statement or pictogram to designate a degree.
+ During the comparison between two alternatives, we compare the two degrees
+ which represent the respective performances of the two alternatives according
+ to criterion 
+\begin_inset Formula $g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There are many types of scales which readers should notice; the following
+ two scales are the most typical 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roy2005paradigms"
+
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Purely
+\begin_inset space ~
+\end_inset
+
+ordinal
+\begin_inset space ~
+\end_inset
+
+scale
+\begin_inset space ~
+\end_inset
+
+or
+\begin_inset space ~
+\end_inset
+
+qualitative
+\begin_inset space ~
+\end_inset
+
+scale
+\series default
+: The gap between two degrees does not have a clear meaning i.e.
+ we only know the ranking of the degrees, we do not know how close or far
+ from one degree to another.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Quantitative
+\begin_inset space ~
+\end_inset
+
+scale
+\series default
+: The degrees in this scale are defined by a clear quantity in a way that
+ it gives meanings i.e.
+ we can count the differences between two different degrees.
+\end_layout
+
+\begin_layout Subsection
+MCDA Methods
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:MCDA-Methods"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Decision Makers can use different methods to analyze the alternatives and
+ find the best alternative or the group of best alternatives, some of these
+ methods do not require criteria to have weights, while others do require
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lectureUZ"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For example, the following methods do not use weights:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Pareto
+\begin_inset space ~
+\end_inset
+
+Rule
+\series default
+: We will choose from the given alternatives the set of alternatives which
+ are non-dominated by any other alternatives.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Conjunctive
+\begin_inset space ~
+\end_inset
+
+Method
+\series default
+: We will define levels of satisfaction for all criteria then for each criterion
+ we find the set of alternatives which satisfies it.
+ After getting all the sets of satisfying alternatives for each criterion,
+ we will intersect all those sets and the resulting set from the intersecting
+ will be our chosen set of alternatives.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Disjunctive
+\begin_inset space ~
+\end_inset
+
+Method
+\series default
+: Similar to Conjunctive Method but we will choose alternatives which are
+ good for at least one criterion.
+ In other words, instead of intersecting all the sets of satisfying alternatives
+ for each criterion, we find the union of all those sets.
+\end_layout
+
+\begin_layout Standard
+On the other hand, these following examples are methods which do require
+ Criteria to have weights:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Lexicographic
+\begin_inset space ~
+\end_inset
+
+Method
+\series default
+: We will order the criteria from the most important to the less important.
+ The ordering will be based on the weights of the criteria.
+ Then, we will choose alternatives which are the best with respect to the
+ first ranking criterion base on the evaluation of the Decision Table.
+ If there is only one such alternative, then we will stop the process.
+ If there are more such alternatives (more than two), we will continue to
+ choose from these alternatives the ones which are the best with respect
+ to the second ranking criterion.
+ We will continue the process unless we reach the last criterion in the
+ ordering or there is only one alternative left.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Weighted
+\begin_inset space ~
+\end_inset
+
+Average Method
+\series default
+: We will calculate the weighted average for each alternative by multiplying
+ the Scaled Decision Table with Criteria weights.
+ By comparing the scores and select the biggest one, we will have our best
+ alternative.
+\end_layout
+
+\begin_layout Standard
+The above methods are just simple methods, however, there are other methods
+ that are complicated and can be used in complex decision problem 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wiki:ahp2017"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Analytic
+\begin_inset space ~
+\end_inset
+
+hierarchy
+\begin_inset space ~
+\end_inset
+
+process
+\begin_inset space ~
+\end_inset
+
+(AHP)
+\series default
+: a method to derive priority or ratio scales from paired comparisons.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+ELECTRE
+\series default
+: this method is a 
+\begin_inset Quotes eld
+\end_inset
+
+outranking method
+\begin_inset Quotes erd
+\end_inset
+
+ of decision making which is applied to three main problems: choosing, ranking,
+ and sorting.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+PROMETHEE
+\series default
+: is also another 
+\begin_inset Quotes eld
+\end_inset
+
+outranking method
+\begin_inset Quotes erd
+\end_inset
+
+ but it can be used both in normative approach and descriptive approach.
+\end_layout
+
+\begin_layout Standard
+In the next 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:The-Method-of"
+
+\end_inset
+
+, we will present to the readers a comprehensive description of AHP method.
+\end_layout
+
+\end_body
+\end_document
