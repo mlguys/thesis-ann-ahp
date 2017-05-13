@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass mwart
+\textclass article
 \begin_preamble
 \usepackage{url}
 \setkeys{Gin}{width=\ifdim\Gin@nat@width>\linewidth
@@ -11657,9 +11657,7 @@ Ford
 \uwave off
 \noun off
 \color none
-
 Vauxhall
-
 \end_layout
 
 \begin_layout Enumerate
@@ -11691,7 +11689,6 @@ Volkswagen
 \uwave off
 \noun off
 \color none
-
 Toyota
 \end_layout
 
@@ -11708,7 +11705,6 @@ Toyota
 \uwave off
 \noun off
 \color none
-
 Peugeot
 \end_layout
 
@@ -11725,7 +11721,6 @@ Peugeot
 \uwave off
 \noun off
 \color none
-
 Audi
 \end_layout
 
@@ -11742,7 +11737,6 @@ Audi
 \uwave off
 \noun off
 \color none
-
 BMW
 \end_layout
 
@@ -11759,7 +11753,6 @@ BMW
 \uwave off
 \noun off
 \color none
-
 Honda
 \end_layout
 
@@ -11776,7 +11769,6 @@ Honda
 \uwave off
 \noun off
 \color none
-
 Mercedes-Benz
 \end_layout
 
@@ -11793,7 +11785,6 @@ Mercedes-Benz
 \uwave off
 \noun off
 \color none
-
 Citroen
 \end_layout
 
@@ -11810,7 +11801,6 @@ Citroen
 \uwave off
 \noun off
 \color none
-
 Nissan
 \end_layout
 
@@ -11827,9 +11817,7 @@ Nissan
 \uwave off
 \noun off
 \color none
-
 Renault
-
 \end_layout
 
 \end_inset

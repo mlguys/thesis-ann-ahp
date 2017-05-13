@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass mwart
+\textclass article
 \begin_preamble
 \usepackage{url}
 \setkeys{Gin}{width=\ifdim\Gin@nat@width>\linewidth
@@ -36,6 +36,27 @@ Citeauthor*[]
 citeyear[]
 citeyearpar[][]
 nocite
+End
+
+Style Section
+    Align                 Left
+    AlignPossible         Left
+    TopSep                2
+    BottomSep             1.5
+    Font
+      Size                Largest
+    EndFont
+End
+
+
+Style Section*
+    Align                 Left
+    AlignPossible         Left
+    TopSep                2
+    BottomSep             1.5
+    Font
+      Size                Largest
+    EndFont
 End
 \end_local_layout
 \language english
@@ -103,30 +124,224 @@ End
 
 \begin_body
 
-\begin_layout Title
-Artificial Neural Network and Application in Multi-Criteria Decision Analysis
-\end_layout
-
-\begin_layout Author
-La Minh Hoang
-\begin_inset Newline newline
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
-Promoter: dr hab.
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size larger
+UNIVERSITY OF ZIELONA GÓRA
+\begin_inset VSpace medskip
+\end_inset
+
+FACULTY OF MATHEMATICS,
+\begin_inset VSpace medskip
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{COMPUTER SCIENCE AND ECONOMETRICS}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+SPECIALIZATION: BUSINESS ANALYTICS
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+LÃ MINH HOÀNG
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size largest
+AN APPLICATION OF NEURAL
+\series default
+\size larger
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\series bold
+\size largest
+NETWORK IN MULTI-CRITERIA
+\series default
+\size larger
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\series bold
+\size largest
+DECISION ANALYSIS
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+Thesis supervisor
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 0.4em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+
+\series bold
+Dr hab.
  Zbigniew Świtalski, prof.
  UZ
 \end_layout
 
-\begin_layout Right Address
-University of Zielona Gora
+\begin_layout Standard
+\align right
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
-\begin_layout Right Address
-Faculty of Mathematics, Computer Science and Econometrics
+\begin_layout Standard
+\align right
+................................................................
 \end_layout
 
-\begin_layout Right Address
-Poland
+\begin_layout Standard
+\align right
+(signature of supervisor)
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+................................................................
+\end_layout
+
+\begin_layout Standard
+\align right
+(date)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+ZIELONA GÓRA, 2017
 \end_layout
 
 \begin_layout Standard
@@ -161,7 +376,7 @@ Multi-criteria Decision Analysis (MCDA) which also can be call as "Multiple
  Criteria Decision-Making" or "Multi-criteria Decision Aiding'' in English
  or "Analyse Multicritère" in French is an exciting field which has seen
  many achievements including increasing number of research papers, books,
- and theoretical over the years since the 60s 
+ and theories over the years since the 70s 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "pugnaire1992multicriteria,roy2005paradigms"
@@ -174,7 +389,7 @@ key "pugnaire1992multicriteria,roy2005paradigms"
 \begin_layout Standard
 For many decision makers, MCDA is an excellent tool in getting comprehensive
  insight information when solving a decision problem especially when there
- are many different factors are taken into account 
+ are many different factors which are taken into account 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "pugnaire1992multicriteria,roy2005paradigms"
@@ -187,7 +402,25 @@ key "pugnaire1992multicriteria,roy2005paradigms"
 
 \begin_layout Standard
 In this thesis, we will show to the readers how to incorporate Artificial
- Neural Network (ANN) in MCDA.
+ Neural Network (ANN) in MCDA 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Give examples or clarify more about the 
+\begin_inset Quotes eld
+\end_inset
+
+how
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
  Thus, to prove the feasibility of this incorporation; first, we will point
  out some difficulties which MCDA has when dealing with complicated decision
  problems, especially problems that repeat many times.
@@ -200,9 +433,9 @@ d as follow:
 \end_layout
 
 \begin_layout Standard
-In the 
+In chapter 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:Multi-criteria-Decision-Analysis"
 
 \end_inset
@@ -212,9 +445,9 @@ reference "sec:Multi-criteria-Decision-Analysis"
 \end_layout
 
 \begin_layout Standard
-Next, in 
+Next, in chapter 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:The-Method-of"
 
 \end_inset
@@ -224,9 +457,9 @@ reference "sec:The-Method-of"
 \end_layout
 
 \begin_layout Standard
-For the 
+For the chapter 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:Artificial-Neural-Network"
 
 \end_inset
@@ -235,9 +468,9 @@ reference "sec:Artificial-Neural-Network"
 \end_layout
 
 \begin_layout Standard
-Then, in 
+Then, in chapter
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:Case-Studies"
 
 \end_inset
@@ -252,6 +485,19 @@ reference "sec:Case-Studies"
 Finally, we will conclude the thesis with some conclusions which summarizes
  the points of this thesis.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Improve the introduction to make it more better
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
