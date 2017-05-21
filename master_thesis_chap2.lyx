@@ -53,6 +53,7 @@ End
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement !tph
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -118,15 +119,15 @@ name "sec:The-Method-of"
 
 \begin_layout Standard
 In this section, we will get into the details of Analytic Hierarchy Process
- (AHP) by answering questions such as: What is AHP? Who created it? Which
- kind of decision problem can we apply AHP?
+ (AHP) by answering questions such as: What is AHP? Who created it? In which
+ kind of decision problems can we apply AHP?
 \end_layout
 
 \begin_layout Standard
 After getting the general ideas about AHP, we will delve deep into the methodolo
-gy and core elements of AHP such as: What is the Pair-wise comparison? How
- to make a Comparison Matrix? How to calculate priority vector? How to use
- Consistency Index and Consistency Ration to verify the comparisons?
+gy and core elements of AHP such as: What is the Pairwise comparison? How
+ to make a comparison matrix? How to calculate priority vector? How to use
+ Consistency Index and Consistency Ratio to verify the comparisons?
 \end_layout
 
 \begin_layout Standard
@@ -150,11 +151,11 @@ name "subsec:Brief-Introduction-of"
 Analytic Hierarchy Process (AHP) is created by Professor Thomas L.
  Saaty as a Multi-Criteria decision-making method.
  This method is described in the book “Mathematical Principles of Decision
- Making” or “Principia Mathematica Decernendi” which Prof.
- Saaty wrote in the 70s 
+ Making” or “Principia Mathematica Decernendi” which Saaty wrote in the
+ 70s 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "web:goepel_ahp"
+key "Saaty:1980ahp,web:goepel_ahp"
 
 \end_inset
 
@@ -172,9 +173,8 @@ key "saaty2008decision"
 \end_inset
 
 .
- The input of AHP method is obtained from actual measurements such as price,
- weight, area, or from subjective opinion such as satisfaction feelings
- or preference 
+ The AHP method takes input in the form of measurements such as length,
+ size, amount, or subjective opinion such as preferences 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "teknomoAHPtutorial"
@@ -188,71 +188,6 @@ key "teknomoAHPtutorial"
 \end_layout
 
 \begin_layout Standard
-To solve a decision problem by using AHP, we need to decompose the decision
- problem into the following steps 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Saaty:1980ahp"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Define the problem and determine the kind of knowledge sought – in other
- words, we set the goal of the decision problem.
-\end_layout
-
-\begin_layout Enumerate
-Structure the hierarchy of the decision problem.
- The goal of the decision problem will be on the top level of the hierarchy.
- Then you will put the objectives or criteria (and sub-criteria) in the
- intermediate levels.
- Finally, at the lowest level will be the set of alternatives.
-\end_layout
-
-\begin_layout Enumerate
-Construct a set of pairwise comparison matrices.
- In which, each element in an upper level is compared to the elements in
- the level immediately below to it.
-\end_layout
-
-\begin_layout Enumerate
-Calculate the priorities from the comparison matrices in each level of the
- hierarchy until the last priorities of the alternatives in the lowest level
- of our hierarchy are obtained.
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-After obtaining priorities for the alternatives in the decision problem,
- we should calculate the Consistency Index and Consistency Ratio to see
- if our comparisons are logical and consistent.
- If not, we have to revise our comparisons to get a more consistent set
- of priorities.
-\end_layout
-
-\begin_layout Standard
-If the priorities are consistent, we can use them to evaluate our alternatives
- and select the optimal alternative for our decision problem, i.e.
- the alternative with the highest priority.
-\end_layout
-
-\begin_layout Standard
 Because AHP allows small inconsistency in making comparison 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -262,7 +197,7 @@ key "teknomoAHPtutorial"
 
 , we can use AHP to solve various decision problems, from making simple
  and straightforward decisions to complex and high-stakes problems in which
- human perceptions and judgements are required 
+ human perceptions and judgments are required 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wiki:ahp2017"
@@ -307,7 +242,7 @@ Etc.
 \end_layout
 
 \begin_layout Standard
-One fascinating example of AHP application is suspect identification by
+One interesting example of AHP application is suspect identification by
  witnesses in criminal cases 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -334,7 +269,1583 @@ key "mu2013new"
 \end_layout
 
 \begin_layout Subsection
-Pair-wise comparison
+The steps of AHP
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-steps-of"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To solve a decision problem by using AHP, we need to decompose the decision
+ problem into the following steps 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "saaty2008decision,web:goepel_ahp"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+From the decision problem, we define the goal of the problem and determine
+ the related elements such as alternatives, criteria, and sub-criteria.
+\end_layout
+
+\begin_layout Enumerate
+We construct a hierarchy based on the decision problem.
+ We put the goal of the decision problem on the first level of the hierarchy.
+ Then we will put the criteria (and sub-criteria for each criterion) in
+ the intermediate levels.
+ Finally, at the last level will be the alternatives.
+\end_layout
+
+\begin_layout Enumerate
+On each level of the hierarchy (except the top level), we make pairwise
+ comparisons for the criteria, groups of sub-criteria that belongs to a
+ particular criterion, and the alternatives with respect to each criterion
+ or sub-criterion.
+ We use comparison matrices to represent the results of pairwise comparisons.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the priorities or priority vectors from the comparison matrices.
+ Also, we should calculate the Consistency Index and Consistency Ratio to
+ check if the comparisons are consistent or not.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the ranking of alternatives by aggregating priorities from criteria,
+ sub-criteria and the alternatives with respect to each criterion or sub-criteri
+on.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After obtaining the ranking for the alternatives, we should examine the
+ Consistency Index and Consistency Ratio to see if our comparisons are consisten
+t or not.
+ If not, we need to revise our comparisons.
+\end_layout
+
+\begin_layout Standard
+If the comparisons are consistent, we can use the ranking of the alternatives
+ to select the optimal alternative for our decision problem, i.e.
+ the alternative with the highest ranking.
+\end_layout
+
+\begin_layout Standard
+In the next sections, we will explain in detail the fundamentals of AHP
+ as follow:
+\end_layout
+
+\begin_layout Itemize
+In section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Hierarchy"
+
+\end_inset
+
+, we will show the readers how we can construct the hierarchy of AHP from
+ a multi-criteria decision problem.
+ 
+\end_layout
+
+\begin_layout Itemize
+Next, in section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:The-comparison-process"
+
+\end_inset
+
+, we will show the readers the way to get the final ranking of alternatives
+ by aggregating priorities.
+\end_layout
+
+\begin_layout Itemize
+Finally, in sections 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Pair-wise-comparison"
+
+\end_inset
+
+ - 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Consistency-Index-and"
+
+\end_inset
+
+, we will explain the mathematics behind AHP and the way to check the consistenc
+y of the pairwise comparison.
+ For simplicity, we will use a very simple example which doesn't have any
+ criteria.
+\end_layout
+
+\begin_layout Subsection
+The Hierarchy of AHP
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Hierarchy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+First, let us define an example of multi-criteria decision problem (decision
+ problem for short) in which we will construct an AHP hierarchy.
+ In this decision problem, we want to select a supplier who will provide
+ the needed materials for our production line.
+ After some discussions, we have decided that we will select the future
+ supplier based on the following criteria:
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+price
+\series default
+ of the materials.
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+quality
+\series default
+ of the materials.
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+reliability
+\series default
+ of the supplier.
+\end_layout
+
+\begin_layout Standard
+For quality and reliability, we also have added some sub-criteria to them
+ so we can know exactly what aspects of quality and reliability that we
+ interest in:
+\end_layout
+
+\begin_layout Itemize
+Quality:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The 
+\series bold
+durability
+\series default
+ of the materials which determines the length of product life.
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+conformance
+\series default
+ of the materials which tells if the materials meet the industry standards
+ or not.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Reliability:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The 
+\series bold
+capital
+\series default
+ of the supplier which shows the financial assets of the supplier.
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+credibility
+\series default
+ of the supplier which tells if the supplier can be trusted or not.
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+delivery time
+\series default
+ of the supplier which tells if the supplier can provide the materials in
+ time or not.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+After some market inquiries, we have the following potential suppliers as
+ our alternatives:
+\end_layout
+
+\begin_layout Itemize
+Supplier 
+\series bold
+Ava
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Supplier 
+\series bold
+Belle
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Supplier 
+\series bold
+Casey
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Recall step 2 in section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:The-steps-of"
+
+\end_inset
+
+, we construct the hierarchy for our decision problem as in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:AHP-Hierarchy-for"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/AHP hierarchy 2-3.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AHP-Hierarchy-for"
+
+\end_inset
+
+AHP Hierarchy for a multi-criteria decision problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we can see in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:AHP-Hierarchy-for"
+
+\end_inset
+
+, our hierarchy has four levels:
+\end_layout
+
+\begin_layout Itemize
+The top or first level is the goal of our decision problem which is about
+ selecting a supplier for the production line.
+\end_layout
+
+\begin_layout Itemize
+The second level contains the criteria (price, quality, and reliability).
+\end_layout
+
+\begin_layout Itemize
+The third level contains the sub-criteria of quality (durability and conformance
+) and reliability (capital, credibility, and delivery time).
+\end_layout
+
+\begin_layout Itemize
+The fourth or the last level contains the alternatives (Ava, Belle, and
+ Casey).
+\end_layout
+
+\begin_layout Standard
+Each connection line in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:AHP-Hierarchy-for"
+
+\end_inset
+
+ shows the relationship between the elements of the hierarchy:
+\end_layout
+
+\begin_layout Itemize
+The connection lines from the goal to the criteria indicate that we use
+ three criteria (price, quality, and reliability) to compare between alternative
+s so we can choose the best one to realize the goal of the decision problem
+ (refer to section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Structure-of-decision-making"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+The connection lines from the criteria to the sub-criteria show to which
+ the criterion in the upper level the sub-criteria belong.
+ In this case, durability and conformance belong to quality while capital,
+ credibility, and delivery time belong to reliability.
+\end_layout
+
+\begin_layout Itemize
+The connection lines from the criteria or the sub-criteria to the alternatives
+ show which criteria or sub-criteria are used to compare the alternatives.
+ We can see that price, durability, conformance, capital, credibility, and
+ delivery time are used to compare our suppliers.
+\end_layout
+
+\begin_layout Standard
+We have constructed the AHP hierarchy for our decision problem, in the next
+ section, we will show the readers the comparison process of AHP which will
+ help us to calculate the ranking of the alternatives based on pairwise
+ comparison.
+\end_layout
+
+\begin_layout Subsection
+The comparison process of AHP
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-comparison-process"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, according to the steps 3 - 5 in section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:The-steps-of"
+
+\end_inset
+
+, we have to make pairwise comparisons, calculate the priority vectors and
+ finally aggregate the priority vectors to find the ranking of the alternatives
+ in our hierarchy.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:AHP-comparisons."
+
+\end_inset
+
+ shows us the process of pairwise comparisons and how priority vectors are
+ aggregated to calculate the ranking of the alternatives.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/AHP hierarchy comparisons.png
+	lyxscale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AHP-comparisons."
+
+\end_inset
+
+AHP pairwise comparison process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we can see in figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:AHP-comparisons."
+
+\end_inset
+
+, the pairwise comparison process runs from the top to the bottom and has
+ two main stages (the stages are separated by the dashed line in the middle).
+ The stages are described as follow:
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+First stage:
+\end_layout
+
+\begin_layout Standard
+In the first stage, we make pairwise comparisons for three groups: the group
+ of criteria, the group of sub-criteria for quality criterion, and the group
+ of sub-criteria for reliability criterion.
+ In each group which is enclosed by the dashed line, we make pairwise comparison
+s between the criteria or sub-criteria in order to produce the priority
+ vector.
+ The comparisons will be based on our preferences on the criteria or sub-criteri
+a (i.e.
+ the more we prefer a particular criterion, the more value of priority that
+ criterion will have).
+ When all priority vectors of the three groups have been calculated, we
+ will aggregate these priority vectors to produce the global priority vector
+ which will be used in the second stage.
+ We do the aggregation process as follow:
+\end_layout
+
+\begin_layout Itemize
+Let us denote 
+\begin_inset Formula $P_{x}$
+\end_inset
+
+ as the weight or the value of a priority for a criterion or sub-criterion
+ 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Suppose the following priority vectors are the results of the pairwise
+ comparisons for the three groups in the first stage (for the calculations
+ of the results, refer to sections 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Pair-wise-comparison"
+
+\end_inset
+
+ - 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Priority-Vector"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The priority vector for the group of criteria: 
+\begin_inset Formula 
+\begin{equation}
+(P_{price},P_{quality},P_{reliability})\label{eq:pv1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The priority vector for the group of sub-criteria for quality criterion:
+ 
+\begin_inset Formula 
+\begin{equation}
+(P_{durability},P_{conformance})\label{eq:pv2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The priority vector for the group of sub-criteria for reliability criterion:
+ 
+\begin_inset Formula 
+\begin{equation}
+(P_{capital},P_{credibility},P_{delivery})\label{eq:pv3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+If a criterion has no sub-criteria then its priority will also be the global
+ priority.
+ However, if a criterion has sub-criteria, then we have to multiply the
+ weight of each sub-criterion with the weight of the corresponding criterion
+ to get the global priorities.
+ Let us denote 
+\begin_inset Formula $G_{x}$
+\end_inset
+
+ as the weigh or the value of a global priority for a criterion or sub-criterion
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ and we will describe the exact calculations for the global priorities or
+ the global priority vector for the criteria or sub-criteria in table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Global-priority-vector"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Global-priority-vector"
+
+\end_inset
+
+Global priority vector calculation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Criterion
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sub-criterion
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Global priority
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{price}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G_{price}=P_{price}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{quality}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{durability}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G_{durability}=P_{quality}*P_{durability}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{conformance}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G_{conformance}=P_{quality}*P_{conformance}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{reliability}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{capital}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G_{capital}=P_{reliability}*P_{capital}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{credibility}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G_{credibility}=P_{reliability}*P_{credibility}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{delivery}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G_{delivery}=P_{reliability}*P_{delivery}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+According to the table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Global-priority-vector"
+
+\end_inset
+
+, we now have the global priorities or the global priority vector for the
+ criteria or sub-criteria: 
+\begin_inset Formula 
+\begin{equation}
+(G_{price},G_{durability},G_{conformance},G_{capital},G_{credibility},G_{delivery})\label{eq:gv}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Second stage:
+\end_layout
+
+\begin_layout Standard
+Recall from our hierarchy in the figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:AHP-Hierarchy-for"
+
+\end_inset
+
+, the alternatives are compared by using the criterion or sub-criterion
+ of price, durability, conformance, capital, credibility, and delivery time.
+ Therefore we have to make 6 times of pairwise comparison, each time we
+ use a different criterion or sub-criterion to compare the alternatives
+ and produce a priority vector.
+ After we got all the priority vectors, we will combine them with the global
+ priority vector we got from the first stage and put all of them in the
+ aggregation process to produce the final ranking for our alternatives.
+ The aggregation process in the second stage is described as follow:
+\end_layout
+
+\begin_layout Itemize
+Let us denote 
+\begin_inset Formula $P_{x}^{y}$
+\end_inset
+
+ as the weight or the value of a priority for an alternative 
+\begin_inset Formula $y$
+\end_inset
+
+ which has been pairwise compared using a criterion or sub-criterion 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Also, let use the characters A, B, and C to denote our alternatives Ava,
+ Belle, and Casey respectively.
+ Suppose the following priority vectors are the results from the 6 times
+ of pairwise comparison we mentioned above:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The priority vector for the pairwise comparison using price criterion: 
+\begin_inset Formula 
+\begin{equation}
+(P_{price}^{A},P_{price}^{B},P_{price}^{C})\label{eq:apv1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The priority vector for the pairwise comparison using durability sub-criterion:
+ 
+\begin_inset Formula 
+\begin{equation}
+(P_{durability}^{A},P_{durability}^{B},P_{durability}^{C})\label{eq:apv1-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The priority vector for the pairwise comparison using conformance sub-criterion:
+ 
+\begin_inset Formula 
+\begin{equation}
+(P_{conformance}^{A},P_{conformance}^{B},P_{conformance}^{C})\label{eq:apv1-2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The priority vector for the pairwise comparison using capital sub-criterion:
+ 
+\begin_inset Formula 
+\begin{equation}
+(P_{capital}^{A},P_{capital}^{B},P_{capital}^{C})\label{eq:apv1-3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The priority vector for the pairwise comparison using credibility sub-criterion:
+ 
+\begin_inset Formula 
+\begin{equation}
+(P_{credibility}^{A},P_{credibility}^{B},P_{credibility}^{C})\label{eq:apv1-4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The priority vector for the pairwise comparison using delivery time sub-criterio
+n: 
+\begin_inset Formula 
+\begin{equation}
+(P_{delivery}^{A},P_{delivery}^{B},P_{delivery}^{C})\label{eq:apv1-5}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We take the global priority vector from the first stage and multiply it
+ with all the priority vectors above to get the weighted priority vectors
+ for the alternatives with respect to each criterion or sub-criterion.
+ Let us denote 
+\begin_inset Formula $W_{x}^{y}$
+\end_inset
+
+ as the weight or the value of the weighted priority for an alternative
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ which has been pairwise compared using a criterion or sub-criterion 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Weighted-priority-vectors"
+
+\end_inset
+
+ shows us the exact calculations for the weighted priorities.
+\end_layout
+
+\begin_layout Itemize
+Let us denote 
+\begin_inset Formula $R_{y}$
+\end_inset
+
+ as the score of an alternative 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Now, to calculate the ranking of the alternatives, we simply sum all the
+ weighted priorities that belong to a particular alternative and repeat
+ for all alternatives as in table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:The-ranking-of"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+According to table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:The-ranking-of"
+
+\end_inset
+
+, we have the score vector of the alternatives as follow: 
+\begin_inset Formula 
+\begin{equation}
+(R_{A},R_{B},R_{C})\label{eq:ranking}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the score vector of the alternatives, which often a vector of percentages,
+ we can see the performance of an alternative based on pairwise comparisons
+ using the criteria or sub-criteria in the hierarchy in figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:AHP-Hierarchy-for"
+
+\end_inset
+
+ therefore we can know the ranking of our alternatives based on those performanc
+es.
+ Next we in the next sections 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Pair-wise-comparison"
+
+\end_inset
+
+ - 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Consistency-Index-and"
+
+\end_inset
+
+, we will show the readers the mathematics behind the comparison process
+ and also the way to check if our pairwise comparisons are consistent or
+ not.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Weighted-priority-vectors"
+
+\end_inset
+
+Weighted priority vectors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The priority vector for the alternatives
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{price}^{A}=P_{price}^{A}*G_{price}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{price}^{B}=P_{price}^{B}*G_{price}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{price}^{C}=P_{price}^{C}*G_{price}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{durability}^{A}=P_{durability}^{A}*G_{durability}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{durability}^{B}=P_{durability}^{B}*G_{durability}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{durability}^{C}=P_{durability}^{C}*G_{durability}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{conformance}^{A}=P_{conformance}^{A}*G_{conformance}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{conformance}^{B}=P_{conformance}^{B}*G_{conformance}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{conformance}^{C}=P_{conformance}^{C}*G_{conformance}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{capital}^{A}=P_{capital}^{A}*G_{capital}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{capital}^{B}=P_{capital}^{B}*G_{capital}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{capital}^{C}=P_{capital}^{C}*G_{capital}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{credibility}^{A}=P_{credibility}^{A}*G_{credibility}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{credibility}^{B}=P_{credibility}^{B}*G_{credibility}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{credibility}^{C}=P_{credibility}^{C}*G_{credibility}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{delivery}^{A}=P_{delivery}^{A}*G_{delivery}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{delivery}^{B}=P_{delivery}^{B}*G_{delivery}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{delivery}^{C}=P_{delivery}^{C}*G_{delivery}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:The-ranking-of"
+
+\end_inset
+
+The ranking of the alternatives
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alternative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ranking
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ava
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{A}=W_{price}^{A}+W_{durability}^{A}+W_{conformance}^{A}+W_{capital}^{A}+W_{credibility}^{A}+W_{delivery}^{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Belle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{B}=W_{price}^{B}+W_{durability}^{B}+W_{conformance}^{B}+W_{capital}^{B}+W_{credibility}^{B}+W_{delivery}^{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Casey
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{C}=W_{price}^{C}+W_{durability}^{C}+W_{conformance}^{C}+W_{capital}^{C}+W_{credibility}^{C}+W_{delivery}^{C}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Pairwise comparison
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Pair-wise-comparison"
@@ -345,7 +1856,7 @@ name "subsec:Pair-wise-comparison"
 \end_layout
 
 \begin_layout Standard
-The most fundamental element of AHP method is the Pair-wise comparison.
+The most fundamental element of AHP method is the Pairwise comparison.
  In short, it is like asking between two objects, which one do you prefer
  and how much do you prefer it to the other object.
  
@@ -354,7 +1865,7 @@ The most fundamental element of AHP method is the Pair-wise comparison.
 \begin_layout Standard
 Suppose we have two cars made by two different manufacturers, one is from
  Renault, and the other is from Toyota.
- To make a pair-wise comparison between these two cars, we will use a relative
+ To make a pairwise comparison between these two cars, we will use a relative
  scale in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -412,8 +1923,8 @@ Relative scale between two car manufacturers
 
 \begin_layout Standard
 In the above relative scale, if we prefer the Toyota car than the Renault
- car, we choose a number which is a preference value between one and nine
- on the left side of the scale.
+ car, we choose a number which denotes a preference value between one and
+ nine on the left side of the scale.
  If we prefer the Renault car otherwise, we choose a number on the right
  side of the scale.
 \end_layout
@@ -442,7 +1953,7 @@ key "saaty2008decision"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -672,7 +2183,7 @@ Toyota is being preferred on relative scale
 \end_layout
 
 \begin_layout Standard
-Now, if we add one more car from another manufacturer, our pair-wise comparison
+Now, if we add one more car from another manufacturer, our pairwise comparison
  will become like in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -722,7 +2233,7 @@ Comparisons between three car manufacturers
 \end_layout
 
 \begin_layout Standard
-As we can see, the number of pair-wise comparisons has been increased from
+As we can see, the number of pairwise comparisons has been increased from
  one to three comparisons; it is a combination of the number of objects
  to be compared.
  We can calculate the number of comparisons using 
@@ -1005,8 +2516,8 @@ reference "subsec:Comparison-Matrix"
 
 \end_inset
 
-, as we have made our pair-wise comparisons between objects, we will aggregate
- them into a Comparison Matrix.
+, as we have made our pairwise comparisons between objects, we will aggregate
+ them into a comparison matrix.
 \end_layout
 
 \begin_layout Subsection
@@ -1022,7 +2533,7 @@ name "subsec:Comparison-Matrix"
 
 \begin_layout Standard
 We will use the comparison between three cars in the previous section as
- the example of how to make a comparison matrix from pair-wise comparisons.
+ the example of how to make a comparison matrix from pairwise comparisons.
 \end_layout
 
 \begin_layout Standard
@@ -1067,7 +2578,7 @@ name "fig:Darek's-pair-wise-comparisons"
 
 \end_inset
 
-Darek's pair-wise comparisons
+Darek's pairwise comparisons
 \end_layout
 
 \end_inset
@@ -1081,7 +2592,7 @@ Darek's pair-wise comparisons
 \end_layout
 
 \begin_layout Standard
-Because we have three pair-wise comparisons, in this case, our comparison
+Because we have three pairwise comparisons, in this case, our comparison
  matrix will be a three by three matrix.
  In this matrix, the values on the diagonal line will be one because it
  is the value of a comparison of two same objects.
@@ -1176,7 +2687,7 @@ name "tab:Comparison-matrix-for"
 
 \end_inset
 
-Comparison matrix for Darek's pair-wise comparisons
+Upper triangular matrix for Darek's pairwise comparisons
 \end_layout
 
 \end_inset
@@ -1388,7 +2899,7 @@ key "teknomoAHPtutorial"
  of the matrix, then the lower diagonal is filled using this equation: 
 \begin_inset Formula 
 \begin{equation}
-a_{ij}=\frac{1}{a_{ij}}\label{eq:reciprocal}
+a_{ij}=\frac{1}{a_{ji}}\label{eq:reciprocal}
 \end{equation}
 
 \end_inset
@@ -2046,7 +3557,7 @@ key "teknomoAHPtutorial"
 \end_layout
 
 \begin_layout Standard
-Using this Principal Eigenvalue, we can verify the consistency of our pair-wise
+Using this Principal Eigenvalue, we can verify the consistency of our pairwise
  comparisons by calculating the Consistency Index and Consistency Ratio
  which will be shown in 
 \begin_inset CommandInset ref
@@ -2070,7 +3581,7 @@ name "subsec:Consistency-Index-and"
 \end_layout
 
 \begin_layout Standard
-The consistency of pair-wise comparison is closely related to the transitive
+The consistency of pairwise comparison is closely related to the transitive
  property 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2191,9 +3702,9 @@ However, there is a problem with this check.
  Therefore, we cannot know if the values in the comparison matrix are consistent
  with each other or not.
  This fact can make the whole hierarchy of AHP (especially multi-level hierarchy
-) becomes inconsistent because we have to make a pair-wise comparison in
+) becomes inconsistent because we have to make a pairwise comparison in
  each level of the hierarchy and the immediately lower level will use the
- priority vector produced by pair-wise comparison of the base level to calculate
+ priority vector produced by pairwise comparison of the base level to calculate
  its global weights 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2205,9 +3716,9 @@ key "saaty2008decision"
 \end_layout
 
 \begin_layout Standard
-According to Prof.
- Saaty, for a consistent comparison matrix to be consistent, the largest
- Eigenvalue should be equal to the size of the comparison matrix, or 
+According to Saaty, for a consistent comparison matrix to be consistent,
+ the largest Eigenvalue should be equal to the size of the comparison matrix,
+ or 
 \begin_inset Formula $\lambda_{max}=n$
 \end_inset
 
@@ -2219,8 +3730,8 @@ key "saaty2008decision"
 \end_inset
 
 .
- Then, to know how many degrees of consistent a comparison matrix is, Prof.
- Saaty gave us a measurement of consistency, the Consistency Index or CI.
+ Then, to know how many degrees of consistency a comparison matrix is, Saaty
+ gave us a measurement of consistency, the Consistency Index or CI.
  To calculate this index, we use the following formula:
 \begin_inset Formula 
 \begin{equation}
@@ -2254,9 +3765,8 @@ CI=\frac{\lambda_{max}-n}{n-1}=\frac{3.4129-3}{2}=0.20645\label{eq:ci}
 
 \begin_layout Standard
 Now, how can we use this index to determine the consistency of our comparison?
- Once again, according to Prof.
- Saaty, by comparing it with the appropriate one we can know how many degrees
- of consistent our comparison matrix is.
+ Once again, according to Saaty, by comparing it with the appropriate one
+ we can know what is the degree of consistency of the comparison matrix.
  The proper consistency index is called Random Consistency Index or RI 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2268,8 +3778,7 @@ key "Saaty:1980ahp"
 \end_layout
 
 \begin_layout Standard
-Prof.
- Saaty had pre-calculated the Random Consistency Index for comparison matrix
+Saaty had pre-calculated the Random Consistency Index for comparison matrix
  using a 1-9 scale based on a sample size of 500 random generated reciprocal
  matrices in 
 \begin_inset CommandInset ref
@@ -2544,9 +4053,8 @@ RI
 
 \begin_layout Standard
 To compare the Consistency Index with the corresponding Random Consistency
- Index, Prof.
- Saaty proposed the Consistency Ratio which is calculated using the following
- formula 
+ Index, Saaty proposed the Consistency Ratio which is calculated using the
+ following formula 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Saaty:1980ahp"
@@ -2568,7 +4076,7 @@ CR=\frac{CI}{RI}\label{eq:crr}
 If the value of Consistency Ratio is smaller or equal to 10%, then the inconsist
 ency in the comparison matrix is acceptable.
  However, if the Consistency Ratio is greater than 10%, we need to revise
- our judgement in the pair-wise comparison process.
+ our judgement in the pairwise comparison process.
 \end_layout
 
 \begin_layout Standard
@@ -2605,10 +4113,17 @@ We have
 \end_inset
 
 .
- Therefore we can see that Darek’s subjective judgement in the pair-wise
+ Therefore we can see that Darek’s subjective judgement in the pairwise
  comparison process is not consistent.
- Thus, we recommend a revision for Darek’s pair-wise comparison between
- three car models to improve the consistency.
+ Thus, we recommend a revision for Darek’s pairwise comparison between three
+ car models to improve the consistency.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_body

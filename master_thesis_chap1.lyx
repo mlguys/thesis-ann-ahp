@@ -53,6 +53,7 @@ End
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement !tph
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -118,9 +119,9 @@ name "sec:Multi-criteria-Decision-Analysis"
 
 \begin_layout Standard
 To begin this chapter, we will examine the foundation theory of MCDA which
- is the Decision Theory in 
+ is the Decision Theory in section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:The-foundation-of"
 
 \end_inset
@@ -130,17 +131,17 @@ reference "subsec:The-foundation-of"
 \end_layout
 
 \begin_layout Standard
-Next, we will have a look at the structure of a typical decision-making
- process and how it operates in 
+Next, we will have a look at the structure of a typical decision situation
+ and how it operates in section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Structure-of-decision-making"
 
 \end_inset
 
- and 
+ and section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:The-process-of"
 
 \end_inset
@@ -150,16 +151,16 @@ reference "subsec:The-process-of"
 
 \begin_layout Standard
 Then we will explain the reasons why people use MCDA for aiding the decision
- making process in 
+ making process in section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Why-people-use"
 
 \end_inset
 
- and 
+ and section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:From-Monocriteria-to"
 
 \end_inset
@@ -170,9 +171,9 @@ reference "subsec:From-Monocriteria-to"
 \begin_layout Standard
 After having a brief description of Decision Theory, decision-making process
  and why we need MCDA, we will delve deep into the philosophy and paradigms
- of MCDA in 
+ of MCDA in section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Basic-concept-mcda"
 
 \end_inset
@@ -181,7 +182,7 @@ reference "subsec:Basic-concept-mcda"
 \end_layout
 
 \begin_layout Standard
-We will also list some interest MCDA methods in subsection 
+We will also list some interesting MCDA methods in subsection 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "subsec:MCDA-Methods"
@@ -216,14 +217,14 @@ key "wiki:decision_theory"
 \end_inset
 
 .
- Each discipline has its way of studying and theorising Decision Theory,
+ Each discipline has its way of studying and theoretizing on Decision Theory,
  for example, a psychologist might want to investigate the behavior of people
  when they are making decisions, an economist is likely to study the payoffs
  of each decision or a political scientist will try to find the optimal
  voting rule by studying Decision Theory.
  However, if we abstract Decision Theory from all disciplines, we can see
- that Decision Theory is all about theorizing human activities in situations
- where there are a goal and options to choose between in order to reach
+ that Decision Theory is all about theoretizing on human activities in situation
+s where there is a goal and options to choose between in order to reach
  that goal, in other words, decision-making process.
 \end_layout
 
@@ -270,9 +271,10 @@ Narrow
 
 definition
 \series default
-: Decision Theory is the set of theoretical consideration of what is a decision,
- what is decision situation, what are elements of a decision situation,
- what is right or optimal decision and how to make a right or optimal decision.
+: Decision Theory is the set of theoretical considerations of what is a
+ decision, what is decision situation, what are the elements of a decision
+ situation, what is right or optimal decision and how to make a right or
+ optimal decision.
 \end_layout
 
 \begin_layout Standard
@@ -309,9 +311,8 @@ Decision
 
 Theory
 \series default
- concerns about constructing rules and methods of making decisions that
- in the context of an ideal decision maker (i.e.
- decision maker with perfect information) can identify the best decision.
+ concerns about constructing rules and methods of making decisions in which
+ an ideal decision with perfect information could make optimal decisions.
 \end_layout
 
 \begin_layout Labeling
@@ -341,7 +342,7 @@ Theory
 \end_layout
 
 \begin_layout Standard
-Also, readers should notice the direction of the thesis in term of which
+Also, readers should notice the direction of the thesis in terms of which
  branch of Decision Theory we will go from here.
  Because the goal of this study is to introduce a new approach, in this
  case, Artificial Neural Network which will be used to enhance the process
@@ -357,11 +358,11 @@ reference "subsec:Structure-of-decision-making"
 
 \end_inset
 
- we will examine the structure of a typical decision-making process.
+ we will examine the basic elements of a decision situation.
 \end_layout
 
 \begin_layout Subsection
-Structure of a decision-making process
+Elements of a decision situation
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Structure-of-decision-making"
@@ -372,7 +373,7 @@ name "subsec:Structure-of-decision-making"
 \end_layout
 
 \begin_layout Standard
-Typically, a decision-making process comprises of these elements 
+Typically, a decision situation comprises of these elements 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "lectureUZ"
@@ -390,10 +391,10 @@ Decision
 \begin_inset space ~
 \end_inset
 
-makers
+maker
 \series default
-: The decision makers themselves, they are the ones who are responsible
- for the consequences of their decisions.
+: The decision maker is the one who is responsible for the consequences
+ of their decisions.
 \end_layout
 
 \begin_layout Labeling
@@ -425,7 +426,7 @@ state
 \labelwidthstring 00.00.0000
 
 \series bold
-Decisions
+Alternatives
 \series default
 : The options or alternative courses of action which are the possibilities
  of realizing our goal or desired state.
@@ -439,8 +440,15 @@ Criterion
 \series default
 : A measurement or a standard which allows comparing between different options
  or alternatives.
- The criterion can be profit, cost, time, effort, property, measurable index,
- measurable attribute or measurable characteristic.
+ For example, when we want to buy a new house, measurements such as the
+ number of rooms, the number of floors, or the price of the house can be
+ used to compare between alternatives.
+ Also, a criterion can also be known as a measurable index, a measurable
+ attribute or a measurable characteristic.
+ A criterion can also be positive or negative, for example, criteria related
+ to time such as time to manufacture, time to delivery or response time
+ are negative criteria because for these criteria we often want their values
+ as small as possible.
 \end_layout
 
 \begin_layout Labeling
@@ -450,13 +458,8 @@ Criterion
 Constraints
 \series default
 : Limitations stated by the decision problem.
- It can also be used to decide the polarity of a criterion, i.e.
- to decide if a criterion is a positive criterion or negative criterion.
- For example, if a decision problem has time constraint then evaluation
- from criteria related to time such as time to manufacture, time to delivery,
- response time or time to travel should be as small as possible.
- In other words, those criteria are negative criteria, i.e.
- the smaller the value, the better the evaluation.
+ For example, a budget to buy a new house can not exceed 50.000 US dollars
+ or the response time from a computer system should be below 100 milliseconds.
 \end_layout
 
 \begin_layout Labeling
@@ -467,6 +470,7 @@ Consequences
 \series default
 : Outcomes or results we get after realizing the goal with the option or
  alternative we have chosen.
+ 
 \end_layout
 
 \begin_layout Labeling
@@ -475,8 +479,11 @@ Consequences
 \series bold
 Uncertainty
 \series default
-: The set of all consequences that are outside the set of expected consequences
- of the goal.
+: In a decision situation, uncertainty is an unknown factor that could affect
+ the outcomes of the decision situation.
+ For example, when we are traveling, going by plane is a good decision since
+ it is fast and cheap for a long trip, but we can not know if we are going
+ to be captured by terrorist or not.
 \end_layout
 
 \begin_layout Labeling
@@ -485,48 +492,28 @@ Uncertainty
 \series bold
 Preferences
 \series default
-: The view of each decision maker which determines the importance of each
- criterion.
- For example, in a decision problem where the time and cost are criteria,
- a decision maker may think time is the most important criterion while the
- other decision maker may think the opposite, cost is the most important
- criterion.
- Therefore, an alternative with high evaluation from time criterion may
- be appealing to decision makers who value time criterion while at the same
- time being ignored by decision makers who value cost criterion.
- This element is the most important one in a decision situation because
- it directly affects the performance of an alternative in different decision
- maker view.
+: The view of the decision maker which determines what kind of criterion
+ the decision maker will use in the decision situation.
+ For example, when choosing a house to buy, if the decision maker only prefers
+ the appearance of the house then he may choose criteria such as the number
+ of windows, the color of the wall, or what kind of architectural style
+ the house is.
 \end_layout
 
-\begin_layout Subsection
-The process of making a decision
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:The-process-of"
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
 
+\series bold
+Decision-making
+\begin_inset space ~
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-The relationship between elements in a decision-making process is presented
- in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Components-of-a"
-
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "lectureUZ"
-
-\end_inset
-
-:
+process
+\series default
+: The process in which the decision maker makes the evaluation of alternatives
+ with respect to criteria and constraints.
+ The result of this process is the final suggestion to the decision maker
+ so he or she can make the final decision.
 \end_layout
 
 \begin_layout Standard
@@ -536,8 +523,9 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename img/Components of a decision-making process.png
+	filename img/Elements of a decision situation.png
 
 \end_inset
 
@@ -554,7 +542,7 @@ name "fig:Components-of-a"
 
 \end_inset
 
-Elements of a decision-making process
+Elements of a decision situation
 \end_layout
 
 \end_inset
@@ -564,60 +552,297 @@ Elements of a decision-making process
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
-In 
+The 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Components-of-a"
 
 \end_inset
 
-, all the elements of decision-making process are drawn as members of an
- analysis process.
- As we can see, the process starts first by formulating the Initial State
- of the decision problem, so then we can find the Constraints of the decision
- problem, determine the Criteria and construct the Alternatives.
- Then this information is given to Decision Makers.
+ shows us the relationship of elements of a decision situation.
+ As we can see, from the initial state we will formulate the decision-making
+ process by determining the criteria and constructing the alternatives from
+ the decision problem.
+ 
 \end_layout
 
 \begin_layout Standard
-After formulating the information from the Initial State, each Decision
- Maker with his or her Preferences takes part in an Evaluating Process along
- with the given Alternatives, Criteria and Constraints.
- During the Evaluating Process, one alternative or combination of alternatives
- which is considered the best comparing to other alternatives is chosen
- to realize the goal of the decision situation.
- Finally, after realizing the goal using the selected alternative, we get
- the outcomes from the realization.
+In the decision-making process, the criteria should be determined with the
+ respect of the decision maker's preferences and the alternatives should
+ be evaluated by the criteria and the constraints of the decision problem.
+ Then, from the result of the decision-making process, the decision maker
+ makes the final decision in order to solve the decision problem thus realizing
+ the goal of the decision situation.
+ 
 \end_layout
 
 \begin_layout Standard
-These outcomes belong to the Uncertainty set because no matter how careful
- the Evaluating Process is executed by Decision Makers, there are always
- some uncontrollable and unforeseeable factors that could affect the outcomes.
- In other words, we can make a good decision by thorough deliberation in
- the process of Evaluating Process and take into account all possible informatio
-n from Initial State, but because of the Uncertainty, we cannot know for
- sure if that decision is the right decision or not.
+After realizing the goal, we get the consequences or the outcomes of the
+ decision situation, and because of the uncertainty, these results could
+ be affected in an unexpected way.
 \end_layout
 
 \begin_layout Standard
-In 
+Next, in the 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "subsec:Why-people-use"
+reference "subsec:The-process-of"
 
 \end_inset
 
-, we will present to the readers the concept of Decision Analysis and why
- it is important to have Decision Analysis in every decision-making process.
+, we will get into the steps of decision-making process.
 \end_layout
 
 \begin_layout Subsection
-The necessary of Decision Analysis
+The steps of decision-making process
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-process-of"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To solve the decision problem, the decision maker will follow the steps
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Steps-of-a"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lectureUZ"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Investigate
+\begin_inset space \space{}
+\end_inset
+
+the
+\begin_inset space \space{}
+\end_inset
+
+situation
+\begin_inset space \space{}
+\end_inset
+
+in
+\begin_inset space \space{}
+\end_inset
+
+detail
+\series default
+: The decision maker starts to formulate the decision-making process by
+ investigating the decision situation.
+ The investigation includes determining the goal of the decision problem,
+ collecting data and information related to the decision problem and find
+ the sources of the decision problem.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Construct
+\begin_inset space \space{}
+\end_inset
+
+the
+\begin_inset space \space{}
+\end_inset
+
+decision
+\begin_inset space \space{}
+\end_inset
+
+alternatives
+\series default
+: After the investigation, based on the gathered information, the decision
+ maker constructs a set of alternatives.
+ These alternatives are the potential solutions for realizing the goal of
+ the decision problem.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Formulate
+\begin_inset space \space{}
+\end_inset
+
+criteria
+\series default
+: The decision maker formulates a set of criteria which is used to determine
+ the value of each alternative.
+ The preferences of the decision maker decide what kind of criterion will
+ be used in the decision-making process.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Evaluation
+\begin_inset space \space{}
+\end_inset
+
+of
+\begin_inset space \space{}
+\end_inset
+
+alternatives
+\series default
+: By using some methods (refer to section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:MCDA-Methods"
+
+\end_inset
+
+), the decision maker evaluates the alternatives with the formulated criteria.
+ The result of the evaluation will help the decision maker to make the decision
+ which realizes the goal of the decision problem.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Implement
+\begin_inset space \space{}
+\end_inset
+
+the
+\begin_inset space \space{}
+\end_inset
+
+decision
+\series default
+: The decision maker constructs a plan of activity based on his or her decision.
+ From this plan, the decision maker will implement it and in the end, realizes
+ the goal of the decision problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/steps of decision-making process.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Steps-of-a"
+
+\end_inset
+
+Steps of a decision-making process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Depending on the nature of the decision problem, the decision-making process
+ can become a cycle in which the next cycle will evaluate the consequences
+ of the decision made from the previous decision cycle and makes corrections.
+ The 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Decision-cycle"
+
+\end_inset
+
+ depicts the decision cycle.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/cycle of decision-making process.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Decision-cycle"
+
+\end_inset
+
+Decision cycle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The necessity of Decision Analysis
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Why-people-use"
@@ -628,41 +853,34 @@ name "subsec:Why-people-use"
 \end_layout
 
 \begin_layout Standard
-In 
+In sections 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "subsec:The-foundation-of"
 
 \end_inset
 
-, 
+-
 \begin_inset CommandInset ref
-LatexCommand formatted
-reference "subsec:Structure-of-decision-making"
-
-\end_inset
-
-, and 
-\begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "subsec:The-process-of"
 
 \end_inset
 
-, we learnt that in a decision-making process, decision makers have the
+, we learned that in a decision-making process, the decision maker has the
  responsibility to choose the right decision in order to realize the goal
  in that particular situation.
  However, there are many factors with hidden information in a decision-making
- process that can hide the true value of each decision thus affect the judgement
+ process that can hide the true value of each decision thus affect the judgment
  of the decision maker.
  
 \end_layout
 
 \begin_layout Standard
-For example, when choosing suppliers for providing materials to build a
- particular product.
+For example, consider the situation when we choose suppliers for providing
+ materials to build a particular product.
  If we do not spend the time to research the past performance of each supplier,
- we will never know the true value of each supplier in term of providing
+ we will never know the true value of each supplier in terms of providing
  the needed materials.
  Thus our judgment for choosing the suppliers will not be certain.
  To overcome this difficulty of uncertain judgment, a decision maker will
@@ -677,68 +895,27 @@ key "roy2005paradigms"
 
 \end_inset
 
-: It is the activity of using explicit and formalized models to help obtain
- elements of responses to the questions posed by a stakeholder in a decision
- process.
+: DA is an activity in which the decision maker uses explicit and formalized
+ models to obtain more information in a decision process.
  In other words, it is the process of getting more information from the
- context of the decision-making process to clarify various components inside
- a decision problem.
+ decision problem in order to clarify various elements inside the decision
+ situation.
 \end_layout
 
 \begin_layout Standard
 With the above definition, DA's purpose is to establish the decision-making
- process with working hypotheses, formulations of propositions (satisfying
- solutions or possible compromises) which clears out the uncertainty in
- the decision maker's judgement 
+ process in a scientifically based way to clear out the uncertainty in the
+ decision maker's judgment 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "roy2005paradigms"
 
 \end_inset
 
- .
- In such case, DA can contribute to the follows:
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Analyzing the context of the decision-making process by various means such
- as identifying the actors, the possibilities of action, their consequences,
- or the stakes.
-\end_layout
-
-\begin_layout Itemize
-Organizing and structuring how the decision-making process should proceed
- to improve the consistency among the values underlying the goal and the
- final decision that realize that goal.
-\end_layout
-
-\begin_layout Itemize
-Getting the actors (such as the decision maker and the expert who is providing
- the information related to the decision) to cooperate by proposing a way
- to improve mutual understanding and a framework that comfortable to debate.
-\end_layout
-
-\begin_layout Itemize
-Elaborating recommendations by using the models or procedures which are
- formulated within the context of a working hypothesis.
-\end_layout
-
-\begin_layout Itemize
-Aiding in the final decision legitimization.
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
+.
+ It is made possible by providing the decision-making process with working
+ hypotheses and formulations of propositions such as satisfying solutions
+ or possible compromises.
 \end_layout
 
 \begin_layout Standard
@@ -749,13 +926,14 @@ reference "subsec:From-Monocriteria-to"
 
 \end_inset
 
-, we will present to readers the notions of Mono-criteria and Multi-criteria,
- thus the reason why MCDA is the prefer tool for many decision makers.
+, we will present to readers the notions of Mono-criterion approach and
+ Multi-criteria approach, thus the reason why Multi-criteria approach is
+ the preferred tool for many decision makers in decision analysis.
  
 \end_layout
 
 \begin_layout Subsection
-From Mono-criteria to Multi-criteria
+From Mono-criterion to Multi-criteria
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:From-Monocriteria-to"
@@ -768,11 +946,12 @@ name "subsec:From-Monocriteria-to"
 \begin_layout Standard
 In a decision-making process, a decision maker has two approaches to evaluate
  the options.
- They are Mono-criteria and Multi-criteria.
- To simply put, Mono-criteria is when the decision maker only uses one criterion
- for determining the value of each option of the decision problem.
- Multi-criteria, on the other hand, evaluate each option on many different
- criteria that associating with various aspects of the decision problem.
+ They are Mono-criterion approach and Multi-criteria approach.
+ To simply put, Mono-criterion approach is when the decision maker only
+ uses one criterion for determining the value of each option of the decision
+ problem.
+ Multi-criteria approach, on the other hand, evaluates each option on many
+ different criteria associated with various aspects of the decision problem.
  Readers can find more information about criterion in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -784,9 +963,9 @@ reference "subsec:Basic-concept-mcda"
 \end_layout
 
 \begin_layout Standard
-When a decision maker is dealing with a DA process, it is very rare for
- the decision maker to have in mind only one single clear criterion (Mono-criter
-ia).
+When a decision maker is dealing with a DA process, it is very difficult
+ for the decision maker to think with only one single criterion in his or
+ her mind only (Mono-criterion approach).
  In a multi-actor environment, it is even more unlikely for that single
  criterion to satisfy the point of view of every actor in the decision-making
  process because each actor plays a different role in that process which
@@ -820,9 +999,8 @@ key "roy2005paradigms"
 
 \begin_layout Standard
 Therefore, it is typical to associating a particular criterion to each related
- point of view (Multi-criteria).
- For each associated criterion, it will be used to evaluate any potential
- action on an appropriate qualitative or quantitative scale 
+ point of view (Multi-criteria approach) and use a suitable scale (qualitative
+ scale or quantitative scale) to evaluate any potential action 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "roy2005paradigms"
@@ -833,15 +1011,15 @@ key "roy2005paradigms"
 \end_layout
 
 \begin_layout Standard
-As we can see, in many decision-making contexts, using Mono-criteria approach
+As we can see, in many decision-making contexts, using Mono-criterion approach
  might overlook certain aspects of the decision problem, thus affecting
- the judgement of the decision maker.
+ the judgment of the decision maker.
  Using Multi-criteria approach in such cases will help the decision maker
- to avoid the before-mentioned danger of neglecting.
+ to avoid the aforementioned danger of neglecting.
 \end_layout
 
 \begin_layout Standard
-Next in 
+Next, in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "subsec:Basic-concept-mcda"
@@ -866,46 +1044,36 @@ name "subsec:Basic-concept-mcda"
 \end_layout
 
 \begin_layout Standard
-The following concepts have a fundamental role in the process of analyzing
- and structuring the decision-making process with MCDA:
-\end_layout
+Recall from section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Structure-of-decision-making"
 
-\begin_layout Standard
-\begin_inset space \thinspace{}
 \end_inset
 
-
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
+, we know that from the elements of a decision situation, there is 
 \series bold
-Alternatives
+alternatives
 \series default
- which defines the options that the decision maker has to decide to choose
- one as the way to realize the goal in a decision-making process.
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
+ and 
 \series bold
-Criterion or Criteria
+criterion
 \series default
- which acts as a tool to evaluate and compare between alternatives.
+ (or 
+\series bold
+criteria
+\series default
+).
+ Alternatives define the options that the decision maker has to choose as
+ the way to realize the goal in a decision-making process.
+ Criterion (or criteria) acts as a tool to evaluate and compare alternatives.
+ These elements have fundamental roles in the course of analyzing and structurin
+g the decision-making process with MCDA.
 \end_layout
 
 \begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The subsections below will present to the readers the definitions of each
- concept so the readers can generalize what an MCDA process is.
+The section below will present to the readers the definitions of each element
+ so the readers can generalize what an MCDA process is.
 \end_layout
 
 \begin_layout Subsubsection
@@ -965,7 +1133,7 @@ key "roy2005paradigms"
 
 \series bold
 Mutual
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 exclusive
@@ -979,7 +1147,7 @@ exclusive
 
 \series bold
 Non-mutual
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 exclusive
@@ -1024,9 +1192,9 @@ key "roy2005paradigms"
  During the decision analysis process, this set can evolve i.e.
  adding more potential actions as a result of investigating every aspect
  of the decision problem.
- For example, the investigation can help gain more knowledge about the goal,
- constraints, the preferences of the stakeholders, the possible outcomes
- of the actions, and other aspects of the decision problem.
+ For example, the investigation can help in gaining more knowledge about
+ the goal, constraints, the preferences of the stakeholders, the possible
+ outcomes of the actions, and other aspects of the decision problem.
  Thus, this new knowledge could open new boundary that helps to identify
  other actions as potential action.
 \end_layout
@@ -1059,20 +1227,31 @@ A=\{a_{1},a_{2},\ldots,a_{m}\}
 \end_layout
 
 \begin_layout Standard
-For each potential action, when we can model the action by referring to
- some variable 
-\begin_inset Formula $x1,x2,x3,...$
+For each potential action, we can represent it by some variables 
+\begin_inset Formula $x_{1,}x_{2,}x_{3,}...$
 \end_inset
 
- we can write:
+ we can write as follow:
 \begin_inset Formula 
 \[
-a=(x_{1},x_{2},...)
+a=(x_{1},x_{2},x_{3}...)
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Each variable 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ where 
+\begin_inset Formula $i=1,2,...$
+\end_inset
+
+ is the score of evaluating an potential action by using a criterion.
 \end_layout
 
 \begin_layout Standard
@@ -1102,7 +1281,7 @@ name "subsec:Criterion-and-Family"
 The readers should recall from 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "subsec:From-Monocriteria-to"
+reference "subsec:Structure-of-decision-making"
 
 \end_inset
 
@@ -1211,11 +1390,11 @@ key "roy2005paradigms"
 
 \series bold
 Purely
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 ordinal
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 scale
@@ -1223,11 +1402,11 @@ scale
 \end_inset
 
 or
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 qualitative
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 scale
@@ -1242,7 +1421,7 @@ scale
 
 \series bold
 Quantitative
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 scale
@@ -1266,8 +1445,8 @@ name "subsec:MCDA-Methods"
 \begin_layout Standard
 Decision Makers can use different methods to analyze the alternatives and
  find the best alternative or the group of best alternatives, some of these
- methods do not require criteria to have weights, while others do require
- 
+ methods do not require criteria to have weights or order of importance,
+ while others do require 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "lectureUZ"
@@ -1286,13 +1465,451 @@ For example, the following methods do not use weights:
 
 \series bold
 Pareto
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 Rule
 \series default
 : We will choose from the given alternatives the set of alternatives which
  are non-dominated by any other alternatives.
+ Non-dominated alternative means that for an alternative 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ there exists no superior alternative 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ to 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ when 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ is being compared with all other alternatives.
+ The readers should also know that 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ is considered superior than 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ if and only if the scores of 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ are better than the scores of 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ respectively.
+ For example, we have the alternatives 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{i}=(x_{1},x_{2},x_{3})$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{k}=(x_{1}^{'},x_{2}^{'},x_{3}^{'})$
+\end_inset
+
+.
+ Because we have 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(x_{1},x_{2},x_{3})>(x_{1}^{'},x_{2}^{'},x_{3}^{'})\iff(x_{1}>x_{1}^{'})\wedge(x_{2}>x_{2}^{'})\wedge(x_{3}>x_{3}^{'})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ , therefore 
+\begin_inset Formula $a_{i}>a_{k}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+For better understanding, we will use the 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix"
+
+\end_inset
+
+ as a simple example to demonstrate the Pareto Rule.
+ The 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix"
+
+\end_inset
+
+ will be a decision table that includes the scores of three alternatives
+ 
+\begin_inset Formula $a_{1},a_{2},$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+ in a house buying problem.
+ In our house buying problem, we have three criteria: number of rooms (
+\begin_inset Formula $g_{1}$
+\end_inset
+
+), floor area of the house in square meter (
+\begin_inset Formula $g_{2}$
+\end_inset
+
+), and the price of the house in US dollar (
+\begin_inset Formula $g_{3}$
+\end_inset
+
+) .
+ We will want to buy a house such that the bigger the number of rooms and
+ floor area the better the house while the price should be as low as possible.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Example-decision-matrix"
+
+\end_inset
+
+Decision table for house buying problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+To apply the Pareto Rule, we will check each alternative 
+\begin_inset Formula $a_{1,}a_{2},$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+ to see which one is non-dominated.
+ In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix"
+
+\end_inset
+
+ we can see that 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ is dominated by 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ (
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ has more rooms, bigger floor area and cheaper price than 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+) therefore we exclude 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ from our non-dominated alternatives set.
+ Continue, we can see that 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+ are non-dominated because there is no other alternative that can be considered
+ superior than 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+.
+ Finally, we get the set of non-dominated alternatives as follow:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+P(A)=\{a_{1},a_{3}\}\label{eq:pareto_rule}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Where 
+\begin_inset Formula $A$
+\end_inset
+
+ is the set of the given alternatives 
+\begin_inset Formula $\{a_{1},a_{2},a_{3}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $P(A)$
+\end_inset
+
+ is the set of non-dominated alternative that we get after using Pareto
+ Rule.
 \end_layout
 
 \begin_layout Labeling
@@ -1300,7 +1917,7 @@ Rule
 
 \series bold
 Conjunctive
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 Method
@@ -1310,6 +1927,224 @@ Method
  After getting all the sets of satisfying alternatives for each criterion,
  we will intersect all those sets and the resulting set from the intersecting
  will be our chosen set of alternatives.
+ For example, we define the levels of satisfaction for the house buying
+ problem in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix"
+
+\end_inset
+
+ as follow: 
+\begin_inset Formula $s_{1}=3,s_{2}=50,s_{3}=40000$
+\end_inset
+
+.
+ Now, we find all the sets of satisfying alternatives for each criterion
+ 
+\begin_inset Formula $g_{1},$
+\end_inset
+
+
+\begin_inset Formula $g_{2},g_{3}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+C_{1}(A)=\{a_{1,}a_{3}\}\label{eq:c1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+C_{2}(A)=\{a_{1},a_{2},a_{3}\}\label{eq:c2}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+C_{3}(A)=\{a_{1},a_{2}\}\label{eq:c3}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let us take a look at the set 
+\begin_inset Formula $C_{1}(A)$
+\end_inset
+
+ which takes in the set of the given alternatives 
+\begin_inset Formula $A=\{a_{1},a_{2},a_{3}\}$
+\end_inset
+
+ and compares the scores with respect to criterion 
+\begin_inset Formula $g_{1}$
+\end_inset
+
+ with the level of satisfaction 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+.
+ Because only 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+ have the number of rooms that is bigger than 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ (
+\begin_inset Formula $4>3$
+\end_inset
+
+, 
+\begin_inset Formula $5>3$
+\end_inset
+
+) therefore the set 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $C_{1}(A)$
+\end_inset
+
+ includes 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+ but excludes 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+, thus 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $C_{1}(A)=\{a_{1,}a_{3}\}$
+\end_inset
+
+.
+ Similarly, we will compare 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{3}$
+\end_inset
+
+ with the scores of criterion 
+\begin_inset Formula $g_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $g_{3}$
+\end_inset
+
+ respectively to get 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+set 
+\begin_inset Formula $C_{2}(A)$
+\end_inset
+
+ and set 
+\begin_inset Formula $C_{3}(A)$
+\end_inset
+
+.
+ Finally, we intersect 
+\begin_inset Formula $C_{2}(A)$
+\end_inset
+
+, 
+\begin_inset Formula $C_{2}(A)$
+\end_inset
+
+, and set 
+\begin_inset Formula $C_{3}(A)$
+\end_inset
+
+ to get the final set of alternatives that satisfies all the levels of 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+satisfaction
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $s_{1},s_{2},s_{3}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+C(A)=C_{1}(A)\cap C_{2}(A)\cap C_{3}(A)=\{a_{1}\}\label{eq:conjuctive}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Labeling
@@ -1317,7 +2152,7 @@ Method
 
 \series bold
 Disjunctive
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 Method
@@ -1325,12 +2160,20 @@ Method
 : Similar to Conjunctive Method but we will choose alternatives which are
  good for at least one criterion.
  In other words, instead of intersecting all the sets of satisfying alternatives
- for each criterion, we find the union of all those sets.
+ for each criterion, we find the union of all those sets:
+\begin_inset Formula 
+\begin{equation}
+D(A)=C_{1}(A)\cup C_{2}(A)\cup C_{3}(A)=\{a_{1},a_{2},a_{3}\}\label{eq:disjunctive}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 On the other hand, these following examples are methods which do require
- Criteria to have weights:
+ Criteria to have weights or order of importance:
 \end_layout
 
 \begin_layout Labeling
@@ -1338,21 +2181,198 @@ On the other hand, these following examples are methods which do require
 
 \series bold
 Lexicographic
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 Method
 \series default
 : We will order the criteria from the most important to the less important.
- The ordering will be based on the weights of the criteria.
  Then, we will choose alternatives which are the best with respect to the
  first ranking criterion base on the evaluation of the Decision Table.
  If there is only one such alternative, then we will stop the process.
- If there are more such alternatives (more than two), we will continue to
+ If there are more such alternatives (more than one), we will continue to
  choose from these alternatives the ones which are the best with respect
  to the second ranking criterion.
  We will continue the process unless we reach the last criterion in the
  ordering or there is only one alternative left.
+ For example, we define the order of importance of the criteria in the house
+ buying problem in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix"
+
+\end_inset
+
+ as follow: 
+\begin_inset Formula 
+\begin{equation}
+g_{2}>g_{3}>g_{1}\label{eq:orderofimportance}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now, we find which alternative is the best with respect to the criterion
+ 
+\begin_inset Formula $g_{2}$
+\end_inset
+
+.
+ From 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix"
+
+\end_inset
+
+ we can see that 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+ are equal in terms of 
+\begin_inset Formula $g_{2}$
+\end_inset
+
+ therefore both of them are the best alternative thus: 
+\begin_inset Formula 
+\begin{equation}
+C_{2}^{*}(A)=\{a_{1,}a_{3}\}\label{eq:lex1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Because we have two alternatives for the set 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $C_{2}^{*}(A)$
+\end_inset
+
+, we will 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+continue to choose from the set 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $C_{2}^{*}(A)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ the alternatives which are the best with respect to the criterion 
+\begin_inset Formula $g_{3}$
+\end_inset
+
+.
+ Now, from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix"
+
+\end_inset
+
+ we can see that 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ is better than 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $g_{3}$
+\end_inset
+
+, therefore we have: 
+\begin_inset Formula 
+\begin{equation}
+C_{3}^{*}(C_{2}^{*}(A))=\{a_{1}\}\label{eq:lex2}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Finally, because we only have one alternative in the set 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $C_{3}^{*}(C_{2}^{*}(A))$
+\end_inset
+
+ therefore we stop the process and use the set 
+\begin_inset Formula $C_{3}^{*}(C_{2}^{*}(A))$
+\end_inset
+
+ as the final result: 
+\begin_inset Formula 
+\begin{equation}
+L(A)=\{a_{1}\}\label{eq:lex_result}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Labeling
@@ -1360,23 +2380,751 @@ Method
 
 \series bold
 Weighted
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
-Average Method
+Average
+\begin_inset space \space{}
+\end_inset
+
+Method
 \series default
-: We will calculate the weighted average for each alternative by multiplying
- the Scaled Decision Table with Criteria weights.
+: In this method, we change the scale of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix"
+
+\end_inset
+
+ to the scale of satisfaction.
+ In this scale of satisfaction, an alternative with respect to a criterion
+ will have the value of 3 if it is the best comparing to other alternatives,
+ 2 if it is the second and 1 if it is the last.
+ Using the scale of satisfaction will create a scaled decision table in
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix-1"
+
+\end_inset
+
+.
+ Also, we assign each of the criteria to a weight which shows how important
+ a criterion is compared to other criteria.
+ The readers should also know that the sum of all weights will be 1.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Example-decision-matrix-1"
+
+\end_inset
+
+Scaled decision table
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix-1"
+
+\end_inset
+
+ we can see that now the values for each criterion is an value created from
+ the ordering or ranking between alternatives.
+ For example, in terms of 
+\begin_inset Formula $g_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ has the value of 2 or the second position in the ranking because its original
+ value in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix"
+
+\end_inset
+
+ is 4 which is higher than 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ but lower than 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $g_{2}$
+\end_inset
+
+, because 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+ have the same original value which is the best in term of 
+\begin_inset Formula $g_{2}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix"
+
+\end_inset
+
+; therefore, they have the same value of 3.
+\begin_inset Newline newline
+\end_inset
+
+Now, we will calculate the weighted average for each alternative by multiplying
+ the scaled decision table with the weights of criteria and sum the table
+ row by row.
  By comparing the scores and select the biggest one, we will have our best
  alternative.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Example-decision-matrix-1-1"
+
+\end_inset
+
+Scaled decision table multiplied with weights
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S(a_{i})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2*0.2=0.4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3*0.5=1.5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3*0.3=0.9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(0.4+1.5+0.9)=2.8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1*0.2=0.2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1*0.5=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2*0.3=0.6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(0.2+1+0.6)=1.8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3*0.2=0.6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3*0.5=1.5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1*0.3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(0.6+1.5+0.3)=2.4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+As we can see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Example-decision-matrix-1-1"
+
+\end_inset
+
+, the alternative 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ seems to have the highest score 
+\begin_inset Formula $S(a_{1})=2.8>2.4>1.8$
+\end_inset
+
+ therefore 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ is the best alternative according to the weighted average method.
 \end_layout
 
 \begin_layout Standard
 The above methods are just simple methods, however, there are other methods
- that are complicated and can be used in complex decision problem 
+ that are more complicated and can be used in complex decision problem 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "wiki:ahp2017"
+key "wiki:mcda"
 
 \end_inset
 
@@ -1401,7 +3149,14 @@ process
 
 (AHP)
 \series default
-: a method to derive priority or ratio scales from paired comparisons.
+: a method to derive priority or ratio scales from paired comparisons 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wiki:ahp2017"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Labeling
@@ -1418,8 +3173,15 @@ outranking method
 \begin_inset Quotes erd
 \end_inset
 
- of decision making which is applied to three main problems: choosing, ranking,
- and sorting.
+ of decision making which has applications in choosing problem, ranking
+ problem, and sorting problem 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wiki:ELECTRE"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Labeling
@@ -1436,18 +3198,35 @@ outranking method
 \begin_inset Quotes erd
 \end_inset
 
- but it can be used both in normative approach and descriptive approach.
+.
+ Combining with its descriptive complement method which is geometrical analysis
+ for interactive aid (GAIA), Promethee and Gaia methods can be used both
+ in normative approach and descriptive approach 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wiki:premethee"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-In the next 
+In the next chapter 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:The-Method-of"
 
 \end_inset
 
 , we will present to the readers a comprehensive description of AHP method.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_body
