@@ -104,7 +104,7 @@ End
 \end_layout
 
 \begin_layout Section
-Artificial Neural Network
+Artificial Neural Networks
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Artificial-Neural-Network"
@@ -133,7 +133,7 @@ key "golmohammadi2011neural"
 \begin_layout Standard
 However, there is an interesting approach to approximate the best possible
  decision from such system without paying too much computation cost; it
- is by using Artificial Neural Network (ANN).
+ is by using Artificial Neural Networks (ANN).
 \end_layout
 
 \begin_layout Standard
@@ -176,9 +176,9 @@ key "wiki:ann"
 \end_layout
 
 \begin_layout Standard
-Therefore, in this section, we will get into the details of ANN, what inspires
- the model of ANN, what is the fundamental element of ANN, the architecture
- of ANN, how ANN can learn, and how to train ANN.
+Therefore, in this section, we study the following details of ANN: what
+ inspires the model of ANN, what is the fundamental element of ANN, the
+ architecture of ANN, how ANN can learn, and how to train ANN.
 \end_layout
 
 \begin_layout Subsection
@@ -193,10 +193,10 @@ name "subsec:The-Model-of"
 \end_layout
 
 \begin_layout Standard
-In a sense, artificial neural network (ANN) simulate the function of the
+In a sense, artificial neural networks (ANN) simulate the function of the
  human brain.
  It is a type of network which nodes are artificial neurons.
- These artificial neurons are based on the mathematic model of biological
+ These artificial neurons are based on the mathematical model of biological
  neurons.
 \end_layout
 
@@ -206,12 +206,12 @@ Biologically, a human brain is a network of about one hundred billion neurons,
 , and axons.
  Every single neuron receives electrochemical input signals from other neurons
  at the dendrites.
- Then, the cell body of the neuron will sum all the strength of all the
- electrochemical input signals which it receives from other neurons, and
- if the sum is greater than some threshold level, the neuron will be activated.
- When the neuron is activated, it will transmit or fire an electrochemical
- signal along the axon and pass this signal to the dendrites of other neurons
- that are attached to this neuron.
+ Then, the cell body of the neuron sums all the strength of all the electrochemi
+cal input signals which it receives from other neurons, and if the sum is
+ greater than some threshold level, the neuron will be activated.
+ When the neuron is activated, it transmits or fires an electrochemical
+ signal along the axon and passes this signal to the dendrites of other
+ neurons that are attached to this neuron.
  It is important to know that a neuron does not fire any signal if the sum
  of electrochemical inputs does not surpass a particular level.
  In other words, a neuron can only do two actions: fire a signal or not,
@@ -319,9 +319,9 @@ To model ANN from the human brain, first, we have to model the most fundamental
  Similar to the natural counterpart, an artificial neuron is a simple processing
  unit which consists of numerical input values (the receiving electrochemical
  input signals), which are multiplied by weights (the strength of the respective
- electrochemical input signals), and these inputs will then be totaled by
- a sum function.
- Finally, an activation function will calculate the output of the artificial
+ electrochemical input signals), and these inputs then be totaled by a sum
+ function.
+ Finally, an activation function calculates the output of the artificial
  neuron by using the result of the sum function 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -330,9 +330,9 @@ key "mashrei2012neural"
 \end_inset
 
 .
- A typical artificial neuron is shown in 
+ A typical artificial neuron is shown in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:An-artificial-neuron"
 
 \end_inset
@@ -391,9 +391,9 @@ key "web:ann2"
 \end_layout
 
 \begin_layout Standard
-In 
+In figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:An-artificial-neuron"
 
 \end_inset
@@ -427,9 +427,9 @@ reference "fig:An-artificial-neuron"
 \end_inset
 
 .
- After all weighted input signals have been added together, the result will
- be passed into the activation function which will determine the output
- of the artificial neuron.
+ After all weighted input signals have been added together, the result is
+ passed into the activation function which determines the output of the
+ artificial neuron.
  There are several types of activation function such as step function, pure-line
 ar function, log sigmoid function, or tangent sigmoid function 
 \begin_inset CommandInset citation
@@ -439,38 +439,38 @@ key "wiki:activationfunctions"
 \end_inset
 
 .
- The 
+ The table 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "tab:Activation-functions"
 
 \end_inset
 
  compares the properties of those activation functions.
- The plots of those functions will be shown in 
+ The plots of those functions are shown in the figures 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:The-plot-of"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:The-plot-of-1"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:The-plot-of-2"
 
 \end_inset
 
  and 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:The-plot-of-3"
 
 \end_inset
@@ -504,6 +504,13 @@ key "wiki:activationfunctions"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -977,18 +984,18 @@ The plot of Tangent function
 \end_layout
 
 \begin_layout Standard
-Lets us use the step function which is the simplest activation function
- in 
+Let us use the step function which is the simplest activation function in
+ table 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "tab:Activation-functions"
 
 \end_inset
 
  to demonstrate how an artificial neuron works.
- Typically, a step function will give the output of 1 if the input exceeds
- a specified threshold level, if not then the step function will produce
- the output of 0.
+ Typically, a step function gives the output of 1 if the input exceeds a
+ specified threshold level, if not then the step function produces the output
+ of 0.
  For example, we have the following inputs, outputs and threshold level
  for an artificial neuron with the step function as its activation function:
 \end_layout
@@ -1045,9 +1052,9 @@ Threshold
 \end_layout
 
 \begin_layout Standard
-According to 
+According to figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:An-artificial-neuron"
 
 \end_inset
@@ -1094,7 +1101,7 @@ Next, we input the calculated sum into the artificial neuron's activation
 \end_layout
 
 \begin_layout Subsection
-Architecture of Artificial Neural Network
+Architecture of Artificial Neural Networks
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Architecture-of-Artificial"
@@ -1105,16 +1112,16 @@ name "subsec:Architecture-of-Artificial"
 \end_layout
 
 \begin_layout Standard
-In 
+In section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Artificial-Neuron"
 
 \end_inset
 
-, we have taken a look at how artificial neuron works, now we will look
- at the architecture of ANN to see the way an ANN connects artificial neurons
- together and processes information.
+, we have taken a look at how artificial neuron works, now we look at the
+ architecture of ANN to see the way an ANN connects artificial neurons together
+ and processes information.
 \end_layout
 
 \begin_layout Standard
@@ -1129,7 +1136,8 @@ key "wiki:anntypes"
 \end_inset
 
 .
- The followings are the most used types of ANN architecture 
+ The following artificial neural networks are the most used types of ANN
+ architecture 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wiki:anntypes"
@@ -1162,8 +1170,7 @@ name "Feedforward-neural-network"
 
 : This type of network is the most simple type of ANN, the flow of the informati
 on moves in just one direction: begin from the input layer, information
- will be passed through the hidden layer and be transferred to the output
- layer.
+ is passed through the hidden layer then is transferred to the output layer.
  Also, there are no loops in the network; the calculation always goes forward,
  never goes back.
 \end_layout
@@ -1182,9 +1189,9 @@ neural
 
 network
 \series default
-: Opposite to feedforward networks which information can only move from
- input to output, in recurrent neural networks, the information can go in
- a bi-directional flow.
+: Opposite to feedforward network which information can only move from input
+ to output, in recurrent neural network, the information can go in a bi-directio
+nal flow.
  In other words, the information which has been processed in the later stages
  can be transferred back to earlier stages.
 \end_layout
@@ -1205,18 +1212,18 @@ network
 \series default
 : Studies in biology have shown that the brain functions as a collection
  of small networks, therefore the concept modular neural network was conceived.
- In this concept, several artificial neural networks will try to cooperate
- or compete to solve problems.
+ In this concept, several artificial neural networks try to cooperate or
+ compete to solve problems.
 \end_layout
 
 \begin_layout Standard
-In this section, we will discuss the detail of the feedforward neural network
+In this section, we discuss the detail of the feedforward neural network
  because it is the simplest neural network and also our primary ANN type
  for the case study of the thesis.
  First, let us consider the basic architecture of a feedforward neural network
- in 
+ in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Feedforward-neural-network"
 
 \end_inset
@@ -1279,9 +1286,9 @@ key "web:ann2"
 
 \begin_layout Standard
 As we can see, every node in the network is an artificial neuron described
- in 
+ in section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Artificial-Neuron"
 
 \end_inset
@@ -1336,8 +1343,8 @@ layer
 \begin_layout Standard
 In the input layer, because the artificial neurons only have the responsibility
  to bring the input from the external world into the network, therefore
- the artificial neurons in the input layer do not have any weight and will
- pass the same input it received from the external world to the next layer.
+ the artificial neurons in the input layer do not have any weight and pass
+ the same input it received from the external world to the next layer.
 \end_layout
 
 \begin_layout Standard
@@ -1377,9 +1384,9 @@ The readers should also notice that there is no connection between artificial
 \end_layout
 
 \begin_layout Standard
-Often, it is required for a Feedforward neural network or ANN, in general,
+Often, it is required for a Feedforward neural network, or ANN in general,
  to have a hidden layer in order to solve problems.
- The reason lies in 
+ The reason is the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1395,15 +1402,23 @@ key "web:ann2"
 \end_inset
 
 .
- We will demonstrate the necessity of the hidden layer by modeling OR function
- and XOR function using ANN.
+ To explain the 
+\begin_inset Quotes eld
+\end_inset
+
+Linear separability
+\begin_inset Quotes erd
+\end_inset
+
+ and the necessity of the hidden layer, we model the OR function and the
+ XOR function using ANN as follows:
 \end_layout
 
 \begin_layout Standard
 First, let us take a look at the graphs of OR function and XOR function
- in 
+ in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:OR-function"
 
 \end_inset
@@ -1415,7 +1430,7 @@ reference "fig:OR-function"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1458,6 +1473,50 @@ key "web:ann2"
 \end_layout
 
 \begin_layout Standard
+By looking at figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:OR-function"
+
+\end_inset
+
+, we can see that both OR function and XOR function take two inputs which
+ can be either one or zero.
+ We define the output of OR function and XOR function as follows:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+OR
+\begin_inset space \space{}
+\end_inset
+
+function
+\series default
+ outputs true when at least one of the inputs is one.
+ In other words, OR function is an inclusive disjunction operation on two
+ inputs.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+XOR
+\begin_inset space \space{}
+\end_inset
+
+function
+\series default
+ outputs true only when the inputs are different from each other (i.e.
+ when one input is one and the other is zero).
+ In other words, XOR function is an exclusive disjunction operation on two
+ inputs.
+\end_layout
+
+\begin_layout Standard
 In the graph of OR function, we can see that the outputs of the OR function
  can be separated by a single straight line.
  This tells us OR function is 
@@ -1478,9 +1537,9 @@ key "web:ann2"
 
 .
  In fact, OR function can be modeled with a single artificial neuron like
- in 
+ in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:OR-function-modeled"
 
 \end_inset
@@ -1551,9 +1610,9 @@ key "web:ann2"
 \end_inset
 
 .
- The extra hidden layer is added to the ANN model like in 
+ The extra hidden layer is added to the ANN model like in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:XOR-function-modeled"
 
 \end_inset
@@ -1612,7 +1671,7 @@ key "web:ann2"
 \end_layout
 
 \begin_layout Subsection
-The Learning Ability of Artificial Neural Network
+The Learning Ability of Artificial Neural Networks
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Learning"
@@ -1623,23 +1682,23 @@ name "subsec:Learning"
 \end_layout
 
 \begin_layout Standard
-In 
+In section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Artificial-Neuron"
 
 \end_inset
 
- and 
+ and section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Architecture-of-Artificial"
 
 \end_inset
 
  we have been introduced to the basic concepts of ANN: what is an artificial
  neuron and how ANN connects artificial neurons to solve problems.
- Now we will explain the learning ability of ANN.
+ Now, we explain the learning ability of ANN.
 \end_layout
 
 \begin_layout Standard
@@ -1657,9 +1716,9 @@ key "web:ann3"
 
 .
  However, it is possible for ANN to get to perform better with experience.
- Therefore, we will define the learning process of ANN as follow: Learning
- in the context of ANN is the ability to perform better at a given task,
- or a range of tasks with the experience 
+ Therefore, we define the learning process of ANN as follow: Learning in
+ the context of ANN is the ability to perform better at a given task, or
+ a range of tasks with the experience 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "web:ann3"
@@ -1670,9 +1729,9 @@ key "web:ann3"
 \end_layout
 
 \begin_layout Standard
-Now, let us recall from the beginning of 
+Now, let us recall from the beginning of section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:The-Model-of"
 
 \end_inset
@@ -1696,8 +1755,8 @@ key "web:ann3"
  This property is the reason why human remembers relevant information easier
  than information that has not been used for a long time; it is because
  relevant information has stronger synaptic connections while less used
- information will have its synaptic connection weakened, therefore, making
- it difficult to remember 
+ information has its synaptic connection weakened, therefore, making it
+ difficult to remember 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "web:ann3"
@@ -1722,14 +1781,16 @@ key "web:ann3"
 \end_layout
 
 \begin_layout Standard
-The learning ability gives ANN many advantages over problems that have challenge
-d tradition computer programs.
- For example, facial recognition problem is extremely hard for a programmer
- to code the right solution accurately; however, it can be solved much easier
- by using an ANN with its learning ability.
+The learning ability gives ANN many advantages over traditional methods
+ (computer programs written by software programmers).
+ For example, facial recognition problem is very difficult for a software
+ programmer to find the right set of rules to recognize people's faces accuratel
+y; however, it can be solved much easier by using an ANN with its learning
+ ability.
  ANN also can pick up the underlying relationship in input data.
- Therefore, ANN can solve classification problem where a loan granting applicati
-on uses past loan data to classify future loan applications 
+ Another example is that ANN can solve classification problem where a loan
+ granting application uses past loan data to classify future loan applications
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "web:ann3"
@@ -1821,7 +1882,7 @@ ment learning introduces a reward system: a reward is awarded to the network
 \end_layout
 
 \begin_layout Subsection
-Training Artificial Neural Network with Back-propagation
+Training ANN with Back-propagation
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Training-Artificial-Neural"
@@ -1850,17 +1911,17 @@ key "web:ann"
 The method starts by applying the inputs as an input vector to the input
  layer of the network.
  Then, this input vector is passed or propagated through the hidden layer,
- and an output vector will be produced at the end of the network which is
- the output layer.
+ and an output vector is produced at the end of the network which is the
+ output layer.
  When the forward propagation is completed, the network evaluates the errors
  between the output vector generated by the network and the desired outputs.
  Next, it uses the evaluated errors to adjust the weights of each artificial
  neuron in the network according to a learning rule which aims to minimize
  the error.
  Finally, the network uses the adjusted weights to start a new cycle.
- This back-propagation cycle or as call as an epoch will repeat until the
- errors between the desired outputs and the actual outputs from the network
- are minimized 
+ This back-propagation cycle or an epoch repeats until the errors between
+ the desired outputs and the actual outputs from the network are minimized
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mashrei2012neural"
@@ -1868,9 +1929,9 @@ key "mashrei2012neural"
 \end_inset
 
 .
- An diagram of a back-propagation cycle is depicted in 
+ An diagram of a back-propagation cycle is depicted in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Back-propagation-cycle"
 
 \end_inset
@@ -1936,9 +1997,9 @@ To demonstrate the back-propagation method, let us make a simple example
 \begin_inset Formula $d$
 \end_inset
 
-, the training data could be something like in 
+, the training data could be something like in table 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "tab:Example-of-training"
 
 \end_inset
@@ -1950,7 +2011,7 @@ reference "tab:Example-of-training"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1965,6 +2026,13 @@ name "tab:Example-of-training"
 Example of training data
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -2122,9 +2190,9 @@ Desired output
 \end_layout
 
 \begin_layout Standard
-According to 
+According to figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Back-propagation-cycle"
 
 \end_inset
@@ -2137,7 +2205,7 @@ reference "fig:Back-propagation-cycle"
 \begin_inset Formula $o$
 \end_inset
 
-, we will then compare this output vector 
+, we then compare this output vector 
 \begin_inset Formula $o$
 \end_inset
 
@@ -2145,13 +2213,17 @@ reference "fig:Back-propagation-cycle"
 \begin_inset Formula $d$
 \end_inset
 
- to get the error value using the following calculation:
+ to get the 
+\begin_inset Formula $Error$
+\end_inset
+
+ value using the following calculation:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-Error=(d-o)^{2}\label{eq:error}
+Error=\frac{1}{n}\sum_{i=1}^{n}(o_{i}-d_{i})^{2}\label{eq:error}
 \end{equation}
 
 \end_inset
@@ -2160,15 +2232,41 @@ Error=(d-o)^{2}\label{eq:error}
 \end_layout
 
 \begin_layout Standard
+where:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n$
+\end_inset
+
+ is the number of elements in the output vector.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $o=(o_{1},o_{2},...,o_{n})$
+\end_inset
+
+ is the output vector.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d=(d_{1},d_{2},...,d_{n})$
+\end_inset
+
+ is the desired output vector.
+\end_layout
+
+\begin_layout Standard
 The squared difference between the output vector 
 \begin_inset Formula $o$
 \end_inset
 
-and the desired output vector 
+ and the desired output vector 
 \begin_inset Formula $d$
 \end_inset
 
-gives us the sense of how far the desired value for a particular input 
+ gives us the sense of how far the desired value for a particular input
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "web:ann"
@@ -2176,7 +2274,7 @@ key "web:ann"
 \end_inset
 
 .
- The back-propagation method aims to minimize the sum of all 
+ The back-propagation method aims to minimize the 
 \begin_inset Formula $Error$
 \end_inset
 
@@ -2196,7 +2294,7 @@ key "web:ann"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-Minimize(\sum(d-o)^{2})\label{eq:minimizeerror}
+Minimize(Error)\label{eq:minimizeerror}
 \end{equation}
 
 \end_inset
@@ -2204,18 +2302,26 @@ Minimize(\sum(d-o)^{2})\label{eq:minimizeerror}
 
 \end_layout
 
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 By using a continuous function such as Pure-linear or Log sigmoid as the
- activation function (refer to 
+ activation function (refer to section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Artificial-Neuron"
 
 \end_inset
 
- and 
+ and table 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "tab:Activation-functions"
 
 \end_inset
@@ -2241,7 +2347,17 @@ key "web:ann"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-Gradient=\frac{\delta Error}{\delta w}\label{eq:gradient}
+Gradient=\frac{\delta Error}{\delta w}=\left[\begin{array}{c}
+\dfrac{\partial Error}{\partial w_{1}}\\
+\dfrac{\partial Error}{\partial w_{2}}\\
+\vdots\\
+\dfrac{\partial Error}{\partial w_{m}}
+\end{array}\right]=\left[\begin{array}{c}
+\dfrac{Error'-Error}{w_{1}^{'}-w_{1}}\\
+\dfrac{Error'-Error}{w_{2}^{'}-w_{2}}\\
+\vdots\\
+\dfrac{Error'-Error}{w_{m}^{'}-w_{m}}
+\end{array}\right]\label{eq:gradient}
 \end{equation}
 
 \end_inset
@@ -2250,8 +2366,64 @@ Gradient=\frac{\delta Error}{\delta w}\label{eq:gradient}
 \end_layout
 
 \begin_layout Standard
+where:
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $Error^{'}$
+\end_inset
+
+ is the new 
+\begin_inset Formula $Error$
+\end_inset
+
+ value when we use the changed weight vector 
+\begin_inset Formula $w^{'}$
+\end_inset
+
+ in our network.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w^{'}$
+\end_inset
+
+ is the changed weight vector.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w$
+\end_inset
+
+ is the current weight vector.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m$
+\end_inset
+
+ is the number of elements in the weight vector 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 To update the weight vectors every time a training sample is fed into the
- network we will need to use the learning rule in formula 
+ network, we need to use the learning rule in formula 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:updateweight"
@@ -2280,7 +2452,7 @@ key "web:ann"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-w_{new}=w_{old}-n\frac{\delta Error}{\delta w}\label{eq:updateweight}
+w_{new}=w_{old}-l\frac{\delta Error}{\delta w}\label{eq:updateweight}
 \end{equation}
 
 \end_inset
@@ -2292,32 +2464,28 @@ w_{new}=w_{old}-n\frac{\delta Error}{\delta w}\label{eq:updateweight}
 Where:
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
+\begin_layout Itemize
 \begin_inset Formula $w_{new}$
 \end_inset
 
- is the newly updated weight vectors.
+ is the newly updated weight vector.
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
+\begin_layout Itemize
 \begin_inset Formula $w_{old}$
 \end_inset
 
- is the old weight vectors.
+ is the old weight vector.
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-\begin_inset Formula $n$
+\begin_layout Itemize
+\begin_inset Formula $l$
 \end_inset
 
- is the learning rate which should be a small number (about 0.1)
+ is the learning rate which should be a small number (about 0.1).
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
+\begin_layout Itemize
 \begin_inset Formula $\frac{\delta Error}{\delta w}$
 \end_inset
 
@@ -2353,7 +2521,7 @@ key "web:ann"
 \end_inset
 
 .
- When the 
+ When 
 \begin_inset Formula $Error$
 \end_inset
 

@@ -17,6 +17,7 @@
 \usepackage[titles]{tocloft}
 \cftsetindents{figure}{0em}{3.0em}
 \cftsetindents{table}{0em}{3.0em}
+\renewcommand{\arraystretch}{1.5}
 \end_preamble
 \use_default_options true
 \master master_thesis.lyx
@@ -118,21 +119,21 @@ name "sec:The-Method-of"
 \end_layout
 
 \begin_layout Standard
-In this section, we will get into the details of Analytic Hierarchy Process
- (AHP) by answering questions such as: What is AHP? Who created it? In which
- kind of decision problems can we apply AHP?
+In this section, we get into the details of Analytic Hierarchy Process (AHP)
+ by answering questions such as: What is AHP? Who created it? In which kind
+ of decision problems can we apply AHP?
 \end_layout
 
 \begin_layout Standard
-After getting the general ideas about AHP, we will delve deep into the methodolo
-gy and core elements of AHP such as: What is the Pairwise comparison? How
+After getting the general ideas about AHP, we continue with the methodology
+ and core elements of AHP such as: What is the Pairwise comparison? How
  to make a comparison matrix? How to calculate priority vector? How to use
  Consistency Index and Consistency Ratio to verify the comparisons?
 \end_layout
 
 \begin_layout Standard
 Explaining AHP using only its definitions can be tough at some points.
- Therefore we will use an example to explain each aspect of AHP.
+ Therefore, we use an example to explain each aspect of AHP.
  It is easier to understand the concept of AHP that way.
 \end_layout
 
@@ -164,8 +165,8 @@ key "Saaty:1980ahp,web:goepel_ahp"
 
 \begin_layout Standard
 In general, Analytic Hierarchy Process is a method to derive priority or
- ratio scales (we will use the word “priority” and “ratio” interchangeably)
- from paired comparisons 
+ ratio scales (we use the word “priority” and “ratio” interchangeably) from
+ paired comparisons 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "saaty2008decision"
@@ -183,12 +184,12 @@ key "teknomoAHPtutorial"
 
 .
  To derive the ratio scales, we need to solve the principal Eigenvectors
- problem and then to verify the scales we will use Consistency Index which
- is calculated from Eigenvalue.
+ problem and then to verify the scales we use Consistency Index which is
+ calculated from Eigenvalue.
 \end_layout
 
 \begin_layout Standard
-Because AHP allows small inconsistency in making comparison 
+Because AHP allows small inconsistency in making comparisons 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "teknomoAHPtutorial"
@@ -242,8 +243,8 @@ Etc.
 \end_layout
 
 \begin_layout Standard
-One interesting example of AHP application is suspect identification by
- witnesses in criminal cases 
+An interesting example of AHP application is suspect identification by witnesses
+ in criminal cases 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mu2013new"
@@ -306,9 +307,9 @@ From the decision problem, we define the goal of the problem and determine
 \begin_layout Enumerate
 We construct a hierarchy based on the decision problem.
  We put the goal of the decision problem on the first level of the hierarchy.
- Then we will put the criteria (and sub-criteria for each criterion) in
- the intermediate levels.
- Finally, at the last level will be the alternatives.
+ Then we put the criteria (and sub-criteria for each criterion) in the intermedi
+ate levels.
+ Finally, at the last level we put the alternatives.
 \end_layout
 
 \begin_layout Enumerate
@@ -320,15 +321,22 @@ On each level of the hierarchy (except the top level), we make pairwise
 \end_layout
 
 \begin_layout Enumerate
-Calculate the priorities or priority vectors from the comparison matrices.
+We calculate the priorities or priority vectors from the comparison matrices.
  Also, we should calculate the Consistency Index and Consistency Ratio to
  check if the comparisons are consistent or not.
 \end_layout
 
 \begin_layout Enumerate
-Calculate the ranking of alternatives by aggregating priorities from criteria,
- sub-criteria and the alternatives with respect to each criterion or sub-criteri
-on.
+We calculate the ranking of alternatives by aggregating priorities from
+ criteria, sub-criteria and the alternatives with respect to each criterion
+ or sub-criterion.
+\end_layout
+
+\begin_layout Enumerate
+After obtaining the ranking for the alternatives, we should examine the
+ Consistency Index and Consistency Ratio to see if our comparisons are consisten
+t or not.
+ If not, we need to revise our comparisons.
 \end_layout
 
 \begin_layout Standard
@@ -339,50 +347,17 @@ on.
 \end_layout
 
 \begin_layout Standard
-After obtaining the ranking for the alternatives, we should examine the
- Consistency Index and Consistency Ratio to see if our comparisons are consisten
-t or not.
- If not, we need to revise our comparisons.
-\end_layout
-
-\begin_layout Standard
 If the comparisons are consistent, we can use the ranking of the alternatives
  to select the optimal alternative for our decision problem, i.e.
  the alternative with the highest ranking.
 \end_layout
 
 \begin_layout Standard
-In the next sections, we will explain in detail the fundamentals of AHP
- as follow:
+In the next sections, we explain in detail the fundamentals of AHP as follows:
 \end_layout
 
 \begin_layout Itemize
-In section 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "subsec:Hierarchy"
-
-\end_inset
-
-, we will show the readers how we can construct the hierarchy of AHP from
- a multi-criteria decision problem.
- 
-\end_layout
-
-\begin_layout Itemize
-Next, in section 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "subsec:The-comparison-process"
-
-\end_inset
-
-, we will show the readers the way to get the final ranking of alternatives
- by aggregating priorities.
-\end_layout
-
-\begin_layout Itemize
-Finally, in sections 
+In sections 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Pair-wise-comparison"
@@ -396,10 +371,2618 @@ reference "subsec:Consistency-Index-and"
 
 \end_inset
 
-, we will explain the mathematics behind AHP and the way to check the consistenc
-y of the pairwise comparison.
- For simplicity, we will use a very simple example which doesn't have any
- criteria.
+, we explain the mathematics behind AHP and the way to check the consistency
+ of the pairwise comparison.
+ For simplicity, we use a very simple example which doesn't have any criteria.
+\end_layout
+
+\begin_layout Itemize
+Next, in section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Hierarchy"
+
+\end_inset
+
+, we show the readers how we can construct the hierarchy of AHP from a multi-cri
+teria decision problem by using an example with criteria and sub-criteria.
+\end_layout
+
+\begin_layout Itemize
+Finally, in section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:The-comparison-process"
+
+\end_inset
+
+, we show the readers the way to get the final ranking of alternatives by
+ aggregating priorities.
+\end_layout
+
+\begin_layout Subsection
+Pairwise comparison
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Pair-wise-comparison"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The most fundamental element of AHP method is the pairwise comparison.
+ In short, it is like asking between two objects, which one do you prefer
+ and how much do you prefer it to the other object.
+ 
+\end_layout
+
+\begin_layout Standard
+Suppose we have two cars made by two different manufacturers, one is from
+ Renault, and the other is from Toyota.
+ To make a pairwise comparison between these two cars, we use a relative
+ scale in figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Relative-scale-between"
+
+\end_inset
+
+ to measure how much we prefer a car compare to the other 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "saaty2008decision"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Relative scale between two car manufacturers.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Relative-scale-between"
+
+\end_inset
+
+Relative scale between two car manufacturers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Relative-scale-between"
+
+\end_inset
+
+ , if we prefer the Toyota car than the Renault car, we choose a number
+ which denotes a preference value between one and nine on the left side
+ of the scale.
+ If we prefer the Renault car otherwise, we choose a number on the right
+ side of the scale.
+\end_layout
+
+\begin_layout Standard
+The preference values or judgement values are used to describe how strong
+ our preference is over a car.
+ The table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Judgement-table"
+
+\end_inset
+
+ explains the judgement values 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "saaty2008decision"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Judgement-table"
+
+\end_inset
+
+Judgement table
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features booktabs="true" tabularvalignment="middle" tabularwidth="100line%">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="70line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preference Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Two cars are equal in comparison; no car is more preferred than the other.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+One car is slightly preferred than the other.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+One car is strongly preferred than the other.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+One car is very strongly preferred than the other.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+On car is absolutely preferred than the other.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,4,6,8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Intermediate scales between two adjacent values.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For example, if we firmly prefer the Toyota car than the Renault car, we
+ then mark the scale like in figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Toyota-is-being"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Toyota is being preferred on relative scale.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Toyota-is-being"
+
+\end_inset
+
+Toyota is being preferred on relative scale
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, if we add one more car from another manufacturer, our pairwise comparisons
+ become like in figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Comparisons-between-three"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Comparisons between three car manufacturers.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparisons-between-three"
+
+\end_inset
+
+Comparisons between three car manufacturers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we can see, the number of pairwise comparisons has been increased from
+ one to three comparisons; it is a combination of the number of objects
+ to be compared.
+ We can calculate the number of comparisons using table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Number-of-comparisons"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Number-of-comparisons"
+
+\end_inset
+
+Number of comparisons per number of objects
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="10">
+<features booktabs="true" tabularvalignment="middle" tabularwidth="100line%">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Number of objects
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+n
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Number of comparisons
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dfrac{n(n-1)}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Number-of-comparisons"
+
+\end_inset
+
+, it suggests that if we compare too many objects (30 cars for example),
+ the number of comparisons will become large (435 comparisons for 30 cars).
+ With a large number of comparison, it often confuses the person who makes
+ the comparison, and as a result, the likelihood of inconsistent comparisons
+ will be high.
+ 
+\end_layout
+
+\begin_layout Standard
+Next, in section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Comparison-Matrix"
+
+\end_inset
+
+, as we have made our pairwise comparisons between objects, we will aggregate
+ them into a comparison matrix.
+\end_layout
+
+\begin_layout Subsection
+Comparison Matrix
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Comparison-Matrix"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We use the comparison between three cars in the previous section as the
+ example of how to make a comparison matrix from pairwise comparisons.
+\end_layout
+
+\begin_layout Standard
+In our example, we have a middle-aged man named Darek.
+ Darek wants to buy a new car, but he does not know which car he should
+ buy because there are just too many cars to choose.
+ Thankfully, a friend who works in automobile industry recommends Darek
+ three car models from three different manufacturers.
+ These three cars are currently the best, but Darek can only choose one.
+ Therefore he makes the comparisons in figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Darek's-pair-wise-comparisons"
+
+\end_inset
+
+ based on his subjective judgement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Darek's pair-wise comparisons.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Darek's-pair-wise-comparisons"
+
+\end_inset
+
+Darek's pairwise comparisons
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because we have three pairwise comparisons, in this case, our comparison
+ matrix is a three by three matrix.
+ In this matrix, the values on the diagonal line are one because it is the
+ value of a comparison of two same objects.
+ We only have to fill up the upper triangular matrix, for the lower triangular
+ matrix, we can use the reciprocal values of the upper triangular matrix.
+ To fill up the comparison value, we use the following rules 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If the preference value is on the 
+\series bold
+left side
+\series default
+ of 1, we put the 
+\series bold
+actual preference value
+\series default
+ 
+\end_layout
+
+\begin_layout Enumerate
+If the preference value is on the 
+\series bold
+right side
+\series default
+ of 1, we put the 
+\series bold
+reciprocal value
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In our case, because Darek strongly prefers Renault than Toyota, we put
+ 
+\begin_inset Formula $\frac{1}{5}$
+\end_inset
+
+ in row 1 and column 2 of the matrix.
+ Next, Darek slightly prefers Ford than Toyota; we put 
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+ in row 1 and column 3 of the matrix.
+ Finally, between Renault and Ford, Darek very strongly prefers Renault
+ then Ford, therefore we put 7 in row 2 and column 3 of the matrix.
+ The comparison matrix is presented in table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Comparison-matrix-for"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Comparison-matrix-for"
+
+\end_inset
+
+Upper triangular matrix for Darek's pairwise comparisons
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\text{1}}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We only have set the value for the upper triangular matrix, for the lower
+ triangular matrix we use the reciprocal values of the upper triangular
+ matrix based on the following rule 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+: If 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ is the element of row 
+\begin_inset Formula $i$
+\end_inset
+
+ column 
+\begin_inset Formula $j$
+\end_inset
+
+ of the matrix, then the lower diagonal is filled using this equation: 
+\begin_inset Formula 
+\begin{equation}
+a_{ij}=\frac{1}{a_{ji}}\label{eq:reciprocal}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the rule above we now have the complete comparison matrix in table
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Complete-comparison-matrix"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Complete-comparison-matrix"
+
+\end_inset
+
+Complete comparison matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\text{1}}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice that all values in the comparison matrix must be positive, or 
+\begin_inset Formula $a_{ij}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Priority-Vector"
+
+\end_inset
+
+, we use this comparison matrix to calculate the eigenvalues and eigenvectors
+ to calculate the final priorities or Priority Vector of our alternatives
+ which are the three car models in Darek example.
+\end_layout
+
+\begin_layout Subsection
+Priority Vector
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Priority-Vector"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With the complete comparison matrix in the previous section, we can now
+ find the priority vector for our alternatives.
+ However, first, we need to calculate the eigenvalues and eigenvectors of
+ the matrix because the priority vector is the normalized principal Eigenvector
+ of the matrix.
+\end_layout
+
+\begin_layout Standard
+Usually, eigenvalues and eigenvectors of a matrix are calculated by using
+ computer programs such as MATLAB or Maxima due to the increasing complexity
+ in calculation when the size of the matrix is getting bigger.
+ However, for small matrices with size 
+\begin_inset Formula $n\leq3$
+\end_inset
+
+ like the one in our example, it is possible to use an approximation method
+ to approximate the normalized principal Eigenvector with low error rate
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The approximation method consists of several steps.
+ First, we need normalize each column in the comparison matrix.
+ For example, we have table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Complete-comparison-matrix"
+
+\end_inset
+
+ from section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Comparison-Matrix"
+
+\end_inset
+
+.
+ First, we sum all elements of each column of table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Complete-comparison-matrix"
+
+\end_inset
+
+ to get table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Comparison-matrix-summed"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Comparison-matrix-summed"
+
+\end_inset
+
+Comparison matrix with sum by column
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\text{1}}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sum by column
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{47}{35}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{25}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next, we normalize each column in table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Comparison-matrix-summed"
+
+\end_inset
+
+ by dividing each element of the column by the sum of that column, the calculati
+ons are shown in table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Comparison-matrix-summed-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Comparison-matrix-summed-1"
+
+\end_inset
+
+Normalized comparison matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1/9=\frac{1}{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\text{1}}{5}/\frac{47}{35}=\frac{7}{47}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{3}/\frac{25}{3}=\frac{1}{25}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5/9=\frac{5}{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1/\frac{47}{35}=\frac{35}{47}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7/\frac{25}{3}=\frac{21}{25}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3/9=\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{7}/\frac{47}{35}=\frac{5}{47}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1/\frac{25}{3}=\frac{3}{25}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To get the approximation of the normalized principal Eigenvector we sum
+ each row of the normalized comparison matrix in table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Comparison-matrix-summed-1"
+
+\end_inset
+
+ and then we divide each sum with the number of alternatives (which is 
+\begin_inset Formula $n=3$
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{equation}
+v=\frac{1}{3}\begin{bmatrix}\frac{1}{9}+\frac{7}{47}+\frac{1}{25}\\
+\frac{5}{9}+\frac{35}{47}+\frac{21}{25}\\
+\frac{1}{3}+\frac{5}{47}+\frac{3}{25}
+\end{bmatrix}=\begin{bmatrix}0.1000\\
+0.7134\\
+0.1866
+\end{bmatrix}\label{eq:eigenv}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we have got the priority vector or the approximation of the normalized
+ principal Eigenvector of the comparison matrix.
+ Since the sum of all elements in the priority vector is 1, it gives us
+ the relative weights of all alternatives we have compared.
+\end_layout
+
+\begin_layout Standard
+By having the priority vector and presenting it as percentages, we can see
+ the weight or the priority of each car model in our example as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The Toyota car is 10%
+\end_layout
+
+\begin_layout Itemize
+The Renault car is 71.34%
+\end_layout
+
+\begin_layout Itemize
+The Ford car is 18.66%
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+According to these weights, the Renault car has the highest priority (71.34%)
+ among the three car models.
+ Therefore, Darek can easily choose the Renault car as his new car.
+\end_layout
+
+\begin_layout Standard
+However, we need to verify if the comparisons made by Darek is consistent
+ or not.
+ To do this, we need to calculate the Principal Eigenvalue.
+ It can be obtained in our approximation by the summation of products between
+ each element of the priority vector and the sum of columns of the comparison
+ matrix 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\lambda_{max}=9*(0.1)+\frac{47}{35}*(0.7134)+\frac{25}{3}*(0.1866)=3.4129\label{eq:eigen}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using this Principal Eigenvalue, we can verify the consistency of our pairwise
+ comparisons by calculating the Consistency Index and Consistency Ratio
+ which is shown in section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Consistency-Index-and"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Consistency Index and Consistency Ratio
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Consistency-Index-and"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The consistency of pairwise comparison is closely related to the transitive
+ property 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "teknomoAHPtutorial"
+
+\end_inset
+
+.
+ This means the followings: for a person who prefers A than B or 
+\begin_inset Formula $A\succ B$
+\end_inset
+
+ and he also prefers B than C or 
+\begin_inset Formula $B\succ C$
+\end_inset
+
+ then according to transitive property, this person should prefer A than
+ C or 
+\begin_inset Formula $A\succ C$
+\end_inset
+
+.
+ If for any reason, this particular person does not prefer A than C, but
+ he prefers C than A or 
+\begin_inset Formula $C\succ A$
+\end_inset
+
+, then we can say that his comparisons over A, B, and C are inconsistent
+ with each other.
+\end_layout
+
+\begin_layout Standard
+Let’s check this consistency in our example in section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Comparison-Matrix"
+
+\end_inset
+
+.
+ Based on the three comparisons in figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Darek's-pair-wise-comparisons"
+
+\end_inset
+
+, we can see that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Darek prefers the Renault car more than the Ford car or 
+\begin_inset Formula $Renault\succ Ford$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Darek prefers the Ford car more than the Toyota car or 
+\begin_inset Formula $Ford\succ Toyota$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Darek prefers the Renault car more than the Toyota car or 
+\begin_inset Formula $Renault\succ Toyota$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case, the comparisons made by Darek appear to be consistent: 
+\begin_inset Formula 
+\begin{equation}
+Renault\succ Ford\land Ford\succ Toyota\Longrightarrow Renault\succ Toyota\label{eq:transitivity}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+(satisfies the transitive property)
+\end_layout
+
+\begin_layout Standard
+If Darek had made the last comparison as follows: 
+\begin_inset Formula $Toyota\succ Renault$
+\end_inset
+
+, then this comparison will be inconsistent with other comparisons thus
+ making Darek judgement in choosing new car inconsistent and not reliable.
+\end_layout
+
+\begin_layout Standard
+However, there is a problem with this check.
+ This check does not take into account of how much Darek prefers each car.
+ Therefore, we cannot know if the values in the comparison matrix are consistent
+ with each other or not.
+ This fact can make the whole hierarchy of AHP (especially multi-level hierarchy
+) becomes inconsistent because we have to make a pairwise comparison in
+ each level of the hierarchy and the immediately lower level uses the priority
+ vector produced by pairwise comparison of the base level to calculate its
+ global weights 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "saaty2008decision"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+According to Saaty, for a comparison matrix to be consistent, the largest
+ Eigenvalue should be equal to the size of the comparison matrix, or 
+\begin_inset Formula $\lambda_{max}=n$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "saaty2008decision"
+
+\end_inset
+
+.
+ Then, to know how many degrees of consistency a comparison matrix is, Saaty
+ gave us a measurement of consistency, the Consistency Index or CI.
+ To calculate this index, we use the following formula:
+\begin_inset Formula 
+\begin{equation}
+CI=\frac{\lambda_{max}-n}{n-1}\label{eq:cii}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, applying into our example which has 
+\begin_inset Formula $\lambda_{max}=3.4129$
+\end_inset
+
+ and the size of the comparison matrix is 
+\begin_inset Formula $n=3$
+\end_inset
+
+; we have the consistency index as follows: 
+\begin_inset Formula 
+\begin{equation}
+CI=\frac{\lambda_{max}-n}{n-1}=\frac{3.4129-3}{2}=0.20645\label{eq:ci}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, how can we use this index to determine the consistency of our comparison?
+ Once again, according to Saaty, by comparing it with the appropriate one
+ we can know what is the degree of consistency of the comparison matrix.
+ The proper consistency index is called Random Consistency Index or RI 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Saaty:1980ahp"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Saaty had pre-calculated the Random Consistency Index for comparison matrix
+ using a 1-9 scale based on a sample size of 500 random generated reciprocal
+ matrices in table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Pre-calculated-Random-Consistenc"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Saaty:1980ahp"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Pre-calculated-Random-Consistenc"
+
+\end_inset
+
+Pre-calculated Random Consistency Index
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="11">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+n
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.58
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.24
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.41
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.45
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.49
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To compare the Consistency Index with the corresponding Random Consistency
+ Index, Saaty proposed the Consistency Ratio which is calculated using the
+ following formula 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Saaty:1980ahp"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+CR=\frac{CI}{RI}\label{eq:crr}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the value of Consistency Ratio is smaller or equal to 10%, then the inconsist
+ency in the comparison matrix is acceptable.
+ However, if the Consistency Ratio is greater than 10%, we need to revise
+ our judgement in the pairwise comparison process.
+\end_layout
+
+\begin_layout Standard
+In our example, we have: 
+\begin_inset Formula $CI=0.20645$
+\end_inset
+
+ and 
+\begin_inset Formula $RI$
+\end_inset
+
+ for 
+\begin_inset Formula $n=3$
+\end_inset
+
+ is 
+\begin_inset Formula $0.58$
+\end_inset
+
+, then we have the Consistency Ratio as follows: 
+\begin_inset Formula 
+\begin{equation}
+CR=\frac{CI}{RI}=\frac{0.20645}{0.58}=0.3559\label{eq:cr}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We have 
+\begin_inset Formula $CR=35\%>10\%$
+\end_inset
+
+.
+ Therefore we can see that Darek’s subjective judgement in the pairwise
+ comparison process is not consistent.
+ Thus, we recommend a revision for Darek’s pairwise comparison between three
+ car models to improve the consistency.
 \end_layout
 
 \begin_layout Subsection
@@ -414,10 +2997,11 @@ name "subsec:Hierarchy"
 \end_layout
 
 \begin_layout Standard
-First, let us define an example of multi-criteria decision problem (decision
- problem for short) in which we will construct an AHP hierarchy.
- In this decision problem, we want to select a supplier who will provide
- the needed materials for our production line.
+Now we show an example with criteria and sub-criteria.
+ First, let us define an example of multi-criteria decision problem (decision
+ problem for short) in which we construct an AHP hierarchy.
+ In this decision problem, we want to select a supplier who provides the
+ needed materials for our production line.
  After some discussions, we have decided that we will select the future
  supplier based on the following criteria:
 \end_layout
@@ -449,7 +3033,7 @@ reliability
 \begin_layout Standard
 For quality and reliability, we also have added some sub-criteria to them
  so we can know exactly what aspects of quality and reliability that we
- interest in:
+ are interested in:
 \end_layout
 
 \begin_layout Itemize
@@ -543,9 +3127,9 @@ reference "subsec:The-steps-of"
 
 \end_inset
 
-, we construct the hierarchy for our decision problem as in 
+, we construct the hierarchy for our decision problem as in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:AHP-Hierarchy-for"
 
 \end_inset
@@ -628,9 +3212,9 @@ The fourth or the last level contains the alternatives (Ava, Belle, and
 \end_layout
 
 \begin_layout Standard
-Each connection line in 
+Each connection line in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:AHP-Hierarchy-for"
 
 \end_inset
@@ -668,9 +3252,8 @@ The connection lines from the criteria or the sub-criteria to the alternatives
 
 \begin_layout Standard
 We have constructed the AHP hierarchy for our decision problem, in the next
- section, we will show the readers the comparison process of AHP which will
- help us to calculate the ranking of the alternatives based on pairwise
- comparison.
+ section, we show the readers the comparison process of AHP which helps
+ us to calculate the ranking of the alternatives based on pairwise comparison.
 \end_layout
 
 \begin_layout Subsection
@@ -695,7 +3278,7 @@ reference "subsec:The-steps-of"
 , we have to make pairwise comparisons, calculate the priority vectors and
  finally aggregate the priority vectors to find the ranking of the alternatives
  in our hierarchy.
- Figure 
+ The figure 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:AHP-comparisons."
@@ -757,7 +3340,7 @@ reference "fig:AHP-comparisons."
 
 , the pairwise comparison process runs from the top to the bottom and has
  two main stages (the stages are separated by the dashed line in the middle).
- The stages are described as follow:
+ The stages are described as follows:
 \end_layout
 
 \begin_layout Paragraph
@@ -767,20 +3350,20 @@ First stage:
 \end_layout
 
 \begin_layout Standard
-In the first stage, we make pairwise comparisons for three groups: the group
+In the first stage, we make pairwise comparisons in three groups: the group
  of criteria, the group of sub-criteria for quality criterion, and the group
  of sub-criteria for reliability criterion.
  In each group which is enclosed by the dashed line, we make pairwise comparison
 s between the criteria or sub-criteria in order to produce the priority
  vector.
- The comparisons will be based on our preferences on the criteria or sub-criteri
-a (i.e.
+ The comparisons are based on our preferences on the criteria or sub-criteria
+ (i.e.
  the more we prefer a particular criterion, the more value of priority that
  criterion will have).
  When all priority vectors of the three groups have been calculated, we
- will aggregate these priority vectors to produce the global priority vector
- which will be used in the second stage.
- We do the aggregation process as follow:
+ aggregate these priority vectors to produce the global priority vector
+ which is used in the second stage.
+ We do the aggregation process as follows:
 \end_layout
 
 \begin_layout Itemize
@@ -854,7 +3437,7 @@ The priority vector for the group of sub-criteria for reliability criterion:
 
 \end_deeper
 \begin_layout Itemize
-If a criterion has no sub-criteria then its priority will also be the global
+If a criterion has no sub-criteria, then its priority will also be the global
  priority.
  However, if a criterion has sub-criteria, then we have to multiply the
  weight of each sub-criterion with the weight of the corresponding criterion
@@ -863,13 +3446,14 @@ If a criterion has no sub-criteria then its priority will also be the global
 \begin_inset Formula $G_{x}$
 \end_inset
 
- as the weigh or the value of a global priority for a criterion or sub-criterion
- 
+ as the weight or the value of a global priority for a criterion or sub-criterio
+n 
 \begin_inset Formula $x$
 \end_inset
 
- and we will describe the exact calculations for the global priorities or
- the global priority vector for the criteria or sub-criteria in table 
+.
+ Next, we describe the exact calculations for the global priorities or the
+ global priority vector for the criteria or sub-criteria in table 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "tab:Global-priority-vector"
@@ -884,7 +3468,7 @@ reference "tab:Global-priority-vector"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -899,6 +3483,13 @@ name "tab:Global-priority-vector"
 Global priority vector calculation
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -1170,7 +3761,7 @@ Global priority
 \end_layout
 
 \begin_layout Itemize
-According to the table 
+According to table 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "tab:Global-priority-vector"
@@ -1194,7 +3785,7 @@ Second stage:
 \end_layout
 
 \begin_layout Standard
-Recall from our hierarchy in the figure 
+Recall from our hierarchy in figure 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:AHP-Hierarchy-for"
@@ -1203,13 +3794,13 @@ reference "fig:AHP-Hierarchy-for"
 
 , the alternatives are compared by using the criterion or sub-criterion
  of price, durability, conformance, capital, credibility, and delivery time.
- Therefore we have to make 6 times of pairwise comparison, each time we
- use a different criterion or sub-criterion to compare the alternatives
+ Therefore we have to make six rounds of pairwise comparisons, in each round
+ we use a different criterion or sub-criterion to compare the alternatives
  and produce a priority vector.
- After we got all the priority vectors, we will combine them with the global
+ After we had got all the priority vectors, we combine them with the global
  priority vector we got from the first stage and put all of them in the
- aggregation process to produce the final ranking for our alternatives.
- The aggregation process in the second stage is described as follow:
+ aggregation process to produce the final ranking of our alternatives.
+ The aggregation process in the second stage is described as follows:
 \end_layout
 
 \begin_layout Itemize
@@ -1226,9 +3817,9 @@ Let us denote
 \end_inset
 
 .
- Also, let use the characters A, B, and C to denote our alternatives Ava,
+ Also, let us use the symbols A, B, and C to denote our alternatives Ava,
  Belle, and Casey respectively.
- Suppose the following priority vectors are the results from the 6 times
+ Suppose the following priority vectors are the results from the six rounds
  of pairwise comparison we mentioned above:
 \end_layout
 
@@ -1329,7 +3920,7 @@ We take the global priority vector from the first stage and multiply it
 \end_inset
 
 .
- Table 
+ The table 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "tab:Weighted-priority-vectors"
@@ -1369,7 +3960,7 @@ reference "tab:The-ranking-of"
 
 \end_inset
 
-, we have the score vector of the alternatives as follow: 
+, we have the score vector of the alternatives as follows: 
 \begin_inset Formula 
 \begin{equation}
 (R_{A},R_{B},R_{C})\label{eq:ranking}
@@ -1378,37 +3969,6 @@ reference "tab:The-ranking-of"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-From the score vector of the alternatives, which often a vector of percentages,
- we can see the performance of an alternative based on pairwise comparisons
- using the criteria or sub-criteria in the hierarchy in figure 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "fig:AHP-Hierarchy-for"
-
-\end_inset
-
- therefore we can know the ranking of our alternatives based on those performanc
-es.
- Next we in the next sections 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Pair-wise-comparison"
-
-\end_inset
-
- - 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Consistency-Index-and"
-
-\end_inset
-
-, we will show the readers the mathematics behind the comparison process
- and also the way to check if our pairwise comparisons are consistent or
- not.
 \end_layout
 
 \begin_layout Standard
@@ -1430,6 +3990,13 @@ name "tab:Weighted-priority-vectors"
 Weighted priority vectors
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -1737,6 +4304,13 @@ The ranking of the alternatives
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
@@ -1844,2279 +4418,36 @@ Casey
 
 \end_layout
 
-\begin_layout Subsection
-Pairwise comparison
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Pair-wise-comparison"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-The most fundamental element of AHP method is the Pairwise comparison.
- In short, it is like asking between two objects, which one do you prefer
- and how much do you prefer it to the other object.
- 
-\end_layout
-
-\begin_layout Standard
-Suppose we have two cars made by two different manufacturers, one is from
- Renault, and the other is from Toyota.
- To make a pairwise comparison between these two cars, we will use a relative
- scale in 
+From the score vector of the alternatives, which is often presented as a
+ vector of percentages, we can see the performance of an alternative based
+ on pairwise comparisons using the criteria or sub-criteria in the hierarchy
+ in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Relative-scale-between"
-
-\end_inset
-
- to measure how much we prefer a car compare to the other 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "saaty2008decision"
+LatexCommand vref
+reference "fig:AHP-Hierarchy-for"
 
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/Relative scale between two car manufacturers.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Relative-scale-between"
-
-\end_inset
-
-Relative scale between two car manufacturers
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In the above relative scale, if we prefer the Toyota car than the Renault
- car, we choose a number which denotes a preference value between one and
- nine on the left side of the scale.
- If we prefer the Renault car otherwise, we choose a number on the right
- side of the scale.
-\end_layout
-
-\begin_layout Standard
-The preference values or judgement values are used to describe how strong
- our preference is over a car.
- The following 
+ Therefore we can know the ranking of our alternatives based on those performanc
+es.
+ In the next sections 
 \begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Judgement-table"
+LatexCommand ref
+reference "subsec:Pair-wise-comparison"
 
 \end_inset
 
- explains the judgement values 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "saaty2008decision"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Judgement-table"
-
-\end_inset
-
-Judgement table
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="2">
-<features booktabs="true" tabularvalignment="middle" tabularwidth="100line%">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="70line%">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Preference Value
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Description
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Two cars are equal in comparison; no car is more preferred than the other.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-One car is slightly preferred than the other.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-One car is strongly preferred than the other.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-One car is very strongly preferred than the other.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-On car is absolutely preferred than the other.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2,4,6,8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Intermediate scales between two adjacent values.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-For example, if we firmly prefer the Toyota car than the Renault car, we
- then mark the scale like in 
+ - 
 \begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Toyota-is-being"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/Toyota is being preferred on relative scale.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Toyota-is-being"
-
-\end_inset
-
-Toyota is being preferred on relative scale
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Now, if we add one more car from another manufacturer, our pairwise comparison
- will become like in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Comparisons-between-three"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/Comparisons between three car manufacturers.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Comparisons-between-three"
-
-\end_inset
-
-Comparisons between three car manufacturers
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-As we can see, the number of pairwise comparisons has been increased from
- one to three comparisons; it is a combination of the number of objects
- to be compared.
- We can calculate the number of comparisons using 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Number-of-comparisons"
-
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "teknomoAHPtutorial"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Number-of-comparisons"
-
-\end_inset
-
-Number of comparisons per number of objects
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="10">
-<features booktabs="true" tabularvalignment="middle" tabularwidth="100line%">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Number of objects
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-6
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-n
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Number of comparisons
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-6
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-10
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-15
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-21
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-28
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{n(n-1)}{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-From 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Number-of-comparisons"
-
-\end_inset
-
-, it suggests that if we compare too many objects (30 cars for example),
- the number of comparisons will become immensely significant (435 comparisons
- for 30 cars).
- With a large number of comparison, it will confuse the people who make
- the comparison, and as a result, the likelihood of inconsistent comparisons
- will be high.
- 
-\end_layout
-
-\begin_layout Standard
-Next in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "subsec:Comparison-Matrix"
-
-\end_inset
-
-, as we have made our pairwise comparisons between objects, we will aggregate
- them into a comparison matrix.
-\end_layout
-
-\begin_layout Subsection
-Comparison Matrix
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Comparison-Matrix"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We will use the comparison between three cars in the previous section as
- the example of how to make a comparison matrix from pairwise comparisons.
-\end_layout
-
-\begin_layout Standard
-In our example, we have a middle-aged man named Darek.
- Darek wants to buy a new car, but he does not know which car he should
- buy because there are just too many cars to choose.
- Thankfully, a friend who works in automobile industry recommends Darek
- three car models from three different manufacturers.
- These three cars are currently the best, but Darek can only choose one.
- Therefore he makes the comparisons in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Darek's-pair-wise-comparisons"
-
-\end_inset
-
- based on his subjective judgement.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/Darek's pair-wise comparisons.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Darek's-pair-wise-comparisons"
-
-\end_inset
-
-Darek's pairwise comparisons
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Because we have three pairwise comparisons, in this case, our comparison
- matrix will be a three by three matrix.
- In this matrix, the values on the diagonal line will be one because it
- is the value of a comparison of two same objects.
- We only have to fill up the upper triangular matrix, for the lower triangular
- matrix, we can use the reciprocal values of the upper triangular matrix.
- To fill up the comparison value, we use the following rules 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "teknomoAHPtutorial"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-If the preference value is on the 
-\series bold
-left side
-\series default
- of 1, we put the 
-\series bold
-actual preference value
-\series default
- 
-\end_layout
-
-\begin_layout Enumerate
-If the preference value is on the 
-\series bold
-right side
-\series default
- of 1, we put the 
-\series bold
-reciprocal value
-\series default
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In our case, because Darek strongly prefers Renault than Toyota, we put
- 
-\begin_inset Formula $\frac{1}{5}$
-\end_inset
-
- in row 1 and column 2 of the matrix.
- Next, Darek slightly prefers Ford than Toyota; we put 
-\begin_inset Formula $\frac{1}{3}$
-\end_inset
-
- in row 1 and column 3 of the matrix.
- Finally, between Renault and Ford, Darek very strongly prefers Renault
- then Ford, therefore we put 7 in row 2 and column 3 of the matrix.
- The comparison matrix is presented in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Comparison-matrix-for"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Comparison-matrix-for"
-
-\end_inset
-
-Upper triangular matrix for Darek's pairwise comparisons
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Toyota
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Renault
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ford
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Toyota
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{\text{1}}{5}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Renault
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ford
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We only have set the value for the upper triangular matrix, for the lower
- triangular matrix we will use the reciprocal values of the upper triangular
- matrix based on the following rule 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "teknomoAHPtutorial"
-
-\end_inset
-
-: If 
-\begin_inset Formula $a_{ij}$
-\end_inset
-
- is the element of row 
-\begin_inset Formula $i$
-\end_inset
-
- column 
-\begin_inset Formula $j$
-\end_inset
-
- of the matrix, then the lower diagonal is filled using this equation: 
-\begin_inset Formula 
-\begin{equation}
-a_{ij}=\frac{1}{a_{ji}}\label{eq:reciprocal}
-\end{equation}
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Using the rule above we now have the complete comparison matrix in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Complete-comparison-matrix"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Complete-comparison-matrix"
-
-\end_inset
-
-Complete comparison matrix
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Toyota
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Renault
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ford
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Toyota
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{\text{1}}{5}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Renault
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ford
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{7}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Please be noticed that all values in the comparison matrix must be positive,
- or 
-\begin_inset Formula $a_{ij}>0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-In 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "subsec:Priority-Vector"
-
-\end_inset
-
-, we will use this comparison matrix to calculate the eigenvalues and eigenvecto
-rs to calculate the final priorities or Priority Vector of our alternatives
- which are the three car models in Darek example.
-\end_layout
-
-\begin_layout Subsection
-Priority Vector
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Priority-Vector"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-With the complete comparison matrix in the previous section, we can now
- find the priority vector for our alternatives.
- However, first, we need to calculate the eigenvalues and eigenvectors of
- the matrix because the priority vector is the normalized principal Eigenvector
- of the matrix.
-\end_layout
-
-\begin_layout Standard
-Usually, eigenvalues and eigenvectors of a matrix are calculated by using
- computer programs such as MATLAB or Maxima due to the increasing complexity
- in calculation when the size of the matrix is getting bigger.
- However, for small matrices with size 
-\begin_inset Formula $n\leq3$
-\end_inset
-
- like the one in our example, it is possible to use an approximation method
- to approximate the normalized principal Eigenvector with low error rate
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "teknomoAHPtutorial"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The approximation method is very easy to use.
- All we need to do is just to normalize each column in the comparison matrix.
- For example, we got 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Complete-comparison-matrix"
-
-\end_inset
-
- from 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "subsec:Comparison-Matrix"
-
-\end_inset
-
-, then we sum each column of 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Complete-comparison-matrix"
-
-\end_inset
-
- to get the following 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Comparison-matrix-summed"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Comparison-matrix-summed"
-
-\end_inset
-
-Comparison matrix summed by column
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="4">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Toyota
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Renault
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ford
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Toyota
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{\text{1}}{5}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Renault
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ford
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{7}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Sum
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{47}{35}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{25}{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To get the approximation of the normalized principal Eigenvector we just
- need to average the matrix across the rows as follow:
-\begin_inset Formula 
-\begin{equation}
-v=\frac{1}{3}\begin{bmatrix}\frac{1}{9}+\frac{7}{47}+\frac{1}{25}\\
-\frac{5}{9}+\frac{35}{47}+\frac{21}{25}\\
-\frac{1}{3}+\frac{5}{47}+\frac{3}{25}
-\end{bmatrix}=\begin{bmatrix}0.1000\\
-0.7134\\
-0.1866
-\end{bmatrix}\label{eq:eigenv}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Now we have got the priority vector or the approximation of the normalized
- principal Eigenvector of the comparison matrix.
- Since the sum of all elements in the priority vector is 1, it tells us
- the relative weights of all alternatives we have compared.
-\end_layout
-
-\begin_layout Standard
-By having the priority vector, we can say the weight or the priority of
- each car model in our example:
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-The Toyota car is 10%
-\end_layout
-
-\begin_layout Itemize
-The Renault car is 71.34%
-\end_layout
-
-\begin_layout Itemize
-The Ford car is 18.66%
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-According to these weights, the Renault car has the highest priority (71.34%)
- among the three car models.
- Therefore, Darek can easily choose the Renault car as his new car.
-\end_layout
-
-\begin_layout Standard
-However, we need to verify if the comparisons made by Darek is consistent
- or not.
- To do this, we need to calculate the Principal Eigenvalue.
- It can be obtained in our approximation by the summation of products between
- each element of the priority vector and the sum of columns of the comparison
- matrix 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "teknomoAHPtutorial"
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{equation}
-\lambda_{max}=9*(0.1)+\frac{47}{35}*(0.7134)+\frac{25}{3}*(0.1866)=3.4129\label{eq:eigen}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Using this Principal Eigenvalue, we can verify the consistency of our pairwise
- comparisons by calculating the Consistency Index and Consistency Ratio
- which will be shown in 
-\begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "subsec:Consistency-Index-and"
 
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Subsection
-Consistency Index and Consistency Ratio
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Consistency-Index-and"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The consistency of pairwise comparison is closely related to the transitive
- property 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "teknomoAHPtutorial"
-
-\end_inset
-
-.
- Which means for a person who prefers A than B or 
-\begin_inset Formula $A\succ B$
-\end_inset
-
- and he also prefers B than C or 
-\begin_inset Formula $B\succ C$
-\end_inset
-
- then according to transitive property, this person should prefer A than
- C or 
-\begin_inset Formula $A\succ C$
-\end_inset
-
-.
- If for any reason, this particular person does not prefer A than C, but
- he prefers C than A or 
-\begin_inset Formula $C\succ A$
-\end_inset
-
-, then we can say that his comparisons over A, B, and C are inconsistent
- with each other.
-\end_layout
-
-\begin_layout Standard
-Let’s check this consistency in our example in
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "subsec:Comparison-Matrix"
-
-\end_inset
-
-.
- Based on the three comparisons in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Darek's-pair-wise-comparisons"
-
-\end_inset
-
-, we can see that:
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Darek prefers the Renault car more than the Ford car or 
-\begin_inset Formula $Renault\succ Ford$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-Darek prefers the Ford car more than the Toyota car or 
-\begin_inset Formula $Ford\succ Toyota$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-Darek prefers the Renault car more than the Toyota car or 
-\begin_inset Formula $Renault\succ Toyota$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In this case, the comparisons made by Darek appear to be consistent: 
-\begin_inset Formula 
-\begin{equation}
-Renault\succ Ford\land Ford\succ Toyota\Longrightarrow Renault\succ Toyota\label{eq:transitivity}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-(satisfies the transitive property)
-\end_layout
-
-\begin_layout Standard
-If Darek had made the last comparison as follow: 
-\begin_inset Formula $Toyota\succ Renault$
-\end_inset
-
-, then this comparison will be inconsistent with other comparisons thus
- making Darek judgement in choosing new car inconsistent and not reliable.
-\end_layout
-
-\begin_layout Standard
-However, there is a problem with this check.
- This check does not take into account of how much Darek prefer each car.
- Therefore, we cannot know if the values in the comparison matrix are consistent
- with each other or not.
- This fact can make the whole hierarchy of AHP (especially multi-level hierarchy
-) becomes inconsistent because we have to make a pairwise comparison in
- each level of the hierarchy and the immediately lower level will use the
- priority vector produced by pairwise comparison of the base level to calculate
- its global weights 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "saaty2008decision"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-According to Saaty, for a consistent comparison matrix to be consistent,
- the largest Eigenvalue should be equal to the size of the comparison matrix,
- or 
-\begin_inset Formula $\lambda_{max}=n$
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "saaty2008decision"
-
-\end_inset
-
-.
- Then, to know how many degrees of consistency a comparison matrix is, Saaty
- gave us a measurement of consistency, the Consistency Index or CI.
- To calculate this index, we use the following formula:
-\begin_inset Formula 
-\begin{equation}
-CI=\frac{\lambda_{max}-n}{n-1}\label{eq:cii}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Therefore, applying into our example which has 
-\begin_inset Formula $\lambda_{max}=3.4129$
-\end_inset
-
- and the size of the comparison matrix is 
-\begin_inset Formula $n=3$
-\end_inset
-
-; we have the consistency index as follow: 
-\begin_inset Formula 
-\begin{equation}
-CI=\frac{\lambda_{max}-n}{n-1}=\frac{3.4129-3}{2}=0.20645\label{eq:ci}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Now, how can we use this index to determine the consistency of our comparison?
- Once again, according to Saaty, by comparing it with the appropriate one
- we can know what is the degree of consistency of the comparison matrix.
- The proper consistency index is called Random Consistency Index or RI 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Saaty:1980ahp"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Saaty had pre-calculated the Random Consistency Index for comparison matrix
- using a 1-9 scale based on a sample size of 500 random generated reciprocal
- matrices in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Pre-calculated-Random-Consistenc"
-
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Saaty:1980ahp"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Pre-calculated-Random-Consistenc"
-
-\end_inset
-
-Pre-calculated Random Consistency Index
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="11">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-n
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-6
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-10
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RI
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.58
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.12
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.24
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.32
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.41
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.45
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.49
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To compare the Consistency Index with the corresponding Random Consistency
- Index, Saaty proposed the Consistency Ratio which is calculated using the
- following formula 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Saaty:1980ahp"
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{equation}
-CR=\frac{CI}{RI}\label{eq:crr}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-If the value of Consistency Ratio is smaller or equal to 10%, then the inconsist
-ency in the comparison matrix is acceptable.
- However, if the Consistency Ratio is greater than 10%, we need to revise
- our judgement in the pairwise comparison process.
-\end_layout
-
-\begin_layout Standard
-In our example, we have: 
-\begin_inset Formula $CI=0.20645$
-\end_inset
-
- and 
-\begin_inset Formula $RI$
-\end_inset
-
- for 
-\begin_inset Formula $n=3$
-\end_inset
-
- is 
-\begin_inset Formula $0.58$
-\end_inset
-
-, then we have the Consistency Ratio as follow: 
-\begin_inset Formula 
-\begin{equation}
-CR=\frac{CI}{RI}=\frac{0.20645}{0.58}=0.3559\label{eq:cr}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We have 
-\begin_inset Formula $CR=35\%>10\%$
-\end_inset
-
-.
- Therefore we can see that Darek’s subjective judgement in the pairwise
- comparison process is not consistent.
- Thus, we recommend a revision for Darek’s pairwise comparison between three
- car models to improve the consistency.
+, we show the readers the mathematics behind the comparison process and
+ also the way to check if our pairwise comparisons are consistent or not.
 \end_layout
 
 \begin_layout Standard

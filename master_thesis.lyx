@@ -17,6 +17,7 @@
 \usepackage[titles]{tocloft}
 \cftsetindents{figure}{0em}{3.0em}
 \cftsetindents{table}{0em}{3.0em}
+\renewcommand{\arraystretch}{1.5}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -139,7 +140,20 @@ UNIVERSITY OF ZIELONA GÓRA
 \begin_inset VSpace medskip
 \end_inset
 
-FACULTY OF MATHEMATICS,
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{FACULTY OF MATHEMATICS,}
+\end_layout
+
+\end_inset
+
+
 \begin_inset VSpace medskip
 \end_inset
 
@@ -219,7 +233,7 @@ AN APPLICATION OF NEURAL
 
 \series bold
 \size largest
-NETWORK IN MULTI-CRITERIA
+NETWORKS IN MULTI-CRITERIA
 \series default
 \size larger
 
@@ -388,7 +402,7 @@ addcontentsline{toc}{section}{Introduction}
 \end_layout
 
 \begin_layout Standard
-Multi-criteria Decision Analysis (MCDA) which also can be call as "Multiple
+Multi-criteria Decision Analysis (MCDA) which can also be called as "Multiple
  Criteria Decision-Making" or "Multi-criteria Decision Aiding'' in English
  or "Analyse Multicritère" in French is an exciting field which has seen
  many achievements including increasing number of research papers, books,
@@ -417,8 +431,8 @@ key "pugnaire1992multicriteria,roy2005paradigms"
 \end_layout
 
 \begin_layout Standard
-In this thesis, we will show to the readers how to incorporate Artificial
- Neural Network (ANN) in MCDA 
+In this thesis, we show to the reader how to incorporate Artificial Neural
+ Networks (ANN) in MCDA 
 \begin_inset Note Note
 status open
 
@@ -437,15 +451,24 @@ how
 \end_inset
 
 .
- Thus, to prove the feasibility of this incorporation; first, we will point
- out some difficulties which MCDA has when dealing with complicated decision
- problems, especially problems that repeat many times.
- Then we will see what advantages of ANN can offer to solve these difficulties.
+ Thus, to prove the feasibility of this incorporation; first, we point out
+ some difficulties which MCDA has when dealing with complicated decision
+ problems, especially problems that are repeated many times.
+ Then we see what advantages ANN can offer to solve these difficulties.
+ In our case study, we use the very popular method of MCDA, namely Analytic
+ Hierarchy Process (AHP), invented by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Saaty:1980ahp"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-To make more sense to the readers, the contents of this thesis will be structure
-d as follow:
+To make more sense to the reader, the contents of this thesis is structured
+ as follow:
 \end_layout
 
 \begin_layout Standard
@@ -456,8 +479,8 @@ reference "sec:Multi-criteria-Decision-Analysis"
 
 \end_inset
 
-, readers will be greeted with basic concepts of MCDA and what we should
- expect from MCDA when using it to solve a decision problem.
+, the reader is greeted with basic concepts of MCDA and what should we expect
+ from MCDA when using it to solve a decision problem.
 \end_layout
 
 \begin_layout Standard
@@ -468,19 +491,19 @@ reference "sec:The-Method-of"
 
 \end_inset
 
-, we will show the concept of Analytic Hierarchy Process (AHP) which is
- an MCDA method to derive priority or ratio scales from paired comparisons.
+, we show the concept of Analytic Hierarchy Process (AHP) which is an MCDA
+ method to derive priorities or ratio scales from paired comparisons.
 \end_layout
 
 \begin_layout Standard
-For the chapter 
+For chapter 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:Artificial-Neural-Network"
 
 \end_inset
 
-, we will focus on the detail of ANN.
+, we focus on the details of ANN.
 \end_layout
 
 \begin_layout Standard
@@ -491,15 +514,15 @@ reference "sec:Case-Studies"
 
 \end_inset
 
-, we will design a model in which Artificial Neural Network will play a
- major role in the MCDA process.
- We will also create a case study where we use real data to show how effective
+, we design a model in which Artificial Neural Network plays a major role
+ in the MCDA process.
+ We also present a case study where we use real data to show how effective
  Artificial Neural Network can be in learning the decision making process.
 \end_layout
 
 \begin_layout Standard
-Finally, we will conclude the thesis with some conclusions which summarizes
- the points of this thesis.
+Finally, we conclude the thesis with some conclusions which summarizes the
+ points of this thesis.
  
 \end_layout
 
@@ -591,8 +614,8 @@ addcontentsline{toc}{section}{Conclusions}
 \end_layout
 
 \begin_layout Standard
-Now we have come to the end of the thesis; we will conclude our study with
- some summarizes and discussions:
+Now we have come to the end of the thesis; we conclude our study with some
+ summarizes and discussions as follows:
 \end_layout
 
 \begin_layout Subparagraph*
@@ -608,14 +631,13 @@ We have been shown with many great features of the artificial neural network:
  function - the ability to learn.
  With the capacity to learn the underlying complex relationship between
  input and output, an artificial neural network can even solve challenging
- classification problems where traditional computer program finds the most
- difficult.
+ classification problems which may be difficult when using traditional computer
+ programs.
 \end_layout
 
 \begin_layout Standard
 With the learning capability of the artificial neural network, we have followed
- the proposed model from Dr.
- Golmohammadi 
+ the proposed model from Golmohammadi 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "golmohammadi2011neural"
@@ -624,15 +646,14 @@ key "golmohammadi2011neural"
 
  and made an attempt to implement this model.
  Although the implementation is simplified to some extent, we have been
- shown with promising results.
+ shown it with promising results.
  
 \end_layout
 
 \begin_layout Standard
-As Dr.
- Golmohammadi has suggested (refer to 
+As Golmohammadi has suggested (refer to section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:The-proposed-model"
 
 \end_inset
@@ -640,9 +661,9 @@ reference "subsec:The-proposed-model"
 ), his proposed model can use historical data for making the future ranking
  of alternatives without the judgment effort of the decision maker.
  Although we can not use this model entirely and replace the traditional
- decision-making methods (according to 
+ decision-making methods (according to figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:The-difference-between"
 
 \end_inset
@@ -653,11 +674,11 @@ reference "fig:The-difference-between"
 \end_layout
 
 \begin_layout Standard
-However, when the validation results of our attempt in implementing Dr.
- Golmohammadi's proposed model has given such an excellent performance,
- we can be assured that this approach is not just only interesting but also
- bridges the gap between multi-criteria decision analysis and artificial
- neural network and opens the gate to many new kinds of application.
+However, when the validation results of our attempt in implementing Golmohammadi
+'s proposed model has given such a quite good performance, we can be assured
+ that this approach is not just only interesting but also bridges the gap
+ between multi-criteria decision analysis and artificial neural network
+ and opens the gate to many new kinds of application.
 \end_layout
 
 \begin_layout Standard
@@ -675,15 +696,14 @@ Issues with the artificial neural network:
 
 \begin_layout Standard
 There are many problems which have been found during the process of implementing
- the proposed model of Dr.
- Golmohammadi.
+ the proposed model of Golmohammadi.
 \end_layout
 
 \begin_layout Standard
 First, the network will not work if we introduce new criteria to our problem
- in our case study (refer to 
+ in our case study (refer to section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Case-Study"
 
 \end_inset
@@ -691,7 +711,7 @@ reference "subsec:Case-Study"
 ).
  This issue happens because the network has only been trained with the training
  data that only contains information related to the provided criteria.
- If we introduce new criteria, the network will stop working because it
+ If we introduce new criteria, the network will perform badly because it
  does not have the relevant information about the new criteria.
  In the situation of new criteria being introduced, we have to restart everythin
 g from scratch again, in other words, we have to build an entirely new training
@@ -700,13 +720,14 @@ g from scratch again, in other words, we have to build an entirely new training
 \end_layout
 
 \begin_layout Standard
-Second, if the training data is not well-defined, the performance of the
- artificial neural network will be deeply affected and can not be useful
- anymore.
+Second, if the training data are not well-defined (for example, the training
+ data are not normalized properly or there is not enough training data),
+ the performance of the artificial neural network will be deeply affected
+ and can not be useful anymore.
  Therefore, we have to be extra careful when modeling the training data
  in order not to waste too much time in training the neural network, in
- particular with the case where we have a large set of training data, and
- the architecture of the artificial neural network is complex.
+ particular in the case when we have a large set of training data, and the
+ architecture of the artificial neural network is complex.
 \end_layout
 
 \begin_layout Standard
@@ -715,9 +736,9 @@ Third, this study only scrapes the tip of the iceberg.
  we only pick the most basic and easiest to understand concepts of artificial
  neural network and machine learning in general.
  Looking at the code where we created an instance of artificial neural network
- in MATLAB (refer to 
+ in MATLAB (refer to section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Artificial-Neural-Network"
 
 \end_inset
@@ -819,6 +840,20 @@ status open
 \backslash
 addcontentsline{toc}{section}{References}
 \end_layout
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "master_thesis_appendix.lyx"
 
 \end_inset
 
