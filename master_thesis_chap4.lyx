@@ -580,7 +580,7 @@ on method, we only have to care about the number of artificial neurons in
 \end_layout
 
 \begin_layout Standard
-The hardest part is to decide the number of neurons and the number of hidden
+It is always difficult to decide the number of neurons and the number of
  layers for the hidden layer of our ANN.
  There is no rule of thumb to determine the exact number of neurons and
  number of hidden layers.

@@ -827,7 +827,7 @@ key "teknomoAHPtutorial"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1172,9 +1172,10 @@ Because we have three pairwise comparisons, in this case, our comparison
  matrix is a three by three matrix.
  In this matrix, the values on the diagonal line are one because it is the
  value of a comparison of two same objects.
- We only have to fill up the upper triangular matrix, for the lower triangular
- matrix, we can use the reciprocal values of the upper triangular matrix.
- To fill up the comparison value, we use the following rules 
+ First, we fill up the upper triangular matrix using the results of our
+ comparisons and then we fill the lower triangular matrix by using the reciproca
+l values of the upper triangular matrix.
+ We use the following rules to fill up the comparison values 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "teknomoAHPtutorial"
@@ -1192,27 +1193,31 @@ key "teknomoAHPtutorial"
 \end_layout
 
 \begin_layout Enumerate
-If the preference value is on the 
+We put the
+\series bold
+ preference value
+\series default
+ when the preference value is on the 
 \series bold
 left side
 \series default
- of 1, we put the 
-\series bold
-actual preference value
-\series default
- 
+ of 1 on the scale.
 \end_layout
 
 \begin_layout Enumerate
-If the preference value is on the 
-\series bold
-right side
-\series default
- of 1, we put the 
+We put the 
 \series bold
 reciprocal value
 \series default
-.
+ of the
+\series bold
+ preference value
+\series default
+ when the preference value is on the 
+\series bold
+right side
+\series default
+ of 1 on the scale.
 \end_layout
 
 \begin_layout Standard

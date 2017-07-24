@@ -18,7 +18,9 @@
 \cftsetindents{figure}{0em}{3.0em}
 \cftsetindents{table}{0em}{3.0em}
 \renewcommand{\arraystretch}{1.5}
+\usepackage{fancyhdr}
 \end_preamble
+\options titlepage
 \use_default_options true
 \begin_modules
 theorems-ams
@@ -98,7 +100,7 @@ End
 \cite_engine natbib
 \cite_engine_type authoryear
 \biblio_style plain
-\use_bibtopic false
+\use_bibtopic true
 \use_indices false
 \paperorientation portrait
 \suppress_date false
@@ -133,48 +135,62 @@ End
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\backslash
+clearpage
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \align center
 
-\size larger
-UNIVERSITY OF ZIELONA GÓRA
-\begin_inset VSpace medskip
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mbox{FACULTY OF MATHEMATICS,}
+\size large
+UNIVERSITY OF ZIELONA GÓRA 
 \end_layout
 
+\begin_layout Standard
+\align center
+
+\size large
+FACULTY OF MATHEMATICS,
+\begin_inset Newline newline
 \end_inset
 
-
-\begin_inset VSpace medskip
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mbox{COMPUTER SCIENCE AND ECONOMETRICS}
+COMPUTER SCIENCE AND ECONOMETRICS
 \end_layout
 
-\end_inset
+\begin_layout Standard
+\align center
 
+\size large
+FIELD OF STUDY: INFORMATICS AND ECONOMETRICS 
+\end_layout
 
-\begin_inset VSpace medskip
-\end_inset
+\begin_layout Standard
+\align center
 
+\size large
 SPECIALIZATION: BUSINESS ANALYTICS
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -195,7 +211,7 @@ SPECIALIZATION: BUSINESS ANALYTICS
 \align center
 
 \series bold
-LÃ MINH HOÀNG
+LA MINH HOANG
 \end_layout
 
 \begin_layout Standard
@@ -268,13 +284,37 @@ DECISION ANALYSIS
 \end_layout
 
 \begin_layout Standard
-\align right
-Thesis supervisor
-\begin_inset space \qquad{}
+\begin_inset VSpace bigskip
 \end_inset
 
 
-\begin_inset space \qquad{}
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+Master thesis supervisor
+\begin_inset space \quad{}
 \end_inset
 
 
@@ -347,15 +387,51 @@ Dr hab.
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace vfill
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{fancy}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+headrulewidth}{0 pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyfoot[C]{ZIELONA GÓRA, 2017}
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\align center
-ZIELONA GÓRA, 2017
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -496,7 +572,7 @@ reference "sec:The-Method-of"
 \end_layout
 
 \begin_layout Standard
-For chapter 
+In chapter 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:Artificial-Neural-Network"
@@ -758,14 +834,6 @@ reference "subsec:Artificial-Neural-Network"
 \end_layout
 
 \begin_layout Standard
-\begin_inset FloatList figure
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -782,15 +850,15 @@ addcontentsline{toc}{section}{List of Figures}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset FloatList figure
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset FloatList table
-
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -813,21 +881,22 @@ addcontentsline{toc}{section}{List of Tables}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset FloatList table
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "master_thesis"
-options "agsm"
-
+\begin_inset Newpage newpage
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+References
 \end_layout
 
 \begin_layout Standard
@@ -844,6 +913,84 @@ addcontentsline{toc}{section}{References}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "master_thesis"
+options "agsm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Internet Sources
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Internet Sources}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "other_internet_sources"
+options "agsm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Wikipedia Sources
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Wikipedia Sources}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "wiki_sources"
+options "agsm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
