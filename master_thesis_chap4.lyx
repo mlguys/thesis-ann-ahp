@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass mwart
+\textclass article
 \begin_preamble
 \usepackage{url}
 \setkeys{Gin}{width=\ifdim\Gin@nat@width>\linewidth
@@ -104,7 +104,7 @@ End
 \end_layout
 
 \begin_layout Section
-Applying ANN in AHP method
+Applying ANN in MCDA Using the AHP method
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Case-Studies"
@@ -115,23 +115,16 @@ name "sec:Case-Studies"
 \end_layout
 
 \begin_layout Standard
-In 
+In chapters 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "sec:Multi-criteria-Decision-Analysis"
 
 \end_inset
 
-, 
+ - 
 \begin_inset CommandInset ref
-LatexCommand formatted
-reference "sec:The-Method-of"
-
-\end_inset
-
-, and 
-\begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "sec:Artificial-Neural-Network"
 
 \end_inset
@@ -152,26 +145,24 @@ reference "sec:Artificial-Neural-Network"
 \begin_layout Standard
 However, these concepts seem rather separated, and not much connection between
  them have been mentioned either.
- Therefore, in this section, we will introduce to the readers the proposed
- model from Dr.
- Golmohammadi which connects all three concepts mentioned above.
- This proposed model is used for reducing the decision maker's effort in
- making future ranking of alternatives 
+ Therefore, in this chapter, we introduce to the reader the proposed model
+ from 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "golmohammadi2011neural"
 
 \end_inset
 
-.
- Then, we will make a case study using a real-life decision problem to introduce
- our implementation of this proposed model to show its feasibility to the
- readers.
+ which connects all three concepts mentioned above.
+ This proposed model is used for reducing the decision maker's effort in
+ making future ranking of alternatives.
+ Then, we make a case study using a real-life decision problem to introduce
+ our implementation of this proposed model and to show its feasibility to
+ the decision methods.
 \end_layout
 
 \begin_layout Subsection
-The proposed model of Dr.
- Golmohammadi
+The proposed model of Golmohammadi
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:The-proposed-model"
@@ -182,10 +173,9 @@ name "subsec:The-proposed-model"
 \end_layout
 
 \begin_layout Standard
-According to the study of Dr.
- Golmohammadi 
+According to the study of 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "golmohammadi2011neural"
 
 \end_inset
@@ -193,26 +183,24 @@ key "golmohammadi2011neural"
 , the task in which a decision maker have to make the best possible decision
  based on the existing information, and future predictions is a challenging
  task.
- Dr.
  Golmohammadi wants to create a model that can act as a tool and support
- the task above, and he chose ANN and AHP as two crucial components for
+ the task above, and he chooses ANN and AHP as two crucial components for
  his proposed model.
 \end_layout
 
 \begin_layout Standard
-The proposed model of Dr.
- Golmohammadi can use historical data for making the future ranking of alternati
-ves without the judgment effort of the decision maker
+The proposed model of 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "golmohammadi2011neural"
 
 \end_inset
 
-.
- In 
+ can use historical data for making the future ranking of alternatives without
+ the judgment effort of the decision maker.
+ In the figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:The-difference-between"
 
 \end_inset
@@ -232,7 +220,7 @@ reference "fig:The-difference-between"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -280,9 +268,9 @@ key "golmohammadi2011neural"
 \end_layout
 
 \begin_layout Standard
-We can see in 
+We can see in the figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:The-difference-between"
 
 \end_inset
@@ -298,12 +286,11 @@ reference "fig:The-difference-between"
 \end_layout
 
 \begin_layout Standard
-In his proposed model, Dr.
- Golmohammadi chooses ANN as the mechanism for which the proposed model
- can use to make the ranking automatically (thanks to the learning ability
- of ANN, please refer to 
+In his proposed model, Golmohammadi chooses ANN as the mechanism for which
+ the proposed model can use to make the ranking automatically (thanks to
+ the learning ability of ANN, please refer to section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Learning"
 
 \end_inset
@@ -316,7 +303,6 @@ key "golmohammadi2011neural"
 \end_inset
 
 .
- Dr.
  Golmohammadi also chooses AHP as the pairwise comparison technique which
  is responsible for weight calculations which are then applied to the training
  data for ANN 
@@ -341,15 +327,14 @@ name "subsec:Implementation-of-The"
 \end_layout
 
 \begin_layout Standard
-In 
+In the figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Model-design-steps"
 
 \end_inset
 
-, Dr.
- Golmohammadi has described a model design for which we can use to implement
+, Golmohammadi has described a model design which can be used to implement
  the proposed model 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -359,42 +344,40 @@ key "golmohammadi2011neural"
 
 .
  However, the scope of the thesis does not allow us to follow all the steps
- from the model design of Dr.
- Golmohammadi; instead, we will make a simplified implementation design
- as in 
+ from the model design of Golmohammadi; instead, we make a simplified implementa
+tion design as in the figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Simplified-model-design"
 
 \end_inset
 
 .
- In our simplified design, we will assume in the context that we will solve
- a decision problem which is a ranking problem using multi-criteria decision
- analysis with analytic hierarchy process as the main method.
- For the artificial neuron network which we will use to support the MCDA
- process, we will use a feedforward neural network and train it with the
- back-propagation method.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
+ For example, we don't use fuzzy sets, the defuzzification procedure, and
+ the sensitivity analysis.
+ In our simplified design, we assume that we are going to solve a decision
+ problem which is a ranking problem.
+ For this ranking problem, we use multi-criteria decision analysis with
+ analytic hierarchy process as the main method.
+ For the artificial neuron network which is used to support the MCDA process,
+ we use a feedforward neural network and train it with the back-propagation
+ method.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename img/Design steps.png
 	lyxscale 50
+	width 60page%
+	height 60pheight%
+	keepAspectRatio
 
 \end_inset
 
@@ -435,7 +418,7 @@ key "golmohammadi2011neural"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -471,13 +454,6 @@ Simplified model design steps
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsubsection
 Making Input
 \begin_inset CommandInset label
@@ -490,22 +466,21 @@ name "subsec:Making-Input"
 \end_layout
 
 \begin_layout Standard
-Recall from 
+Recall from section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Training-Artificial-Neural"
 
 \end_inset
 
-, to train an ANN; we need to provide the network a set of training input.
- This set of training input will be the measurements of the criteria in
- our decision problem.
- These measurements are the history performance which the decision maker
- has used to make prior decisions.
+ that to train an ANN we need to provide the network with a set of training
+ inputs.
+ This set of training inputs is the data taken form the prior decisions
+ made by the decision maker.
 \end_layout
 
 \begin_layout Standard
-It is also important to normalized the set of training input to have the
+It is also important to normalize the set of training inputs to have the
  same order of magnitude because if we do not normalize, some training input
  values may appear to have more significance than they actually do and this
  difference in order of magnitude between training input values could affect
@@ -531,42 +506,40 @@ name "subsec:Making-Output"
 \end_layout
 
 \begin_layout Standard
-Also from 
+Also from section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Training-Artificial-Neural"
 
 \end_inset
 
-, we will need a set of training output which is the scores for ranking
- of alternatives corresponding to the training input.
- This set of training output will be the desired output vector (refer to
+, we need a set of training outputs which is the scores for ranking of alternati
+ves corresponding to the training input.
+ This set of training outputs is the desired output vector (refer to section
  
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Training-Artificial-Neural"
 
 \end_inset
 
- and 
+ and table 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "tab:Example-of-training"
 
 \end_inset
 
-) and we will use them to train our ANN in order for the ANN to recognize
- the relationship between the measurements of the criteria in our decision
- problem and the ranking produced by the AHP method (refer to 
+) which is the ranking produced by the AHP method (refer to chapter 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:The-Method-of"
 
 \end_inset
 
- and 
+ and section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Priority-Vector"
 
 \end_inset
@@ -575,14 +548,14 @@ reference "subsec:Priority-Vector"
 \end_layout
 
 \begin_layout Standard
-For the same reason as in 
+For the same reason as in section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Making-Input"
 
 \end_inset
 
-, we also need to normalized the set of training output.
+, we also need to normalize the set of training outputs.
 \end_layout
 
 \begin_layout Subsubsection
@@ -597,27 +570,27 @@ name "subsec:Determine-ANN-Structure"
 \end_layout
 
 \begin_layout Standard
-Because we have assumed to use a feedforward neural network and train it
- with the back-propagation method, we only have to care about the number
- of artificial neurons in each layer of the ANN.
- For the input layer, the number of neurons will equal to the number of
+Because we use a feedforward neural network and train it with the back-propagati
+on method, we only have to care about the number of artificial neurons in
+ each layer of the ANN.
+ For the input layer, the number of neurons is the same as the number of
  criteria we use in our decision problem.
  For the output layer, because our decision problem is a ranking problem
- therefore we just need one neuron to represent the score for ranking our
- alternatives.
+ so we just need one neuron to represent the score for ranking our alternatives.
 \end_layout
 
 \begin_layout Standard
-The hardest part is to decide the number of neurons and the number of hidden
+It is always difficult to decide the number of neurons and the number of
  layers for the hidden layer of our ANN.
  There is no rule of thumb to determine the exact number of neurons and
  number of hidden layers.
- Usually, the optimal numbers are found by trail-and-error in which we train
- the network with various configurations then to pick the configuration
- with the fewest number of layers and neurons that still keep the network
- at the minimum Mean Squared Errors (refer to 
+ Usually, the optimal number is found by trial-and-error in which we train
+ the network with various configurations.
+ Then we pick the configuration with the fewest number of layers and neurons
+ that still keep the network at the minimum Mean Squared Errors (refer to
+ section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Validation"
 
 \end_inset
@@ -644,29 +617,29 @@ name "subsec:Model-Training"
 \end_layout
 
 \begin_layout Standard
-From 
+From section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Training-Artificial-Neural"
 
 \end_inset
 
- and the assumption in the beginning of 
+ and the assumption in the beginning of section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Implementation-of-The"
 
 \end_inset
 
-, we knew that our ANN will be trained using the back-propagation method.
- We will keep training our ANN until the 
+, we know that our ANN is trained using the back-propagation method.
+ We keep training our ANN until the 
 \begin_inset Formula $Error$
 \end_inset
 
- value is at minimum, then we will test the performance of our ANN using
- Mean Squared Error and R-value (refer to 
+ value is at minimum, then we test the performance of our ANN using Mean
+ Squared Error and R-value (refer to section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:Validation"
 
 \end_inset
@@ -675,7 +648,7 @@ reference "subsec:Validation"
 \end_layout
 
 \begin_layout Subsubsection
-Validation
+Validate model performance
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Validation"
@@ -710,7 +683,7 @@ Error
 \begin_layout LyX-Code
 \begin_inset Formula 
 \begin{equation}
-MSE=\frac{1}{n}\sum_{i=1}^{n}(o-d)^{2}\label{eq:mse}
+MSE=\frac{1}{n}\sum_{i=1}^{n}(o_{i}-d_{i})^{2}\label{eq:mse}
 \end{equation}
 
 \end_inset
@@ -720,28 +693,25 @@ MSE=\frac{1}{n}\sum_{i=1}^{n}(o-d)^{2}\label{eq:mse}
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-Where:
+where:
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
+\begin_layout Itemize
 \begin_inset Formula $n$
 \end_inset
 
  is the number of observations.
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-\begin_inset Formula $o$
+\begin_layout Itemize
+\begin_inset Formula $o=(o_{1},o_{2},...,o_{n})$
 \end_inset
 
  is the output vector produced by the ANN.
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-\begin_inset Formula $d$
+\begin_layout Itemize
+\begin_inset Formula $d=(d_{1},d_{2},...,d_{n})$
 \end_inset
 
  is the desired output vector we want the ANN to learn.
@@ -761,13 +731,17 @@ Where:
 \series bold
 R-value
 \series default
- is defined as follow:
+ which is denoted as 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ and is defined as follows:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-R^{2}=1-\frac{\sum_{i=1}^{n}(o-d)^{2}}{\sum_{i=1}^{n}(o-\overline{d})^{2}}\label{eq:rvalue}
+R^{2}=1-\frac{\sum_{i=1}^{n}(o_{i}-d_{i})^{2}}{\sum_{i=1}^{n}(o_{i}-\overline{d})^{2}}\label{eq:rvalue}
 \end{equation}
 
 \end_inset
@@ -777,12 +751,11 @@ R^{2}=1-\frac{\sum_{i=1}^{n}(o-d)^{2}}{\sum_{i=1}^{n}(o-\overline{d})^{2}}\label
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-Where:
+where:
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-\begin_inset Formula $\overline{d}$
+\begin_layout Itemize
+\begin_inset Formula $\overline{d}=\frac{1}{n}\sum_{i=1}^{n}(d_{i})$
 \end_inset
 
  is the average value of the desired output vector 
@@ -793,13 +766,12 @@ Where:
 \end_layout
 
 \begin_layout Standard
-When the training process is finished, we will test our trained ANN on a
- set of independent input and output which is exclusive from the training
- data.
- Based on the result, if the performance is good (MSE closes to 0 and R-value
- closes to 1) then we can use the trained ANN for future ranking.
- However, if the performance is bad then we have to investigate to see where
- is the problem in our model design.
+When the training process is finished, we test our trained ANN on a set
+ of independent input and output which is separated from the training data.
+ Based on the result, if the performance is good (MSE close to 0 and R-value
+ close to 1) then we can use the trained ANN for future ranking.
+ However, if the performance is bad then we have to investigate where is
+ the problem in our model design.
 \end_layout
 
 \begin_layout Standard
@@ -814,10 +786,17 @@ key "mashrei2012neural"
  Training an ANN requires a lot of parameters to be properly set such as
  the number of artificial neurons in the hidden layer, the number of hidden
  layers, the type of activation function, or did our training data is normalized
- yet? There are many factors that could affect the performance of the ANN
- and depend on the location (is problem relates to how we define the set
- of training input or is the number of artificial neurons is too much) we
- will have to repeat the model design at the suitable steps.
+ yet? Therefore, we have to identify what kind of bad configuration is causing
+ the bad performance (Is the set of training inputs and training output
+ well defined yet? Is the number of artificial neurons too much or too few?)
+ in order to correct the right step in the model design in figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Simplified-model-design"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -832,9 +811,9 @@ name "subsec:Case-Study"
 \end_layout
 
 \begin_layout Standard
-In this section, we will demonstrate the proposed model of applying Artificial
+In this section, we demonstrate the proposed model of applying Artificial
  Neural Network (ANN) in multi-criteria decision making problems by applying
- it on actual problem based on real data sources.
+ it for an actual problem based on real data.
 \end_layout
 
 \begin_layout Subsubsection
@@ -850,38 +829,39 @@ name "subsec:Problem-definition"
 
 \begin_layout Standard
 The problem is to rank the eco-friendly levels of top twelve best-selling
- car manufacturers in the United Kingdom each year by using AHP method;
- we will call this problem Eco-Friendly Car Manufacturers Ranking Problem.
+ car manufacturers in the United Kingdom by using AHP method and then to
+ use the ranking to choose the most eco-friendly car; we call this problem
+ Eco-Friendly Car Manufacturers Ranking Problem.
 \end_layout
 
 \begin_layout Standard
 To have the list of top twelve best-selling car manufacturers for each year,
- we will use sale data provided by The Society of Motor Manufacturers and
- Traders of United Kingdom 
+ we use sales data provided by The Society of Motor Manufacturers and Traders
+ of United Kingdom or SMMT 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citeyearpar
 key "web:smmt"
 
 \end_inset
 
 .
- Each year, SMMT will release a sale report which tells us how many cars
- are sold in the United Kingdom in that year.
+ Each year, SMMT releases a sales report which tells us how many cars were
+ sold in the United Kingdom in that year.
  The report also says the number of cars each car manufacturer has sold.
- Therefore we will know which car manufacturer has the best sale.
- Base on this information, we will select the top twelve best-selling car
- manufacturers for our problem.
+ Therefore we know which car manufacturer has the best sale.
+ Base on this information, we select the top twelve best-selling car manufacture
+rs for our problem.
 \end_layout
 
 \begin_layout Standard
 We also need some environment related information such as fuel consumptions
  and emissions data for each car manufacturer in each year to determine
  their eco-friendly level.
- We will use the “Car fuel consumptions and emissions 2000-2013” dataset
- published by the Vehicle Certification Agency of United Kingdom Department
- for Transport 
+ We use the “Car fuel consumptions and emissions 2000-2013” dataset published
+ by the Vehicle Certification Agency of United Kingdom Department for Transport
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citeyearpar
 key "web:cardata"
 
 \end_inset
@@ -896,14 +876,31 @@ r could make each year by averaging all the impacts on the environment of
 \end_layout
 
 \begin_layout Standard
-One thing about our data is that it will not contain the actual information
- of environment impact which each car makes each year, it just specifies
- how much a car model will impact on the environment.
- Also, the reason why we choose to rank the top twelve best-selling car
- manufacturers is to reduce the amount of pair-wise comparison which could
- get exponentially large if we have too many alternatives (refer to 
+One thing about our data is that it does not contain the actual information
+ of environment impact (information achieved under 
+\begin_inset Quotes eld
+\end_inset
+
+real life
+\begin_inset Quotes erd
+\end_inset
+
+ driving conditions), it contains only the data that are obtained by specific
+ test conditions which are performed by Vehicle Certification Agency of
+ United Kingdom Department for Transport 
+\begin_inset CommandInset citation
+LatexCommand citeyearpar
+key "web:cardata"
+
+\end_inset
+
+.
+ Also, the reason why we choose to rank only the top twelve best-selling
+ car manufacturers is to reduce the amount of pairwise comparisons which
+ could get exponentially large if we would have too many alternatives (refer
+ to table 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "tab:Number-of-comparisons"
 
 \end_inset
@@ -913,19 +910,16 @@ reference "tab:Number-of-comparisons"
 
 \begin_layout Standard
 Therefore, the ranking produced from the Eco-Friendly Car Manufacturers
- Ranking Problem will tell us the potential environment impact level of
- car manufacturers would make for each year.
- With this insight, if we want to purchase a new car, we can reference this
- ranking and make our decision so that the car we buy will be the most eco-frien
-dly car.
+ Ranking Problem tells us the potential environment impact level of cars
+ produced by different manufacturers each year.
 \end_layout
 
 \begin_layout Standard
 Although the datasets from SMMT and VCA have data for more than a decade,
- we will pick only data from the year 2009, 2010, 2011, 2012 and 2013 to
- use in the demonstration of our problem.
- This amount of data is adequate for the training of ANN, and it also helps
- to reduce the scope of our problem.
+ we pick only data from the years 2009, 2010, 2011, 2012 and 2013 to use
+ in the demonstration of our problem.
+ This amount of data is sufficient for the training of ANN, and it also
+ helps us to reduce the size of our problem.
 \end_layout
 
 \begin_layout Subsubsection
@@ -940,20 +934,21 @@ name "subsec:Data-Sources"
 \end_layout
 
 \begin_layout Paragraph
-Sale Report for Car in United Kingdom:
+Sales Report for Car in United Kingdom:
 \end_layout
 
 \begin_layout Standard
-We will use the sale report provided by 
+We use the sales report posted by Car Magazine 
 \begin_inset CommandInset citation
-LatexCommand citep
-key "web:smmt"
+LatexCommand citeyearpar
+key "web:carmagazine"
 
 \end_inset
 
- each year to select our top twelve best-selling car manufacturers.
- This report contains the total number of cars sold in one year span in
- United Kingdom.
+ which takes data from SMMT each year to select out top twelve best-selling
+ car manufacturers.
+ This report contains the total number of cars sold in one year in United
+ Kingdom.
  It also groups the car sales by manufacturers, therefore we simply sort
  the report in descending order and pick the top twelve car manufacturers
  to have our best-selling car manufacturers.
@@ -964,7 +959,7 @@ key "web:smmt"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -976,9 +971,23 @@ name "tab:UK-Car-Sales"
 
 \end_inset
 
-UK Car Sales 2009
+UK Car Sales 2009 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "web:carmagazin2009"
+
+\end_inset
+
+
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -1073,7 +1082,7 @@ Ford
 \uwave off
 \noun off
 \color none
-129.287
+316,369
 \end_layout
 
 \end_inset
@@ -1117,7 +1126,7 @@ Vauxhall
 \uwave off
 \noun off
 \color none
-101.023
+237,40
 \end_layout
 
 \end_inset
@@ -1161,7 +1170,7 @@ Volkswagen
 \uwave off
 \noun off
 \color none
-62.892
+161,137
 \end_layout
 
 \end_inset
@@ -1205,7 +1214,7 @@ Toyota
 \uwave off
 \noun off
 \color none
-40.265
+102,612
 \end_layout
 
 \end_inset
@@ -1249,51 +1258,7 @@ Peugeot
 \uwave off
 \noun off
 \color none
-39.164
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Audi
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-39.180
+102,574
 \end_layout
 
 \end_inset
@@ -1337,7 +1302,7 @@ BMW
 \uwave off
 \noun off
 \color none
-34.098
+98,683
 \end_layout
 
 \end_inset
@@ -1360,7 +1325,7 @@ BMW
 \uwave off
 \noun off
 \color none
-Honda
+Audi
 \end_layout
 
 \end_inset
@@ -1381,51 +1346,7 @@ Honda
 \uwave off
 \noun off
 \color none
-31.423
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Mercedes-Benz
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-27.137
+91,172
 \end_layout
 
 \end_inset
@@ -1469,7 +1390,7 @@ Citroen
 \uwave off
 \noun off
 \color none
-25.788
+72,450
 \end_layout
 
 \end_inset
@@ -1492,7 +1413,7 @@ Citroen
 \uwave off
 \noun off
 \color none
-Nissan
+Mercedes-Benz
 \end_layout
 
 \end_inset
@@ -1513,7 +1434,95 @@ Nissan
 \uwave off
 \noun off
 \color none
-24.093
+72,281
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+63,174
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Fiat
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+60,337
 \end_layout
 
 \end_inset
@@ -1536,7 +1545,7 @@ Nissan
 \uwave off
 \noun off
 \color none
-Renault
+Hyundai
 \end_layout
 
 \end_inset
@@ -1557,7 +1566,7 @@ Renault
 \uwave off
 \noun off
 \color none
-21.139
+56,726
 \end_layout
 
 \end_inset
@@ -1583,7 +1592,7 @@ Renault
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1595,9 +1604,23 @@ name "tab:UK-Car-Sales-1"
 
 \end_inset
 
-UK Car Sales 2010
+UK Car Sales 2010 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "web:carmagazin2010"
+
+\end_inset
+
+
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -1692,7 +1715,7 @@ Ford
 \uwave off
 \noun off
 \color none
-280.364
+280,364
 \end_layout
 
 \end_inset
@@ -1736,7 +1759,7 @@ Vauxhall
 \uwave off
 \noun off
 \color none
-247.265
+247,265
 \end_layout
 
 \end_inset
@@ -1780,7 +1803,7 @@ Volkswagen
 \uwave off
 \noun off
 \color none
-174.655
+174,655
 \end_layout
 
 \end_inset
@@ -1824,7 +1847,7 @@ BMW
 \uwave off
 \noun off
 \color none
-109.418
+109,418
 \end_layout
 
 \end_inset
@@ -1868,7 +1891,7 @@ Peugeot
 \uwave off
 \noun off
 \color none
-109.324
+109,324
 \end_layout
 
 \end_inset
@@ -1912,7 +1935,7 @@ Audi
 \uwave off
 \noun off
 \color none
-99.828
+99,828
 \end_layout
 
 \end_inset
@@ -1956,7 +1979,7 @@ Renault
 \uwave off
 \noun off
 \color none
-95.608
+95,608
 \end_layout
 
 \end_inset
@@ -2000,7 +2023,7 @@ Nissan
 \uwave off
 \noun off
 \color none
-89.681
+89,681
 \end_layout
 
 \end_inset
@@ -2044,7 +2067,7 @@ Toyota
 \uwave off
 \noun off
 \color none
-87.396
+87,396
 \end_layout
 
 \end_inset
@@ -2088,7 +2111,7 @@ Mercedes-Benz
 \uwave off
 \noun off
 \color none
-74.977
+74,977
 \end_layout
 
 \end_inset
@@ -2132,7 +2155,7 @@ Citroen
 \uwave off
 \noun off
 \color none
-73.317
+73,317
 \end_layout
 
 \end_inset
@@ -2176,7 +2199,7 @@ Honda
 \uwave off
 \noun off
 \color none
-63.652
+63,652
 \end_layout
 
 \end_inset
@@ -2198,7 +2221,7 @@ Honda
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2210,9 +2233,23 @@ name "tab:UK-Car-Sales-1-1"
 
 \end_inset
 
-UK Car Sales 2011
+UK Car Sales 2011 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "web:carmagazin2011"
+
+\end_inset
+
+
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -2307,7 +2344,7 @@ Ford
 \uwave off
 \noun off
 \color none
-265.894
+265,894
 \end_layout
 
 \end_inset
@@ -2351,7 +2388,7 @@ Vauxhall
 \uwave off
 \noun off
 \color none
-234.710
+234,710
 \end_layout
 
 \end_inset
@@ -2395,7 +2432,7 @@ Volkswagen
 \uwave off
 \noun off
 \color none
-179.290
+179,290
 \end_layout
 
 \end_inset
@@ -2439,7 +2476,7 @@ BMW
 \uwave off
 \noun off
 \color none
-116.642
+116,642
 \end_layout
 
 \end_inset
@@ -2483,7 +2520,7 @@ Audi
 \uwave off
 \noun off
 \color none
-113.797
+113,797
 \end_layout
 
 \end_inset
@@ -2527,7 +2564,7 @@ Nissan
 \uwave off
 \noun off
 \color none
-96.269
+96,269
 \end_layout
 
 \end_inset
@@ -2571,7 +2608,7 @@ Peugeot
 \uwave off
 \noun off
 \color none
-94.989
+94,989
 \end_layout
 
 \end_inset
@@ -2615,7 +2652,7 @@ Mercedes-Benz
 \uwave off
 \noun off
 \color none
-81.873
+81,873
 \end_layout
 
 \end_inset
@@ -2659,7 +2696,7 @@ Toyota
 \uwave off
 \noun off
 \color none
-73.589
+73,589
 \end_layout
 
 \end_inset
@@ -2703,7 +2740,7 @@ Citroen
 \uwave off
 \noun off
 \color none
-68.464
+68,464
 \end_layout
 
 \end_inset
@@ -2747,7 +2784,7 @@ Renault
 \uwave off
 \noun off
 \color none
-68.449
+68,449
 \end_layout
 
 \end_inset
@@ -2791,7 +2828,7 @@ Hyundai
 \uwave off
 \noun off
 \color none
-62.900
+62,900
 \end_layout
 
 \end_inset
@@ -2813,7 +2850,7 @@ Hyundai
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2825,9 +2862,23 @@ name "tab:UK-Car-Sales-1-2"
 
 \end_inset
 
-UK Car Sales 2012
+UK Car Sales 2012 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "web:carmagazin2012"
+
+\end_inset
+
+
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -2922,7 +2973,7 @@ Ford
 \uwave off
 \noun off
 \color none
-281.917
+281,917
 \end_layout
 
 \end_inset
@@ -2966,7 +3017,7 @@ Vauxhall
 \uwave off
 \noun off
 \color none
-232.255
+232,255
 \end_layout
 
 \end_inset
@@ -3010,7 +3061,7 @@ Volkswagen
 \uwave off
 \noun off
 \color none
-183.098
+183,098
 \end_layout
 
 \end_inset
@@ -3054,7 +3105,7 @@ BMW
 \uwave off
 \noun off
 \color none
-127.530
+127,530
 \end_layout
 
 \end_inset
@@ -3098,7 +3149,7 @@ Audi
 \uwave off
 \noun off
 \color none
-123.622
+123,622
 \end_layout
 
 \end_inset
@@ -3142,7 +3193,7 @@ Nissan
 \uwave off
 \noun off
 \color none
-105.835
+105,835
 \end_layout
 
 \end_inset
@@ -3186,7 +3237,7 @@ Peugeot
 \uwave off
 \noun off
 \color none
-99.486
+99,486
 \end_layout
 
 \end_inset
@@ -3230,7 +3281,7 @@ Mercedes-Benz
 \uwave off
 \noun off
 \color none
-91.855
+91,855
 \end_layout
 
 \end_inset
@@ -3274,7 +3325,7 @@ Toyota
 \uwave off
 \noun off
 \color none
-84.563
+84,563
 \end_layout
 
 \end_inset
@@ -3318,7 +3369,7 @@ Hyundai
 \uwave off
 \noun off
 \color none
-74.285
+74,285
 \end_layout
 
 \end_inset
@@ -3362,7 +3413,7 @@ Citroen
 \uwave off
 \noun off
 \color none
-73.656
+73,656
 \end_layout
 
 \end_inset
@@ -3406,7 +3457,7 @@ Kia
 \uwave off
 \noun off
 \color none
-66.629
+66,629
 \end_layout
 
 \end_inset
@@ -3428,7 +3479,7 @@ Kia
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3440,9 +3491,23 @@ name "tab:UK-Car-Sales-1-3"
 
 \end_inset
 
-UK Car Sales 2013
+UK Car Sales 2013 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "web:carmagazine2013"
+
+\end_inset
+
+
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -3537,7 +3602,7 @@ Ford
 \uwave off
 \noun off
 \color none
-310.865
+310,865
 \end_layout
 
 \end_inset
@@ -3581,7 +3646,7 @@ Vauxhall
 \uwave off
 \noun off
 \color none
-259.444
+259,444
 \end_layout
 
 \end_inset
@@ -3625,7 +3690,7 @@ Volkswagen
 \uwave off
 \noun off
 \color none
-194.085
+194,085
 \end_layout
 
 \end_inset
@@ -3669,7 +3734,7 @@ Audi
 \uwave off
 \noun off
 \color none
-142.040
+142,040
 \end_layout
 
 \end_inset
@@ -3713,7 +3778,7 @@ BMW
 \uwave off
 \noun off
 \color none
-135.583
+135,583
 \end_layout
 
 \end_inset
@@ -3757,7 +3822,7 @@ Nissan
 \uwave off
 \noun off
 \color none
-117.967
+117,967
 \end_layout
 
 \end_inset
@@ -3801,7 +3866,7 @@ Mercedes-Benz
 \uwave off
 \noun off
 \color none
-109.456
+109,456
 \end_layout
 
 \end_inset
@@ -3845,7 +3910,7 @@ Peugeot
 \uwave off
 \noun off
 \color none
-105.435
+105,435
 \end_layout
 
 \end_inset
@@ -3889,7 +3954,7 @@ Toyota
 \uwave off
 \noun off
 \color none
-88.648
+88,648
 \end_layout
 
 \end_inset
@@ -3933,7 +3998,7 @@ Citroen
 \uwave off
 \noun off
 \color none
-78.358
+78,358
 \end_layout
 
 \end_inset
@@ -3977,7 +4042,7 @@ Hyundai
 \uwave off
 \noun off
 \color none
-76.918
+76,918
 \end_layout
 
 \end_inset
@@ -4021,7 +4086,7 @@ Kia
 \uwave off
 \noun off
 \color none
-72.090
+72,090
 \end_layout
 
 \end_inset
@@ -4054,10 +4119,10 @@ Car Fuel Consumptions And Emissions 2000-2013:
 The “Car fuel consumptions and emissions 2000-2013” dataset from VCA is
  a collection of fuel consumptions and emissions data from car models from
  all car manufacturers in United Kingdom from year 2000 to year 2013.
- This dataset has in total of 27 fields of information, we will not use
- all of those fields, instead we will use only the following 4 fields which
- give us enough information of how much the environment impact each car
- model has, they are: 
+ This dataset has in total of 27 fields of information, we do not use all
+ of those fields, instead we use only the following 4 fields which give
+ us enough information of how much the environment impact each car model
+ has, they are: 
 \end_layout
 
 \begin_layout Labeling
@@ -4116,15 +4181,30 @@ capacity
 \end_layout
 
 \begin_layout Standard
-These 4 fields will be used as criteria to determine how much a car model
- can impact the environment.
+These 4 fields are used as criteria to determine how much a car model can
+ impact the environment.
  However, these fields not only show us the environment impact information
  but also show us how efficient a car model can be in terms of saving the
- environment e.g.
- a car model might have high engine capacity but its CO2 emissions and Noise
- level might not as high as other car models with same engine capacity,
- this tells us that car model is using superior technology to minimize the
- amount of CO2 emissions and Noise level while maintain high engine capacity.
+ environment.
+ For example, a car model might have high engine capacity but its CO2 emissions
+ and noise level might be not as high as for other car models with the same
+ engine capacity, this tells us that this car model is using superior technology
+ to minimize the amount of CO2 emissions and noise level while maintain
+ high engine capacity.
+\end_layout
+
+\begin_layout Standard
+Notice that the data we use in our case study is averaged data for each
+ car manufacturer.
+ For example, the fuel consumption number for Ford in figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:UK-Car-Sales-2"
+
+\end_inset
+
+ is the result of averaging all fuel consumption numbers from car models
+ which belong to Ford.
 \end_layout
 
 \begin_layout Standard
@@ -4143,9 +4223,16 @@ name "tab:UK-Car-Sales-2"
 
 \end_inset
 
-Car Manufacturers With Averaged Environmental Information For Year 2009
+Car Manufacturers With Environmental Information For Year 2009
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -4820,113 +4907,6 @@ Peugeot
 \uwave off
 \noun off
 \color none
-Audi
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-7.95
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-72.59
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-195.12
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-2,499.68
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
 BMW
 \end_layout
 
@@ -5034,7 +5014,7 @@ BMW
 \uwave off
 \noun off
 \color none
-Honda
+Audi
 \end_layout
 
 \end_inset
@@ -5055,7 +5035,7 @@ Honda
 \uwave off
 \noun off
 \color none
-7.23
+7.95
 \end_layout
 
 \end_inset
@@ -5076,7 +5056,7 @@ Honda
 \uwave off
 \noun off
 \color none
-71.17
+72.59
 \end_layout
 
 \end_inset
@@ -5097,7 +5077,7 @@ Honda
 \uwave off
 \noun off
 \color none
-174.84
+195.12
 \end_layout
 
 \end_inset
@@ -5118,114 +5098,7 @@ Honda
 \uwave off
 \noun off
 \color none
-1,956.88
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Mercedes-Benz
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-8.06
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-72.21
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-199.32
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-2,619.47
+2,499.68
 \end_layout
 
 \end_inset
@@ -5355,7 +5228,7 @@ Citroen
 \uwave off
 \noun off
 \color none
-Nissan
+Mercedes-Benz
 \end_layout
 
 \end_inset
@@ -5376,7 +5249,7 @@ Nissan
 \uwave off
 \noun off
 \color none
-7.79
+8.06
 \end_layout
 
 \end_inset
@@ -5397,7 +5270,7 @@ Nissan
 \uwave off
 \noun off
 \color none
-71.18
+72.21
 \end_layout
 
 \end_inset
@@ -5418,7 +5291,7 @@ Nissan
 \uwave off
 \noun off
 \color none
-194.47
+199.32
 \end_layout
 
 \end_inset
@@ -5439,7 +5312,221 @@ Nissan
 \uwave off
 \noun off
 \color none
-1,999.72
+2,619.47
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Renault
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+6.80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+71.31
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+169.56
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1,776.82
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Fiat
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+5.79
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+72.59
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+144.67
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1,494.11
 \end_layout
 
 \end_inset
@@ -5462,7 +5549,7 @@ Nissan
 \uwave off
 \noun off
 \color none
-Renault
+Hyundai
 \end_layout
 
 \end_inset
@@ -5483,7 +5570,7 @@ Renault
 \uwave off
 \noun off
 \color none
-6.80
+6.52
 \end_layout
 
 \end_inset
@@ -5504,7 +5591,7 @@ Renault
 \uwave off
 \noun off
 \color none
-71.31
+71.81
 \end_layout
 
 \end_inset
@@ -5525,7 +5612,7 @@ Renault
 \uwave off
 \noun off
 \color none
-169.56
+161.81
 \end_layout
 
 \end_inset
@@ -5546,7 +5633,7 @@ Renault
 \uwave off
 \noun off
 \color none
-1,776.82
+1,678.40
 \end_layout
 
 \end_inset
@@ -5568,7 +5655,7 @@ Renault
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5580,9 +5667,16 @@ name "tab:UK-Car-Sales-1-4"
 
 \end_inset
 
-Car Manufacturers With Averaged Environmental Information For Year 2010
+Car Manufacturers With Environmental Information For Year 2010
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -7005,7 +7099,7 @@ Honda
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7017,9 +7111,16 @@ name "tab:UK-Car-Sales-1-1-1"
 
 \end_inset
 
-Car Manufacturers With Averaged Environmental Information For Year 2011
+Car Manufacturers With Environmental Information For Year 2011
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -8442,7 +8543,7 @@ Hyundai
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8454,9 +8555,16 @@ name "tab:UK-Car-Sales-1-2-1"
 
 \end_inset
 
-Car Manufacturers With Averaged Environmental Information For Year 2012
+Car Manufacturers With Environmental Information For Year 2012
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -9879,7 +9987,7 @@ Kia
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -9891,9 +9999,16 @@ name "tab:UK-Car-Sales-1-3-1"
 
 \end_inset
 
-Car Manufacturers With Averaged Environmental Information For Year 2013
+Car Manufacturers With Environmental Information For Year 2013
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -11320,7 +11435,7 @@ Kia
 \end_layout
 
 \begin_layout Subsubsection
-Solving Problem Using AHP Method
+Solving The Problem Using AHP Method
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Solving-Problem-Using"
@@ -11336,8 +11451,15 @@ Define Decision Hierarchy And Global Priorities
 
 \begin_layout Standard
 First, we must structure our Eco-Friendly Car Manufacturers Ranking Problem
- in a decision hierarchy with appropriate criteria which are: Combined fuel
- consumption, Noise Level, CO2, and Engine capacity.
+ in a decision hierarchy (refer to section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Hierarchy"
+
+\end_inset
+
+) with appropriate criteria which are: Combined fuel consumption, Noise
+ Level, CO2, and Engine capacity.
  These criteria must also be assigned with global priorities which should
  be computed by pairwise comparisons to reflect the following order of importanc
 e:
@@ -11346,7 +11468,7 @@ e:
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-CO2>NoiseLevel>Combinedfuelconsumption=Enginecapacity\label{eq:orderofimport}
+CO2>Noise\:Level>Combined\:fuel\:consumption=Engine\:capacity\label{eq:orderofimport}
 \end{equation}
 
 \end_inset
@@ -11355,10 +11477,28 @@ CO2>NoiseLevel>Combinedfuelconsumption=Enginecapacity\label{eq:orderofimport}
 \end_layout
 
 \begin_layout Standard
-To compute the global priorities for our criteria in order to follow the
- above order of importance, we make the pairwise comparisons as in 
+Notice that the order of importance 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
+reference "eq:orderofimport"
+
+\end_inset
+
+ comes from the subjective judgment of the decision maker.
+ In our case study, we assume that the personal preferences of the decision
+ maker are as follows: the level of CO2 emissions is the most important
+ factor when choosing a car.
+ The second most important factor is the noise level.
+ Finally, the combined fuel consumption and the engine capacity have the
+ same level of importance.
+\end_layout
+
+\begin_layout Standard
+To compute the global priorities for our criteria in order to follow the
+ above order of importance, we make the pairwise comparisons as in figure
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "fig:Judgement-Table-For"
 
 \end_inset
@@ -11401,7 +11541,14 @@ Judgement Table For Criteria
 \end_layout
 
 \begin_layout Plain Layout
-Where: 
+In figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Judgement-Table-For"
+
+\end_inset
+
+, we have denoted: 
 \end_layout
 
 \begin_layout Enumerate
@@ -11427,18 +11574,18 @@ Engine capacity
 
 \begin_layout Standard
 After we had the pairwise comparisons, we can compute the priorities and
- ranking as in 
+ ranking as in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Criteria-Priorities-And"
 
 \end_inset
 
 .
  Then when we got the priorities for our criteria, we can define our decision
- hierarchy as in 
+ hierarchy with global priorities as in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Decision-Hierarchy-With"
 
 \end_inset
@@ -11533,6 +11680,19 @@ Decision Hierarchy With Global Priorities
 
 \end_layout
 
+\begin_layout Standard
+The calculations and the pairwise comparisons are made by using the AHP
+ Online System which is a online platform for multi-criteria decision making
+ using AHP 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "web:ahp-online"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Paragraph
 Calculate Scores of Alternatives
 \end_layout
@@ -11540,9 +11700,9 @@ Calculate Scores of Alternatives
 \begin_layout Standard
 When we have got the global priorities for our criteria, we can proceed
  to calculate the scores of our Alternatives.
- We will use the data in 
+ We use the data in table 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "tab:UK-Car-Sales-2"
 
 \end_inset
@@ -11552,36 +11712,36 @@ reference "tab:UK-Car-Sales-2"
 
 \begin_layout Standard
 First, similar to the process of finding the global priorities for our criteria,
- we must find the priority vector of the 12 car manufacturers for each criteria.
- To find the priority vector for each criteria, we make the pairwise comparisons
- between 12 car manufacturers for each criteria.
- For example, we will make pairwise comparisons for the criterion fuel consumpti
-on.
+ we must find the priority vector of the 12 car manufacturers for each criterion.
+ To find the priority vector for each criterion, we make the pairwise comparison
+s between 12 car manufacturers for each criteria.
+ For example, let us make pairwise comparisons for the criterion fuel consumptio
+n.
  Because we have 12 alternatives therefore we have to make 66 comparisons
- (refer to 
+ (refer to table 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "tab:Number-of-comparisons"
 
 \end_inset
 
-) as in 
+) as in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Judgement-Table-For-1"
 
 \end_inset
 
-, then we get the priority vector in 
+, then we get the priority vector in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Priority-vector-for"
 
 \end_inset
 
- by solving the principal Eigenvectors problem (refer to 
+ by solving the principal Eigenvectors problem (refer to chapter
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:The-Method-of"
 
 \end_inset
@@ -11593,7 +11753,7 @@ reference "sec:The-Method-of"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -11625,7 +11785,21 @@ Judgement Table For Fuel Consumption in year 2009
 \end_layout
 
 \begin_layout Plain Layout
-Where:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+In figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Judgement-Table-For-1"
+
+\end_inset
+
+, we have used the following numbering of cars:
 \end_layout
 
 \begin_layout Enumerate
@@ -11657,9 +11831,7 @@ Ford
 \uwave off
 \noun off
 \color none
-
 Vauxhall
-
 \end_layout
 
 \begin_layout Enumerate
@@ -11691,7 +11863,6 @@ Volkswagen
 \uwave off
 \noun off
 \color none
-
 Toyota
 \end_layout
 
@@ -11708,7 +11879,6 @@ Toyota
 \uwave off
 \noun off
 \color none
-
 Peugeot
 \end_layout
 
@@ -11725,24 +11895,6 @@ Peugeot
 \uwave off
 \noun off
 \color none
-
-Audi
-\end_layout
-
-\begin_layout Enumerate
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
 BMW
 \end_layout
 
@@ -11759,8 +11911,7 @@ BMW
 \uwave off
 \noun off
 \color none
-
-Honda
+Audi
 \end_layout
 
 \begin_layout Enumerate
@@ -11776,24 +11927,6 @@ Honda
 \uwave off
 \noun off
 \color none
-
-Mercedes-Benz
-\end_layout
-
-\begin_layout Enumerate
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
 Citroen
 \end_layout
 
@@ -11810,8 +11943,7 @@ Citroen
 \uwave off
 \noun off
 \color none
-
-Nissan
+Mercedes-Benz
 \end_layout
 
 \begin_layout Enumerate
@@ -11827,9 +11959,39 @@ Nissan
 \uwave off
 \noun off
 \color none
-
 Renault
+\end_layout
 
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Fiat 
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Hyundai
 \end_layout
 
 \end_inset
@@ -11841,7 +12003,7 @@ Renault
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -11882,63 +12044,66 @@ Priority vector for Fuel Consumption in year 2009
 \end_layout
 
 \begin_layout Standard
-Repeat the process for the remaining criteria to find all priority vectors,
- then we multiply the priority vector of each criteria with the global prioritie
-s to get the consolidated priorities or the scores for ranking for our 12
- car manufacturers in year 2009 in 
+After repeating the process for the remaining criteria to find all priority
+ vectors (refer to figures A.1 - A.6 in appendix A), we multiply the priority
+ vector of each criteria with the global priorities to get the consolidated
+ priorities or the scores for ranking our 12 car manufacturers.
+ The results for the year 2009 are in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Consolidated-priorities-for"
 
 \end_inset
 
 .
- Finally we get the ranking for our 12 car manufactures in year 2009 in
- 
+ The diagram presenting the scores for year 2009 is in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Car-manufacturers-ranking"
 
 \end_inset
 
 .
  The scores and rankings for year 2010, 2011, 2012 and 2013 are shown in
- 
+ the figures 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Car-manufacturers-ranking-1"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Car-manufacturers-ranking-1-1"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Car-manufacturers-ranking-1-2"
 
 \end_inset
 
 , and 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Car-manufacturers-ranking-1-3"
 
 \end_inset
 
 .
+ The results of pairwise comparisons, the priority vectors, and the consolidated
+ priorities for year 2010, 2011, 2012 and 2013 are shown in the figures
+ A.7 - A.42 in appendix A.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways true
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11982,7 +12147,7 @@ Consolidated priorities for car manufactures in year 2009
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -12026,7 +12191,7 @@ Car manufacturers ranking in 2009
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -12070,7 +12235,7 @@ Car manufacturers ranking in 2010
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -12110,7 +12275,7 @@ Car manufacturers ranking in 2011
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -12150,7 +12315,7 @@ Car manufacturers ranking in 2012
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -12186,6 +12351,18 @@ Car manufacturers ranking in 2013
 
 \end_layout
 
+\begin_layout Standard
+The calculations, the pairwise comparisons, and the ranking diagrams are
+ made by using the AHP Online System 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "web:ahp-online"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsubsection
 Artificial Neural Network Training
 \begin_inset CommandInset label
@@ -12202,92 +12379,92 @@ Making Input and Output:
 \end_layout
 
 \begin_layout Standard
-Recall from 
+We use the measurements from the tables 
 \begin_inset CommandInset ref
-LatexCommand formatted
-reference "subsec:Making-Input"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "subsec:Making-Output"
-
-\end_inset
-
-, we will use the measurements from 
-\begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:UK-Car-Sales-2"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:UK-Car-Sales-1-4"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:UK-Car-Sales-1-1-1"
 
 \end_inset
 
 , and 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:UK-Car-Sales-1-2-1"
 
 \end_inset
 
- as our training input.
- But we will not use 
+ as our training inputs (refer to section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
+reference "subsec:Making-Input"
+
+\end_inset
+
+).
+ But we do not use table 
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "tab:UK-Car-Sales-1-3-1"
 
 \end_inset
 
- as out training input, instead, we will use it for validation.
+ as out training inputs, instead, we use it only for validation.
 \end_layout
 
 \begin_layout Standard
-For the training output, we will use the scores from 
+For the training outputs, we use the scores from the figures 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:Car-manufacturers-ranking"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:Car-manufacturers-ranking-1"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:Car-manufacturers-ranking-1-1"
 
 \end_inset
 
 , 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:Car-manufacturers-ranking-1-2"
 
 \end_inset
 
-.
- And for the same reason as input, we will only use 
+ (refer to section 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
+reference "subsec:Making-Output"
+
+\end_inset
+
+).
+ And for the same reason as input, we only use figure 
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "fig:Car-manufacturers-ranking-1-3"
 
 \end_inset
@@ -12296,8 +12473,22 @@ reference "fig:Car-manufacturers-ranking-1-3"
 \end_layout
 
 \begin_layout Standard
-The readers should notice that all training data are normalized to have
- the same order of magnitude.
+Notice that all training data should be normalized to have the same order
+ of magnitude (refer to sections 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Making-Input"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Making-Output"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Paragraph
@@ -12305,43 +12496,42 @@ Determine ANN Structure:
 \end_layout
 
 \begin_layout Standard
-Because we have 4 criteria, therefore we will have 4 artificial neurons
- in our input layers, as for output layer we will only need 1 neuron because
- the score for ranking for each car manufacturer is just a single numerical
- value.
+Because we have 4 criteria, therefore we have 4 artificial neurons in our
+ input layers, as for output layer we only need 1 neuron because the score
+ for ranking for each car manufacturer is just a single numerical value.
 \end_layout
 
 \begin_layout Standard
 For the number of neurons in hidden layer and the number of hidden layers,
- we will choose 
+ we choose 
 \begin_inset Formula $[9\:4]$
 \end_inset
 
-, this means we will have 2 hidden layers and the first layer will have
- 9 neurons and the second layer will have 4 neurons.
+, this means we have 2 hidden layers and the first layer has 9 neurons and
+ the second layer has 4 neurons.
  The reason we choose this configuration is because after several tries,
  this configuration gives the best performance for our ANN.
- Also, the activation function for our neurons in the hidden layers will
- be the Tangent function (refer to 
+ Also, we choose the Tangent function (refer to table 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "tab:Activation-functions"
 
 \end_inset
 
-) and the activation function for the neuron in the output layer will be
- the Pure-linear function.
+) as the activation function for our neurons in the hidden layers and we
+ choose the Pure-linear function as the activation function for the neuron
+ in the output layer.
 \end_layout
 
 \begin_layout Standard
-Therefore the shape of our artificial neural network will look like 
+Figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Artificial-Neural-Network"
 
 \end_inset
 
-.
+shows the shape of our artificial neural network.
 \end_layout
 
 \begin_layout Standard
@@ -12399,18 +12589,21 @@ Model Training:
 \end_layout
 
 \begin_layout Standard
-MATLAB version R2016b with Neural Network Toolbox will be our main tool
- for creating, training calculating the performance for our ANN.
+We choose MATLAB version R2016b with Neural Network Toolbox as our main
+ tool for creating, training, and calculating the performance of our ANN.
 \end_layout
 
 \begin_layout Standard
-To create an instance of ANN we will use feedforwardnet function from Neural
- Network Toolbox in MATLAB.
- The feedforwardnet function will generate a feedforward neural network
- consist of series of layers.
- The first layer for connecting the network input, subsequent hidden layers
- each has connection from previous layer, and the final layer for producing
- the network output.
+To create an instance of ANN, we use 
+\begin_inset Formula $feedforwardnet$
+\end_inset
+
+ function from Neural Network Toolbox in MATLAB.
+ The feedforwardnet function generates a feedforward neural network consisting
+ of series of layers.
+ The first layer is for connecting the network input, subsequent hidden
+ layers each has connection with previous layer, and the final layer for
+ producing the network output.
 \end_layout
 
 \begin_layout Standard
@@ -12427,7 +12620,7 @@ hiddenSizes
 \begin_inset Formula $[9\:4]$
 \end_inset
 
- so we will use “[9 4]”.
+ so we use “[9 4]”.
  
 \end_layout
 
@@ -12437,9 +12630,9 @@ hiddenSizes
 \series bold
 trainFcn
 \series default
- - is where we will specify our training function, we will use “traingdm”
- which is a network training function that updates weight and bias values
- according to gradient descent with momentum.
+ - is where we specify our training function, we use “traingdm” which is
+ a network training function that updates weight and bias values according
+ to gradient descent with momentum.
  We use this so we can control learning rate and momentum value.
 \end_layout
 
@@ -12470,7 +12663,7 @@ trainFcn = 'traingdm';
 
 \begin_layout Plain Layout
 
-net = feedforwardnet(hiddenSizes,trainFcn); 
+net = feedforwardnet(hiddenSizes,trainFcn);
 \end_layout
 
 \end_inset
@@ -12486,17 +12679,64 @@ net = feedforwardnet(hiddenSizes,trainFcn);
 \end_layout
 
 \begin_layout Standard
-To train an instance of ANN we will use the train function from Neural Network
+To train an instance of ANN we use the train function from Neural Network
  Toolbox in MATLAB.
- The train function will train a neural network using the training parameters
+ The train function trains a neural network using the training parameters
  we provide to the neural network.
- Depending on the chosen training function, we will put in different type
- of training parameters, in this case we have chosen “traingdm” as our training
+ Depending on the chosen training function, we put in different type of
+ training parameters, in this case we have chosen “traingdm” as our training
  function.
 \end_layout
 
 \begin_layout Standard
 We have to provide these parameters to the neural network before using train:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+net.layers{1}.transferFcn
+\series default
+ - we specify the activation function of the neurons in the first hidden
+ layer.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+net.layers{2}.transferFcn
+\series default
+ - we specify the activation function of the neurons in the second hidden
+ layer.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+net.initFcn
+\series default
+ - we specify the initialize function for the neural network.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+net.layers{1}.initFcn
+\series default
+ - we specify the initialize function of the first hidden layer.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+net.layers{2}.initFcn
+\series default
+ - we specify the initialize function of the second hidden layer.
 \end_layout
 
 \begin_layout Labeling
@@ -12552,7 +12792,7 @@ divideParam.testRatio
 \series bold
 trainParam.lr
 \series default
- - we will specify the learning rate of the neural network.
+ - we specify the learning rate of the neural network.
 \end_layout
 
 \begin_layout Labeling
@@ -12561,7 +12801,28 @@ trainParam.lr
 \series bold
 trainParam.mc
 \series default
- - we will specify the momentum value of the neural network.
+ - we specify the momentum value of the neural network.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+net.trainParam.max_fail
+\series default
+ - we specify the maximum number of times the neural network does not improve
+ after one cycle of training, the neural network stops training if this
+ number is reached.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+net.trainparam.epochs
+\series default
+ - we specify how many training cycles the neural network should be trained.
+ 
 \end_layout
 
 \begin_layout Labeling
@@ -12577,9 +12838,9 @@ trainingInputs
 \labelwidthstring 00.00.0000
 
 \series bold
-targets
+trainingTargets
 \series default
- - is the targets from training data.
+ - is the targets or desired outputs from training data.
 \end_layout
 
 \begin_layout Standard
@@ -12649,6 +12910,31 @@ net = feedforwardnet(hiddenSizes,trainFcn);
 
 \begin_layout Plain Layout
 
+net.layers{1}.transferFcn = 'logsig';
+\end_layout
+
+\begin_layout Plain Layout
+
+net.layers{2}.transferFcn = 'tansig';
+\end_layout
+
+\begin_layout Plain Layout
+
+net.initFcn='initlay';
+\end_layout
+
+\begin_layout Plain Layout
+
+net.layers{1}.initFcn='initnw';
+\end_layout
+
+\begin_layout Plain Layout
+
+net.layers{2}.initFcn='initnw';
+\end_layout
+
+\begin_layout Plain Layout
+
 net.divideFcn = 'divideblock';  % Divide data to sequential blocks
 \end_layout
 
@@ -12684,12 +12970,12 @@ net.trainParam.mc = 0.3;
 
 \begin_layout Plain Layout
 
-net.trainParam.max_fail = 1000;
+net.trainParam.max_fail = 10000;
 \end_layout
 
 \begin_layout Plain Layout
 
-net.trainparam.epochs = 10000; 
+net.trainparam.epochs = 100000; 
 \end_layout
 
 \begin_layout Plain Layout
@@ -12699,6 +12985,16 @@ net.trainparam.epochs = 10000;
 \begin_layout Plain Layout
 
 % Train the Network
+\end_layout
+
+\begin_layout Plain Layout
+
+x = [trainingInputs]';
+\end_layout
+
+\begin_layout Plain Layout
+
+t = [trainingTargets]';
 \end_layout
 
 \begin_layout Plain Layout
@@ -12716,24 +13012,24 @@ Validation
 \end_layout
 
 \begin_layout Standard
-After our ANN is trained, we will use the input data from 
+After our ANN is trained, we use the input data from table 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "tab:UK-Car-Sales-1-3-1"
 
 \end_inset
 
- and the output data from 
+ and the output data from figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:Car-manufacturers-ranking-1-3"
 
 \end_inset
 
  to test the performance of our ANN.
- The result of R-value is shown in 
+ The result of R-value is shown in figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "fig:R-value-graph"
 
 \end_inset
@@ -12742,10 +13038,156 @@ reference "fig:R-value-graph"
 \end_layout
 
 \begin_layout Standard
+For the MSE, we compare the the outputs produced from the ANN with the actual
+ scores we have calculated for data in the year 2013 and then calculate
+ the MSE value for the ANN in table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Mean-Squared-Error"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We can see that MSE value in table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Mean-Squared-Error"
+
+\end_inset
+
+ is very close to 0 and R-value in figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:R-value-graph"
+
+\end_inset
+
+ is very close to 1.
+ When MSE is close to 0, it often means that the error between the desired
+ output and the actual output is very small therefore our ANN model is a
+ good estimator 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wiki:MSE"
+
+\end_inset
+
+.
+ Similarly, when the R-value is close to 1, it often indicates that our
+ ANN model can make good prediction for future input data 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wiki:rvalue"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Although the value of MSE and R-value are very promising, when we look at
+ the differences between the desired output and the actual output in table
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Mean-Squared-Error"
+
+\end_inset
+
+ we can see that our ANN's prediction is not perfect.
+ Some differences are quite significant such as 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Ford, Nissan, Hyundai and Kia.
+ However, when we rank the scores and compare the predicted ranking with
+ the desired ranking in table 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Ranking-of-alternatives"
+
+\end_inset
+
+, we can see that the predicted ranking is very similar to the desired one.
+ For example, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+some rankings are identical such as Ford, Vauxhall, Volkswagen, Audi, BMW,
+ Mercedes-Benz, Citroen, and Kia.
+ Still, there are some differences for other manufacturers such as Nissan
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Hyundai.
+\end_layout
+
+\begin_layout Standard
+By looking at the MSE value, the R-value, and the similarity between the
+ actual ranking (ranking from AHP method) and the predicted ranking (ranking
+ predicted by our ANN), we can be confident that our ANN has learned the
+ way to make ranking from AHP method and can make good prediction for future
+ data (i.e.
+ the data that is not included in the training data).
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -12776,33 +13218,16 @@ R-value graph
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-For the MSE, we will compare the the outputs produced from the ANN with
- the actual scores we have calculated for data in year 2013 and then calculate
- the MSE value for the ANN in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Mean-Squared-Error"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -12823,10 +13248,18 @@ Mean Squared Error
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="14" columns="3">
+<lyxtabular version="3" rows="14" columns="4">
 <features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -12835,7 +13268,7 @@ Mean Squared Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Manufacturer
 \end_layout
 
 \end_inset
@@ -12861,7 +13294,7 @@ AHP-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12882,6 +13315,15 @@ ANN-Score
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Difference
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -12889,6 +13331,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Ford
 \end_layout
 
 \end_inset
@@ -12914,7 +13368,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12930,7 +13384,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-12.35%
+13.15%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2.64%
 \end_layout
 
 \end_inset
@@ -12942,6 +13417,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Vauxhall
 \end_layout
 
 \end_inset
@@ -12967,7 +13454,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12983,7 +13470,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-5.76%
+8.68%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.66%
 \end_layout
 
 \end_inset
@@ -12995,6 +13503,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Volkswagen
 \end_layout
 
 \end_inset
@@ -13020,7 +13540,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13036,7 +13556,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-5.44%
+4.77%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.37%
 \end_layout
 
 \end_inset
@@ -13048,6 +13589,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Audi
 \end_layout
 
 \end_inset
@@ -13073,7 +13626,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13089,7 +13642,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-3.11%
+3.33%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.96%
 \end_layout
 
 \end_inset
@@ -13101,6 +13675,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+BMW
 \end_layout
 
 \end_inset
@@ -13126,7 +13712,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13142,7 +13728,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-3.81%
+2.39%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.21%
 \end_layout
 
 \end_inset
@@ -13154,6 +13761,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Nissan
 \end_layout
 
 \end_inset
@@ -13179,7 +13798,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13195,7 +13814,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-3.68%
+4.16%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2.94%
 \end_layout
 
 \end_inset
@@ -13207,6 +13847,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Mercedes-Benz
 \end_layout
 
 \end_inset
@@ -13232,7 +13884,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13248,7 +13900,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-2.59%
+1.66%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.15%
 \end_layout
 
 \end_inset
@@ -13260,6 +13933,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Peugeot
 \end_layout
 
 \end_inset
@@ -13285,7 +13970,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13301,7 +13986,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-10.66%
+13.81%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.60%
 \end_layout
 
 \end_inset
@@ -13313,6 +14019,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Toyota
 \end_layout
 
 \end_inset
@@ -13338,7 +14056,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13354,7 +14072,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-10.21%
+13.88%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.60%
 \end_layout
 
 \end_inset
@@ -13366,6 +14105,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Citroen
 \end_layout
 
 \end_inset
@@ -13391,7 +14142,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13407,7 +14158,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-14.13%
+15.70%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.89%
 \end_layout
 
 \end_inset
@@ -13419,6 +14191,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Hyundai
 \end_layout
 
 \end_inset
@@ -13444,7 +14228,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13460,7 +14244,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-6.51%
+9.61%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.77%
 \end_layout
 
 \end_inset
@@ -13472,6 +14277,18 @@ ANN-Score
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Kia
 \end_layout
 
 \end_inset
@@ -13497,7 +14314,7 @@ ANN-Score
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13513,7 +14330,28 @@ ANN-Score
 \uwave off
 \noun off
 \color none
-8.41%
+11.89%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.47%
 \end_layout
 
 \end_inset
@@ -13531,7 +14369,16 @@ MSE
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0004728
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13540,11 +14387,11 @@ MSE
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0004110
+
 \end_layout
 
 \end_inset
@@ -13557,8 +14404,28 @@ MSE
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Ranking-of-alternatives"
+
+\end_inset
+
+Rankings of alternatives 
 \end_layout
 
 \end_inset
@@ -13566,11 +14433,1102 @@ MSE
 
 \end_layout
 
-\begin_layout Standard
-We can see that both MSE and R-value gives very high result, therefore we
- can be confident that our ANN has learned to accurately predict the score
- of a car manufacturer with the data that is not included in the training
- data.
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Manufacturer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AHP-Rank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ANN-Rank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Difference
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Ford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Vauxhall
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Volkswagen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Audi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+BMW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Nissan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Mercedes-Benz
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Peugeot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Toyota
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Citroen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Hyundai
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Kia
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
